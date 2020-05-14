@@ -1,0 +1,31 @@
+{
+  "name": "ds-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no tests implemented && exit 1",
+    "dev": "parcel src/index.html --hmr-port 1235 --host 192.168.136.128",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsnider/ds-website.git"
+  },
+  "author": "Daniel Snider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielsnider/ds-website/issues"
+  },
+  "homepage": "https://github.com/danielsnider/ds-website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
