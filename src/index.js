@@ -15,6 +15,11 @@ const section = {
         id: 'cat-photo',
         title: 'Cat Photo',
         src: 'placeholder-cat.6a394075.png',
+      },
+      dogPhoto: {
+        id: 'dog-photo',
+        title: 'Dog Photo',
+        src: 'placeholder-dog.cbd3e9e1.jpg',
       }
     }
   },
@@ -39,7 +44,7 @@ class Main extends React.Component {
             <div>Socials</div>
           </div>
           <div className='header-right'>
-            Index
+            Portfolio
             <a href={`#${section.computerVision.id}`}>
               {section.computerVision.title}
             </a>
@@ -49,14 +54,17 @@ class Main extends React.Component {
           </div>
         </div>
         <div className='body'>
+          <Section {...section.computerVision}>
+            <ImageItem {...section.robotics.items.dogPhoto}/>
+            <ImageItem {...section.robotics.items.dogPhoto}/>
+            <ImageItem {...section.robotics.items.dogPhoto}/>
+            <ImageItem {...section.robotics.items.dogPhoto}/>
+          </Section>
           <Section {...section.robotics}>
             <ImageItem {...section.robotics.items.catPhoto}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
-          </Section>
-          <Section {...section.computerVision}>
-            <GithubReadmeItem {...section.robotics.items.catPhoto}/>
           </Section>
         </div>
         <div className='footer'>
@@ -79,6 +87,40 @@ class Main extends React.Component {
 }
 
 class Section extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+
+
+//   componentDidMount() {
+//     ReactDOM.findDOMNode(this.myRef).addEventListener('scroll', this.listenScrollEvent);
+// }
+
+// componentWillUnmount() {
+//     ReactDOM.findDOMNode(this.myRef).removeEventListener('scroll', this.listenScrollEvent);
+// }
+
+handleScroll(e) {
+  let element = e.target
+  console.log('e:', e)
+  console.log('element:', element)
+  if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+    console.log('element.clientHeight:', element.clientHeight)
+    console.log('element.scrollTop:', element.scrollTop)
+    console.log('element.scrollHeight:', element.scrollHeight)
+    // do something at end of scroll
+  }
+}
+
+
+  listenScrollEvent(event) {
+    console.log('event:', target)
+    // console.log('target:', event.target)
+    console.log('Scroll event detected!');
+}
+
+
   render() {
     return (
       <div id={this.props.id} className='portfolio-section'>
@@ -90,7 +132,7 @@ class Section extends React.Component {
             {this.props.description}
           </div>
         </div>
-        <div className='portfolio-section-right'>
+        <div className='portfolio-section-right'  ref={this.myRef} onScroll={this.handleScroll}>
           <div className='portfolio-section-content'>
           {/* <div className="sc-jnlKLf iygzaU">
             <p id='scroll-text'>GIMME A NICE SCROLL</p>
