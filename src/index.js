@@ -4,15 +4,22 @@ import ReactDOM from "react-dom"
 import './styles/main.css'
 
 
-const content = {
-  catPhoto: {
-    src: 'placeholder-cat.6a394075.png',
-  },
-  roboticsSection: {
+
+const section = {
+  robotics: {
+    id: 'robotics',
     title: 'Robotics',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.',
+    items: {
+      catPhoto: {
+        id: 'cat-photo',
+        title: 'Cat Photo',
+        src: 'placeholder-cat.6a394075.png',
+      }
+    }
   },
-  computerVisionSection: {
+  computerVision: {
+    id: 'computer-vision',
     title: 'Computer Vision',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
   }
@@ -25,53 +32,97 @@ class Main extends React.Component {
     return (
       <div className='main'>
         <div className='header'>
-          <div className='headerLeft'>
+          <div className='header-left'>
             <img className='logo' src='logo.236e4034.svg'/>
-            Left
-            Daniel Snider
-            Toronto
-            Socials
+            <div>Daniel Snider</div>
+            <div>Toronto</div>
+            <div>Socials</div>
           </div>
-          <div className='headerRight'>
-            Right
+          <div className='header-right'>
             Index
+            <a href={`#${section.computerVision.id}`}>
+              {section.computerVision.title}
+            </a>
+            <a href={`#${section.robotics.items.catPhoto.id}`}>
+              {section.robotics.items.catPhoto.title}
+            </a>
           </div>
         </div>
         <div className='body'>
-          <PortfolioSection {...content.roboticsSection}>
-            <PortfolioItemImage {...content.catPhoto}/>
-            <PortfolioItemImage {...content.catPhoto}/>
-          </PortfolioSection>
-          <PortfolioSection {...content.computerVisionSection}>
-            <PortfolioItemImage {...content.catPhoto}/>
-            <PortfolioItemImage {...content.catPhoto}/>
-          </PortfolioSection>
+          <Section {...section.robotics}>
+            <ImageItem {...section.robotics.items.catPhoto}/>
+            <ImageItem {...section.robotics.items.catPhoto}/>
+            <ImageItem {...section.robotics.items.catPhoto}/>
+            <ImageItem {...section.robotics.items.catPhoto}/>
+          </Section>
+          <Section {...section.computerVision}>
+            <GithubReadmeItem {...section.robotics.items.catPhoto}/>
+          </Section>
         </div>
         <div className='footer'>
-          When I start something, I do it with everything I have. Passion, love, and devotion, to name a few.
-          <img className='logo' src='logo.236e4034.svg'/>
-          Made using [tools]. Fork me on [github].
+          <div className='slogan'>
+            <em>When I start something, I do it with everything I have. Passion, love, and devotion, to name a few.</em>
+          </div>
+          <div className='footer-text'>
+            <p>
+              Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
+            </p>
+            <p>
+              Fork on <a href='https://github.com/danielsnider/ds-website'>Gituhb</a>.
+            </p>
+            <img className='logo' src='logo.236e4034.svg'/>
+          </div>
         </div>
       </div>
     )
   }
 }
 
-class PortfolioSection extends React.Component {
+class Section extends React.Component {
+  render() {
+    return (
+      <div id={this.props.id} className='portfolio-section'>
+        <div className='portfolio-section-left'>
+          <h1 className='portfolio-section-title'>
+            {this.props.title}
+          </h1>
+          <div className='portfolio-section-description'>
+            {this.props.description}
+          </div>
+        </div>
+        <div className='portfolio-section-right'>
+          <div className='portfolio-section-content'>
+          {/* <div className="sc-jnlKLf iygzaU">
+            <p id='scroll-text'>GIMME A NICE SCROLL</p>
+            <img id='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
+            <img id='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
+            <img id='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
+          </div> */}
+            {this.props.children}
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class ImageItem extends React.Component {
+  render() {
+    return (
+      <div className='image-item'>
+        <img id={this.props.id} src={this.props.src} className='image-img' />
+      </div>
+    )
+  }
+}
+
+class GithubReadmeItem extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='portfolio-section-title'>{this.props.title}</h1>
-        <div className='portfolio-section-description'>{this.props.description}</div>
-        {this.props.children}
+        <img id={this.props.id} src={this.props.src}/>
       </div>
     )
-  }
-}
-
-class PortfolioItemImage extends React.Component {
-  render() {
-    return <img src={this.props.src}/>
   }
 }
 

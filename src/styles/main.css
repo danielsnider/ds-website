@@ -5,16 +5,119 @@ body {
   font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial";
   line-height: 24px;
   font-size: 19px;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
   padding: 30px 0px;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left {
+  text-align: center;
+  height: 800px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header-right {
+  text-align: center;
+  height: 800px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .footer {
   padding: 30px 0px;
+  text-align:center;
 }
 
 .logo {
   height: 50px;
+}
+
+.image-item {
+  padding: 10px 20px;
+}
+
+.image-img {
+  border-radius: 5%;
+  width: 100%;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  max-height: 500px;
+  max-width: 1200px;
+  overflow: hidden;
+
+}
+.portfolio-section-left {
+  flex: 2;
+  overflow: hidden;
+}
+
+.portfolio-section-right {
+  overflow: scroll;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  /* flex-grow: 3; */
+  /* Commenting this line out will make the flex row use 100% of the viewport */
+  flex: 4;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.portfolio-section-right::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-section-title {
+
+}
+
+.portfolio-section-description {
+
+}
+
+.portfolio-section-content {
+
+}
+
+
+#scroll-text {
+  font-family: GT-America-Expanded-Bold, sans-serif; font-style: normal; line-height: normal; font-size: 10px; text-transform: uppercase; text-align: center; color: rgb(255, 255, 255); margin-top: 190px;
+}
+
+#scroll-svg1 {
+  width: 19px; margin-top: 12px; will-change: transform;
+}
+
+#scroll-svg2 {
+  width: 11px; margin-top: 5px; will-change: transform;
+}
+
+#scroll-svg3 {
+  width: 11px; margin-top: 3px; will-change: transform;
+}
+
+.iygzaU {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  top: 40px;
+  will-change: opacity;
+  /* width: 100%; */
+  /* height: 300px; */
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
