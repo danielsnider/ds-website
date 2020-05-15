@@ -55,7 +55,7 @@ body {
 }
 
 .image-img {
-  border-radius: 5%;
+  border-radius: 25px;
   width: 100%;
 }
 
@@ -81,7 +81,8 @@ body {
   overflow: scroll;
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
   flex: 4;
-  border: 5px solid lime;
+  /* border-top: 6px solid #A8EB12;
+  border-bottom: 6px solid #A8EB12; */
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .portfolio-section-right::-webkit-scrollbar {

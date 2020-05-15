@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from "react-dom"
+import { Document, Page, pdfjs } from 'react-pdf';
 import useScrollInfo from 'react-element-scroll-hook'
 
+import objectTrackingPdf from './images/object-tracking.pdf';
 import './styles/main.css'
 
 
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const section = {
   robotics: {
@@ -32,7 +36,36 @@ const section = {
   computerVision: {
     id: 'computer-vision',
     title: 'Computer Vision',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.',
+    items: {
+      objectTracking: {
+        id: 'object-tracking',
+        title: 'Object Tracking',
+        src: 'object-tracking.6ad48331.jpg',
+      },
+      objectTrackingPdf: {
+        id: 'object-tracking',
+        title: 'Object Tracking',
+        file: objectTrackingPdf,
+      }
+    }
+  },
+  fullStack: {
+    id: 'full-stack',
+    title: 'Full Stack',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.',
+    items: {
+      breqwatr: {
+        id: 'breqwatr',
+        title: 'Breqwatr Private Cloud Appliance',
+        src: 'breqwatr.7131c5d5.jpg',
+      },
+      matkit: {
+        id: 'matkit',
+        title: 'Matkit Image Analysis Toolkit',
+        src: 'matkit.f372a226.jpg',
+      }
+    }
   }
 }
 
@@ -63,8 +96,10 @@ class Main extends React.Component {
           </div>
         </div>
         <div className='body'>
+
           <Section {...section.computerVision}>
-            <ImageItem {...section.robotics.items.dogPhoto}/>
+            {/* <PdfItem {...section.computerVision.items.objectTrackingPdf}/> */}
+            <ImageItem {...section.computerVision.items.objectTracking}/>
             <ImageItem {...section.robotics.items.dogPhoto}/>
             <ImageItem {...section.robotics.items.dogPhoto}/>
             <ImageItem {...section.robotics.items.dogPhoto}/>
@@ -74,6 +109,10 @@ class Main extends React.Component {
             <ImageItem {...section.robotics.items.catPhoto2}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
+          </Section>
+          <Section {...section.fullStack}>
+            <ImageItem {...section.fullStack.items.breqwatr}/>
+            <ImageItem {...section.fullStack.items.matkit}/>
           </Section>
         </div>
         <div className='footer'>
@@ -118,7 +157,6 @@ function Section(props) {
 function ScrollOverlay(props) {
   const scrollInfo = props.scrollInfo
   const opacity = scrollInfo.y.value ? scrollInfo.y.value / 50 : 0
-  console.log('opacity:', opacity)
   return (
     <div className="scroll-outer" style={{opacity: 1-opacity}}>
       <div className="scroll-inner">
@@ -136,6 +174,21 @@ class ImageItem extends React.Component {
     return (
       <div className='image-item'>
         <img id={this.props.id} src={this.props.src} className='image-img' />
+      </div>
+    )
+  }
+}
+
+class PdfItem extends React.Component {
+  render() {
+    return (
+      <div className='image-item' id={this.props.id} className='image-img'>
+        <Document
+          file={this.props.file}
+          onLoadSuccess={this.onDocumentLoadSuccess}
+        >
+          <Page pageNumber={1} />
+        </Document>
       </div>
     )
   }

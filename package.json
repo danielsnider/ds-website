@@ -27,6 +27,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-element-scroll-hook": "^1.0.8"
+    "react-element-scroll-hook": "^1.0.8",
+    "react-pdf": "^4.1.0"
   }
 }
