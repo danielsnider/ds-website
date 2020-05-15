@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from 'react'
 import ReactDOM from "react-dom"
+import useScrollInfo from 'react-element-scroll-hook'
 
 import './styles/main.css'
 
@@ -15,6 +16,11 @@ const section = {
         id: 'cat-photo',
         title: 'Cat Photo',
         src: 'placeholder-cat.6a394075.png',
+      },
+      catPhoto2: {
+        id: 'cat-photo2',
+        title: 'Cat Photo 2 (dog)',
+        src: 'placeholder-dog.cbd3e9e1.jpg',
       },
       dogPhoto: {
         id: 'dog-photo',
@@ -51,6 +57,9 @@ class Main extends React.Component {
             <a href={`#${section.robotics.items.catPhoto.id}`}>
               {section.robotics.items.catPhoto.title}
             </a>
+            <a href={`#${section.robotics.items.catPhoto2.id}`}>
+              {section.robotics.items.catPhoto2.title}
+            </a>
           </div>
         </div>
         <div className='body'>
@@ -62,7 +71,7 @@ class Main extends React.Component {
           </Section>
           <Section {...section.robotics}>
             <ImageItem {...section.robotics.items.catPhoto}/>
-            <ImageItem {...section.robotics.items.catPhoto}/>
+            <ImageItem {...section.robotics.items.catPhoto2}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
             <ImageItem {...section.robotics.items.catPhoto}/>
           </Section>
@@ -86,66 +95,40 @@ class Main extends React.Component {
   }
 }
 
-class Section extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
-
-
-//   componentDidMount() {
-//     ReactDOM.findDOMNode(this.myRef).addEventListener('scroll', this.listenScrollEvent);
-// }
-
-// componentWillUnmount() {
-//     ReactDOM.findDOMNode(this.myRef).removeEventListener('scroll', this.listenScrollEvent);
-// }
-
-handleScroll(e) {
-  let element = e.target
-  console.log('e:', e)
-  console.log('element:', element)
-  if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-    console.log('element.clientHeight:', element.clientHeight)
-    console.log('element.scrollTop:', element.scrollTop)
-    console.log('element.scrollHeight:', element.scrollHeight)
-    // do something at end of scroll
-  }
-}
-
-
-  listenScrollEvent(event) {
-    console.log('event:', target)
-    // console.log('target:', event.target)
-    console.log('Scroll event detected!');
-}
-
-
-  render() {
-    return (
-      <div id={this.props.id} className='portfolio-section'>
-        <div className='portfolio-section-left'>
-          <h1 className='portfolio-section-title'>
-            {this.props.title}
-          </h1>
-          <div className='portfolio-section-description'>
-            {this.props.description}
-          </div>
-        </div>
-        <div className='portfolio-section-right'  ref={this.myRef} onScroll={this.handleScroll}>
-          <div className='portfolio-section-content'>
-          {/* <div className="sc-jnlKLf iygzaU">
-            <p id='scroll-text'>GIMME A NICE SCROLL</p>
-            <img id='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
-            <img id='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
-            <img id='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
-          </div> */}
-            {this.props.children}
-          </div>
+function Section(props) {
+  const [scrollInfo, setRef, ref] = useScrollInfo()
+  return (
+    <div id={props.id} className='portfolio-section'>
+      <div className='portfolio-section-left'>
+        <h1 className='portfolio-section-title'>
+          {props.title}
+        </h1>
+        <div className='portfolio-section-description'>
+          {props.description}
         </div>
       </div>
-    )
-  }
+      <div className='portfolio-section-right' ref={setRef}>
+        <ScrollOverlay scrollInfo={scrollInfo}/>
+        {props.children}
+      </div>
+    </div>
+  )
+}
+
+function ScrollOverlay(props) {
+  const scrollInfo = props.scrollInfo
+  const opacity = scrollInfo.y.value ? scrollInfo.y.value / 50 : 0
+  console.log('opacity:', opacity)
+  return (
+    <div className="scroll-outer" style={{opacity: 1-opacity}}>
+      <div className="scroll-inner">
+        <p id='scroll-text'>GIMME A NICE SCROLL</p>
+        <img id='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
+        <img id='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
+        <img id='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
+      </div>
+    </div>
+  )
 }
 
 class ImageItem extends React.Component {
