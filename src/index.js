@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ReactDOM from "react-dom"
 import { Document, Page, pdfjs } from 'react-pdf'
 import useScrollInfo from 'react-element-scroll-hook'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
@@ -123,9 +122,9 @@ function IndexItem(props) {
     const item = section.items[k]
     items.push(
     <div key={item.id}>
-      <AnchorLink key={`#item.id`} href={`#${item.id}`}>
+      <a key={`#item.id`} href={`#${item.id}`}>
         {item.title}
-      </AnchorLink>
+      </a>
     </div>
     )
   })
