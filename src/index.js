@@ -1,39 +1,26 @@
 import React, { useState } from 'react'
 import ReactDOM from "react-dom"
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf'
 import useScrollInfo from 'react-element-scroll-hook'
 
 import './styles/main.css'
+import cellBioMarkdown from './static/cell-bio-readme.md'
+import rosRoverMarkdown from './static/ros-rover-readme.md'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-const section = {
+const sections = {
   robotics: {
     id: 'robotics',
     title: 'Robotics',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.',
     items: {
-      catPhoto: {
-        id: 'cat-photo',
-        title: 'Cat Photo',
-        src: 'placeholder-cat.6a394075.png',
-      },
-      catPhoto2: {
-        id: 'cat-photo2',
-        title: 'Cat Photo 2 (dog)',
-        src: 'placeholder-dog.cbd3e9e1.jpg',
-      },
       rosRover: {
         id: 'ros-rover',
         title: 'Mars Rover',
-        src: 'https://github.com/danielsnider/ros-rover/blob/master/README.md',
-        description: 'How to build a one-armed, self-driving, University Rover Challenge robot with ROS',
-      },
-      dogPhoto: {
-        id: 'dog-photo',
-        title: 'Dog Photo',
-        src: 'placeholder-dog.cbd3e9e1.jpg',
+        src: rosRoverMarkdown,
+        filename: 'README.md'
       }
     }
   },
@@ -47,6 +34,12 @@ const section = {
         title: 'Object Tracking',
         src: 'object-tracking.6ad48331.jpg',
       },
+      cellBio: {
+        id: 'cell-bio',
+        title: 'Cell Bio',
+        src: cellBioMarkdown,
+        filename: 'README.md'
+      }
     }
   },
   fullStack: {
@@ -85,37 +78,22 @@ class Main extends React.Component {
             <div>Socials</div>
           </div>
           <div className='header-right'>
-            Portfolio
-            <a href={`#${section.computerVision.id}`}>
-              {section.computerVision.title}
-            </a>
-            <a href={`#${section.robotics.items.catPhoto.id}`}>
-              {section.robotics.items.catPhoto.title}
-            </a>
-            <a href={`#${section.robotics.items.catPhoto2.id}`}>
-              {section.robotics.items.catPhoto2.title}
-            </a>
+            <Index/>
           </div>
         </div>
         <div className='body'>
 
-          <Section {...section.computerVision}>
-            {/* <PdfItem {...section.computerVision.items.objectTrackingPdf}/> */}
-            <ImageItem {...section.computerVision.items.objectTracking}/>
-            <ImageItem {...section.robotics.items.dogPhoto}/>
-            <ImageItem {...section.robotics.items.dogPhoto}/>
-            <ImageItem {...section.robotics.items.dogPhoto}/>
+          <Section {...sections.computerVision}>
+            <MarkdownItem {...sections.computerVision.items.cellBio}/>
+            <ImageItem {...sections.computerVision.items.objectTracking}/>
           </Section>
-          {/* <Section {...section.robotics}>
-            <ImageItem {...section.robotics.items.catPhoto}/>
-            <ImageItem {...section.robotics.items.catPhoto2}/>
-            <ImageItem {...section.robotics.items.catPhoto}/>
-            <ImageItem {...section.robotics.items.catPhoto}/>
-          </Section> */}
-          <Section {...section.fullStack}>
-            <ImageItem {...section.fullStack.items.breqwatr}/>
-            <ImageItem {...section.fullStack.items.deepScatter}/>
-            <ImageItem {...section.fullStack.items.matkit}/>
+          <Section {...sections.robotics}>
+            <MarkdownItem {...sections.robotics.items.rosRover}/>
+          </Section>
+          <Section {...sections.fullStack}>
+            <ImageItem {...sections.fullStack.items.breqwatr}/>
+            <ImageItem {...sections.fullStack.items.deepScatter}/>
+            <ImageItem {...sections.fullStack.items.matkit}/>
           </Section>
         </div>
         <div className='footer'>
@@ -135,6 +113,40 @@ class Main extends React.Component {
       </div>
     )
   }
+}
+
+function IndexItem(props) {
+  const section = sections[props.sectionName]
+  const items = []
+  Object.entries(section.items).forEach(([k, v]) => {
+    const item = section.items[k]
+    items.push(
+    <div key={item.id}>
+      <a key={`#item.id`} href={`#${item.id}`}>
+        {item.title}
+      </a>
+    </div>
+    )
+  })
+  return (
+    <div>
+      {items}
+    </div>
+  )
+}
+
+function Index(props) {
+
+  return (
+    <div>
+      <h3>Computer Vision</h3>
+      <IndexItem sectionName={'computerVision'}/>
+      <h3>Robotics</h3>
+      <IndexItem sectionName={'robotics'}/>
+      <h3>Full Stack</h3>
+      <IndexItem sectionName={'fullStack'}/>
+    </div>
+  )
 }
 
 function Section(props) {
@@ -207,11 +219,11 @@ class IframeItem extends React.Component {
       },
 
     3. Then use this component:
-    <IframeItem {...section.robotics.items.rosRover}/>
+    <IframeItem {...sections.robotics.items.rosRover}/>
   */
   render() {
     return (
-      <div className='image-item'>
+      <div className='image-item' id={this.props.id}>
         <iframe width='800' height='700' is="x-frame-bypass" src={this.props.src}></iframe>
       </div>
     )
@@ -221,7 +233,7 @@ class IframeItem extends React.Component {
 class PdfItem extends React.Component {
   /*
     1. Do the import the file
-    import objectTrackingPdf from './static/object-tracking.pdf';
+    import objectTrackingPdf from './static/object-tracking.pdf'
 
     2. Add item data to a content section
     objectTrackingPdf: {
@@ -231,7 +243,7 @@ class PdfItem extends React.Component {
     }
 
     3. Then use this component:
-    <PdfItem {...section.computerVision.items.objectTrackingPdf}/>
+    <PdfItem {...sections.computerVision.items.objectTrackingPdf}/>
   */
   render() {
     return (
@@ -247,6 +259,26 @@ class PdfItem extends React.Component {
   }
 }
 
+
+function MarkdownItem(props) {
+  const getMarkdownText = () => {
+    // var rawMarkup = marked(cellBioMarkdown.toString(), {sanitize: true})
+    return { __html: props.src }
+  }
+
+  return (
+    <div className='markdown-item' id={props.id}>
+      <div className='markdown-header'>
+        <div className='markdown-filename'>
+          {props.filename}
+        </div>
+      </div>
+      <div className='markdown-content-container'>
+        <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
+      </div>
+    </div>
+  )
+}
 
 var mountNode = document.getElementById("app")
 ReactDOM.render(<Main name="Daniel" />, mountNode)

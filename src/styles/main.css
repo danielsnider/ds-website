@@ -146,3 +146,32 @@ body {
   will-change: transform;
   margin-bottom: 50px;
 }
+
+.markdown-header {
+  background-color: #f1f8ff;
+  border-color: #c8e1ff;
+  margin: -1px -1px 0;
+  border: 1px solid #d1d5da;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: black;
+  padding: 8px 16px;
+  display: flex;
+}
+
+.markdown-filename {
+  align-self: flex-start;
+
+}
+
+.markdown-content {
+  background-color: white;
+  color: black;
+}
+
+.markdown-content p {
+  margin-block-start: 0em !important;
+  padding-block-start: 1em !important;
+  margin-block-end: 0em !important;
+  padding-block-end: 1em !important;
+}
