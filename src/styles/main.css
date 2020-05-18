@@ -5,39 +5,95 @@ body {
   color: white;
   font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial";
   font-family: 'Noto Sans', sans-serif;
-  line-height: 24px;
-  font-size: 19px;
+  margin: 0px;
   display: flex;
   justify-content: center;
 }
 
+#app {
+  width: 100%;
+}
+
 .header {
-  /* background-color: rgb(22, 23, 26); */
+  background-color: rgb(22, 23, 26);
   padding: 30px 0px;
-  height: 800px;
   display: flex;
   flex-direction: row;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 25px;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .header-left {
   text-align: center;
-  height: 800px;
   justify-content: center;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+.city {
+  color: rgb(122, 124, 128);
+}
+
+.name {
+  font-size: 25px;
+  padding: 7px 0px;
+}
+
+.social-icon {
+  padding: 10px 5px;
+  fill: rgb(122, 124, 128);
+  width: 25px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  fill: rgb(161, 163, 167);
+}
+
 .header-right {
   text-align: center;
-  height: 800px;
   justify-content: center;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
+.index {
+  text-align: left;
+}
+
+.index-title {
+  font-size: 25px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.index-title2 {
+  font-size: 25px;
+  padding-top: 25px;
+  padding-bottom: 9px;
+}
+
+.index-subtitle {
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: rgba(122, 124, 128, 0.623);
+}
+
+.index a {
+  color: rgb(122, 124, 128);
+  text-decoration: none;
+  cursor: pointer;
+}
+.index a:hover {
+  color: rgb(161, 163, 167);
+}
+
 
 .footer {
   padding: 30px 0px;
@@ -47,8 +103,11 @@ body {
 }
 
 .logo {
-  height: 120px;
-  padding-bottom: 30px;
+  width: 73px;
+  height: 51px;
+  padding-bottom: 10px;
+  fill: white;
+  margin: 0 auto;
 }
 
 .image-item {
@@ -148,13 +207,12 @@ body {
 }
 
 .markdown-header {
-  background-color: #f1f8ff;
-  border-color: #c8e1ff;
-  margin: -1px -1px 0;
-  border: 1px solid #d1d5da;
+  color: white;
+  background-color: #202f3d;
+  /* border-color: #c8e1ff;
+  border: 1px solid #d1d5da; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  color: black;
   padding: 8px 16px;
   display: flex;
 }
@@ -165,8 +223,8 @@ body {
 }
 
 .markdown-content {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .markdown-content p {

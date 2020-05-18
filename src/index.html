@@ -7,7 +7,21 @@
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="app"></div>
-        <!-- <img src="images/deepscatter.jpg"> -->
+        <!-- <img src="static/leaf.svg"> -->
         <script src="index.js"></script>
+        <script>
+            // On page load
+            window.addEventListener('load', (event) => {
+                // Enable smooth scroll which clicking any anchor link (Note: this only works when pressing ENTER in the address bar, not F5 refresh)
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+      </script>
     </body>
 </html>
