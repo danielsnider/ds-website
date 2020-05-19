@@ -148,14 +148,6 @@ function Index(props) {
 function Section(props) {
   const [scrollInfo, setRef, ref] = useScrollInfo()
 
-  const sectionElem = document.getElementById('computer-vision')
-  const sectionRect = sectionElem ? sectionElem.getBoundingClientRect() : null
-  // console.log('sectionRect: ', sectionRect)
-
-  const itemElem = document.getElementById('object-tracking')
-  const rect = itemElem ? itemElem.getBoundingClientRect() : null
-  // console.log('rect: ', rect)
-
   return (
     <div id={props.id} className='portfolio-section'>
       <div className='portfolio-section-left'>
