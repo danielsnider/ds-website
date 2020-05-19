@@ -120,20 +120,20 @@ function Index(props) {
       <div className='index-title'>Lead Developer</div>
       <a href='#image-archive'>Medical Image Archive</a>
       <div className='index-subtitle'>Scaled to 100 million images</div>
-      <a href='#image-archive'>Tele-operated, 6-wheeled, 1-armed robot</a>
+      <a href='#ros-rover'>Tele-operated, 6-wheeled, 1-armed robot</a>
       <div className='index-subtitle'>Placed 21st at international URC competition in Utah</div>
-      <a href='#image-archive'>DeepScatter AI Web App</a>
+      <a href='#deep-scatter'>DeepScatter AI Web App</a>
       <div className='index-subtitle'>AI Grant Finalist</div>
-      <a href='#image-archive'>MatKit-Image Analysis Framework</a>
+      <a href='#matkit'>MatKit-Image Analysis Framework</a>
       <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
-      <a href='#image-archive'>Microscopy Image Analysis</a>
+      <a href='#cell-bio'>Microscopy Image Analysis</a>
       <div className='index-subtitle'>Contributed to <em>n</em> research papers</div>
 
-      <div className='index-title2'>Contributor</div>
-      <div style={{paddingTop:'3px'}}><a href='#image-archive'>Breqwatr private cloud</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#image-archive'>Rareconnect social network</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#image-archive'>Penguin ASI robotics</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#image-archive'>SenseActSenseAct robot learning framework</a></div>
+      <div className='index-2nd-title'>Contributor</div>
+      <div style={{paddingTop:'3px'}}><a href='#breqwatr'>Breqwatr private cloud</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>Rareconnect social network</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#penguin'>Penguin ASI robotics</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#senseact'>SenseActSenseAct robot learning framework</a></div>
     </div>
   )
 }
