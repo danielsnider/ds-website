@@ -66,61 +66,59 @@ const sections = {
   }
 }
 
-class Main extends React.Component {
-  render() {
-    return (
-      <div className='main'>
-        <div className='header'>
-          <div className='header-left'>
-            <div>
-              <img className='logo' style={{transform: 'rotate(180deg)'}} src='leaf.3bab224c.svg'/>
-            </div>
-            <div className='name'>Daniel Snider</div>
-            <div className='city'>Toronto</div>
-            <div id="contact">
-              <a href="https://twitter.com/danielsnider">
-                <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
-              </a>
-              <a href="mailto:danielsnider12@gmail.com">
-                <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path></svg>
-              </a>
-            </div>
+function Main(props) {
+  return (
+    <div className='main'>
+      <div className='header'>
+        <div className='header-left'>
+          <div>
+            <img className='logo' style={{transform: 'rotate(180deg)'}} src='leaf.3bab224c.svg'/>
           </div>
-          <div className='header-right'>
-            <Index/>
+          <div className='name'>Daniel Snider</div>
+          <div className='city'>Toronto</div>
+          <div id="contact">
+            <a href="https://twitter.com/danielsnider">
+              <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
+            </a>
+            <a href="mailto:danielsnider12@gmail.com">
+              <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path></svg>
+            </a>
           </div>
         </div>
-        <div className='body'>
-          <Section {...sections.computerVision}>
-            <ImageItem {...sections.computerVision.items.objectTracking}/>
-            {/* <MarkdownItem {...sections.computerVision.items.cellBio}/> */}
-          </Section>
-          <Section {...sections.robotics}>
-            {/* <MarkdownItem {...sections.robotics.items.rosRover}/> */}
-          </Section>
-          <Section {...sections.fullStack}>
-            <ImageItem {...sections.fullStack.items.breqwatr}/>
-            <ImageItem {...sections.fullStack.items.deepScatter}/>
-            <ImageItem {...sections.fullStack.items.matkit}/>
-          </Section>
-        </div>
-        <div className='footer'>
-          <div className='slogan'>
-            <em>When I start something, I do it with everything I have. Passion, love, and devotion, to name a few.</em>
-          </div>
-          <div className='footer-text'>
-            <p>
-              Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
-            </p>
-            <p>
-              Fork on <a href='https://github.com/danielsnider/ds-website'>Gituhb</a>.
-            </p>
-            <img className='logo' src='logo.236e4034.svg'/>
-          </div>
+        <div className='header-right'>
+          <Index/>
         </div>
       </div>
-    )
-  }
+      <div className='body'>
+        <Section {...sections.computerVision}>
+          <ImageItem {...sections.computerVision.items.objectTracking}/>
+          {/* <MarkdownItem {...sections.computerVision.items.cellBio}/> */}
+        </Section>
+        <Section {...sections.robotics}>
+          {/* <MarkdownItem {...sections.robotics.items.rosRover}/> */}
+        </Section>
+        <Section {...sections.fullStack}>
+          <ImageItem {...sections.fullStack.items.breqwatr}/>
+          <ImageItem {...sections.fullStack.items.deepScatter}/>
+          <ImageItem {...sections.fullStack.items.matkit}/>
+        </Section>
+      </div>
+      <div className='footer'>
+        <div className='slogan'>
+          <em>When I start something, I do it with everything I have. Passion, love, and devotion, to name a few.</em>
+        </div>
+        <div className='footer-text'>
+          <p>
+            Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
+          </p>
+          <p>
+            Fork on <a href='https://github.com/danielsnider/ds-website'>Gituhb</a>.
+          </p>
+          <img className='logo' src='logo.236e4034.svg'/>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 function IndexItem(props) {
@@ -163,7 +161,6 @@ function Index(props) {
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>Rareconnect social network</a></div>
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>Penguin ASI robotics</a></div>
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>SenseActSenseAct robot learning framework</a></div>
-      
       {/* <IndexItem sectionName={'computerVision'}/>
       <div className='index-title'>Robotics</div>
       <IndexItem sectionName={'robotics'}/>
@@ -217,17 +214,15 @@ function ScrollOverlay(props) {
   )
 }
 
-class ImageItem extends React.Component {
-  render() {
-    return (
-      <div className='image-item'>
-        <img id={this.props.id} src={this.props.src} className='image-img' />
-      </div>
-    )
-  }
+function ImageItem(props) {
+  return (
+    <div className='image-item'>
+      <img id={props.id} src={props.src} className='image-img' />
+    </div>
+  )
 }
 
-class IframeItem extends React.Component {
+function IframeItem(props) {
   /*
     1. To embed any webpage into an iframe these scripts are needed in index.html
     <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
@@ -245,16 +240,14 @@ class IframeItem extends React.Component {
     3. Then use this component:
     <IframeItem {...sections.robotics.items.rosRover}/>
   */
-  render() {
-    return (
-      <div className='image-item' id={this.props.id}>
-        <iframe width='800' height='700' is="x-frame-bypass" src={this.props.src}></iframe>
-      </div>
-    )
-  }
+  return (
+    <div className='image-item' id={props.id}>
+      <iframe width='800' height='700' is="x-frame-bypass" src={props.src}></iframe>
+    </div>
+  )
 }
 
-class PdfItem extends React.Component {
+function PdfItem(props) {
   /*
     1. Do the import the file
     import objectTrackingPdf from './static/object-tracking.pdf'
@@ -269,20 +262,14 @@ class PdfItem extends React.Component {
     3. Then use this component:
     <PdfItem {...sections.computerVision.items.objectTrackingPdf}/>
   */
-  render() {
-    return (
-      <div className='image-item' id={this.props.id} className='image-img'>
-        <Document
-          file={this.props.file}
-          onLoadSuccess={this.onDocumentLoadSuccess}
-        >
-          <Page pageNumber={1} />
-        </Document>
-      </div>
-    )
-  }
+  return (
+    <div className='image-item' id={props.id} className='image-img'>
+      <Document file={props.file} >
+        <Page pageNumber={1} />
+      </Document>
+    </div>
+  )
 }
-
 
 function MarkdownItem(props) {
   const getMarkdownText = () => {
