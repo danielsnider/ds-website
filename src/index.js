@@ -121,26 +121,6 @@ function Main(props) {
   )
 }
 
-function IndexItem(props) {
-  const section = sections[props.sectionName]
-  const items = []
-  Object.entries(section.items).forEach(([k, v]) => {
-    const item = section.items[k]
-    items.push(
-    <div key={item.id}>
-      <a href={`#${item.id}`}>
-        {item.title}
-      </a>
-    </div>
-    )
-  })
-  return (
-    <div>
-      {items}
-    </div>
-  )
-}
-
 function Index(props) {
   return (
     <div className='index'>
@@ -161,11 +141,6 @@ function Index(props) {
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>Rareconnect social network</a></div>
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>Penguin ASI robotics</a></div>
       <div style={{paddingTop:'3px'}}><a href='#image-archive'>SenseActSenseAct robot learning framework</a></div>
-      {/* <IndexItem sectionName={'computerVision'}/>
-      <div className='index-title'>Robotics</div>
-      <IndexItem sectionName={'robotics'}/>
-      <div className='index-title'>Full Stack</div>
-      <IndexItem sectionName={'fullStack'}/> */}
     </div>
   )
 }
