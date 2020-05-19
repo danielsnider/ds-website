@@ -70,18 +70,19 @@ function Main(props) {
   return (
     <div className='main'>
       <Header/>
+      <Gallery/>
       <div className='body'>
-        <Section {...sections.computerVision}>
-          <ImageItem {...sections.computerVision.items.objectTracking}/>
-          {/* <MarkdownItem {...sections.computerVision.items.cellBio}/> */}
-        </Section>
-        <Section {...sections.robotics}>
-          {/* <MarkdownItem {...sections.robotics.items.rosRover}/> */}
-        </Section>
         <Section {...sections.fullStack}>
           <ImageItem {...sections.fullStack.items.breqwatr}/>
           <ImageItem {...sections.fullStack.items.deepScatter}/>
           <ImageItem {...sections.fullStack.items.matkit}/>
+        </Section>
+        <Section {...sections.computerVision}>
+          <MarkdownItem {...sections.computerVision.items.cellBio}/>
+          <ImageItem {...sections.computerVision.items.objectTracking}/>
+        </Section>
+        <Section {...sections.robotics}>
+          <MarkdownItem {...sections.robotics.items.rosRover}/>
         </Section>
       </div>
       <Footer/>
@@ -138,20 +139,61 @@ function Index(props) {
   )
 }
 
+function Gallery(props) {
+  return (
+    <div className='gallery'>
+      <Card
+        desc="Robot placed 21st in international competition."
+        src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
+        anchor="#ros-rover"
+        styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
+      />
+      <Card
+        desc="Scaled to 100 million images."
+        src="image-archive.c360adba.jpg"
+        anchor="#image-archive"
+      />
+      <Card
+        desc="AI Grant Finalist."
+        src="deepscatter.0b40bbf5.jpg"
+        anchor="#deep-scatter"
+        styleWrap={{border: '1.3px solid rgba(170, 170, 170, 0.33)'}}
+      />
+      <Card
+        desc="Mary Jo Haddad SickKids Innovation Award."
+        src="matkit-cells.092d1f2f.jpg"
+        anchor="#matkit"
+        styleWrap={{border: '1.3px solid rgba(170, 170, 170, 0.33)'}}
+      />
+    </div>
+  )
+}
+
+function Card(props) {
+  return (
+    <a className="card-wrap" href={props.anchor} style={props.styleWrap}>
+      <img className="card-img" src={props.src} style={props.styleImg}/>
+      <div className="card-description_layer">
+        <p className="card-description">{props.desc}</p>
+      </div>
+    </a>
+  )
+}
+
 function Section(props) {
   const [scrollInfo, setRef, ref] = useScrollInfo()
 
   return (
-    <div id={props.id} className='portfolio-section'>
-      <div className='portfolio-section-left'>
-        <h1 className='portfolio-section-title'>
+    <div id={props.id} className='section'>
+      <div className='section-left'>
+        <h1 className='section-title'>
           {props.title}
         </h1>
-        <div className='portfolio-section-description'>
+        <div className='section-description'>
           {props.description}
         </div>
       </div>
-      <div className='portfolio-section-right' ref={setRef}>
+      <div className='section-right' ref={setRef}>
         <ScrollOverlay scrollInfo={scrollInfo}/>
         {props.children}
       </div>
@@ -253,7 +295,7 @@ function MarkdownItem(props) {
 
 function Logo(props) {
   return (
-    <img className='logo' style={{transform: 'rotate(180deg)'}} src='leaf.3bab224c.svg'/>
+    <img className='logo' src='nature.8aa98222.svg'/>
   )
 }
 
