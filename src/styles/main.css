@@ -288,29 +288,21 @@ body {
 
 .card-title {
   position: absolute;
-  top: -42px;
-  /* left: 130px; */
+  top: -62px;
   text-align: left;
   z-index: 999;
   font-size: 20px;
   width: 100%;
   color: rgb(122, 124, 128);
   font-family: 'Noto Sans', sans-serif;
-
+  top: -30px;
+  position: absolute;
 }
 
-
-.card-title2 {
-  position: absolute;
-  top: -62px;
-  /* left: 130px; */
-  text-align: left;
-  z-index: 999;
-  font-size: 20px;
-  width: 100%;
-  color: rgb(122, 124, 128);
-  font-family: 'Noto Sans', sans-serif;
-
+.card-subtitle {
+  padding-bottom: 4px;
+  font-size: 16px;
+  color: rgba(122, 124, 128, 0.623);
 }
 
 .card-img {

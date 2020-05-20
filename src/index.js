@@ -69,22 +69,8 @@ const sections = {
 function Main(props) {
   return (
     <div className='main'>
-      <div className='AltNameAndLogo'>
-        <NameAndLogo/>
-      </div>
-      <HeaderAlt/>
       <Header/>
       <Gallery/>
-      <br></br>
-      <br></br>
-      <br></br>
-      <Header/>
-      <GalleryWithWords/>
-      <br></br>
-      <br></br>
-      <br></br>
-      <Header/>
-      <GalleryWithWordsAndSubTitles/>
       <div className='body'>
         <Section {...sections.fullStack}>
           <ImageItem {...sections.fullStack.items.breqwatr}/>
@@ -137,19 +123,6 @@ function NameAndLogo(props) {
   )
 }
 
-function HeaderAlt(props) {
-  return (
-    <div className='header'>
-      <div className='header-left-alt'>
-        <GalleryAlt/>
-      </div>
-      <div className='header-right-alt'>
-        <Index/>
-      </div>
-    </div>
-  )
-}
-
 function Index(props) {
   return (
     <div className='index'>
@@ -179,112 +152,6 @@ function Gallery(props) {
   return (
     <div className='gallery'>
       <Card
-        desc="Robot placed 21st in international competition."
-        src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
-        anchor="#ros-rover"
-        styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-      />
-      <Card
-        desc="Scaled to 100 million images."
-        src="image-archive.c360adba.jpg"
-        anchor="#image-archive"
-      />
-      <Card
-        desc="A.I. Grant Finalist."
-        src="deepscatter.0b40bbf5.jpg"
-        anchor="#deep-scatter"
-      />
-      <Card
-        desc="Mary Jo Haddad SickKids Innovation Award."
-        src="matkit-cells.092d1f2f.jpg"
-        anchor="#matkit"
-      />
-      <Card
-        desc="Contributed to a reinforcement learning framework for physical robots."
-        src="senseact-arm.29fbdd9f.jpg"
-        anchor="#matkit"
-      />
-      <Card
-        desc="Contributed to a privace cloud appliance."
-        src="breqwatr-card-3.5981857b.png"
-        anchor="#breqwtr"
-      />
-      <Card
-        desc="Contributed to a social network for rare disease patients."
-        src="rareconnect.c719a054.png"
-        anchor="#rareconnect"
-        styleImg={{objectFit: 'unset'}}
-      />
-      <Card
-        desc="Contributed to n research papers."
-        src="cell-tracking.93c9c9ec.jpg"
-        anchor="#cell-bio"
-      />
-    </div>
-  )
-}
-
-function GalleryWithWords(props) {
-  return (
-    <div className='gallery'>
-      <Card
-        title="Teleoperated Robot"
-        desc="Robot placed 21st in international competition."
-        src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
-        anchor="#ros-rover"
-        styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-      />
-      <Card
-        title="Medical Image Archive"
-        desc="Scaled to 100 million images."
-        src="image-archive.c360adba.jpg"
-        anchor="#image-archive"
-      />
-      <Card
-        title="A.I. Web App"
-        desc="A.I. Grant Finalist."
-        src="deepscatter.0b40bbf5.jpg"
-        anchor="#deep-scatter"
-      />
-      <Card
-        title="Image Analysis Framework"
-        desc="Mary Jo Haddad SickKids Innovation Award."
-        src="matkit-cells.092d1f2f.jpg"
-        anchor="#matkit"
-      />
-        <Card
-          title="Reinforcement Learning"
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
-          anchor="#matkit"
-        />
-      <Card
-        title="Datacentre Platform"
-        desc="Contributed to a privace cloud appliance."
-        src="breqwatr-card-3.5981857b.png"
-        anchor="#breqwtr"
-      />
-      <Card
-        title="Global Social Network"
-        desc="Contributed to a social network for rare disease patients."
-        src="rareconnect.c719a054.png"
-        anchor="#rareconnect"
-        styleImg={{objectFit: 'unset'}}
-      />
-      <Card
-        title="Microscopy Analysis"
-        desc="Contributed to n research papers."
-        src="cell-tracking.93c9c9ec.jpg"
-        anchor="#cell-bio"
-      />
-    </div>
-  )
-}
-
-function GalleryWithWordsAndSubTitles(props) {
-  return (
-    <div className='gallery'>
-      <Card2
         title="Teleoperated Robot"
         subtitle="Place 21st at Competition"
         desc="Robot placed 21st in international competition."
@@ -292,102 +159,49 @@ function GalleryWithWordsAndSubTitles(props) {
         anchor="#ros-rover"
         styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
       />
-      <Card2
+      <Card
         title="Medical Image Archive"
         desc="Scaled to 100 million images."
         src="image-archive.c360adba.jpg"
         anchor="#image-archive"
       />
-      <Card2
+      <Card
         title="A.I. Web App"
         desc="A.I. Grant Finalist."
         src="deepscatter.0b40bbf5.jpg"
         anchor="#deep-scatter"
       />
-      <Card2
+      <Card
         title="Image Analysis Framework"
         desc="Mary Jo Haddad SickKids Innovation Award."
         src="matkit-cells.092d1f2f.jpg"
         anchor="#matkit"
       />
-        <Card2
-          title="Reinforcement Learning"
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
-          anchor="#matkit"
-        />
-      <Card2
+      <Card
+        title="Reinforcement Learning"
+        desc="Contributed to a reinforcement learning framework for physical robots."
+        src="senseact-arm.29fbdd9f.jpg"
+        anchor="#matkit"
+      />
+      <Card
         title="Datacentre Platform"
         desc="Contributed to a privace cloud appliance."
         src="breqwatr-card-3.5981857b.png"
         anchor="#breqwtr"
       />
-      <Card2
+      <Card
         title="Global Social Network"
         desc="Contributed to a social network for rare disease patients."
         src="rareconnect.c719a054.png"
         anchor="#rareconnect"
         styleImg={{objectFit: 'unset'}}
       />
-      <Card2
+      <Card
         title="Microscopy Analysis"
         desc="Contributed to n research papers."
         src="cell-tracking.93c9c9ec.jpg"
         anchor="#cell-bio"
       />
-    </div>
-  )
-}
-
-function GalleryAlt(props) {
-  return (
-    <div>
-      <div className='gallery'>
-        <Card
-          desc="Robot placed 21st in international competition."
-          src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
-          anchor="#ros-rover"
-          styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-        />
-        <Card
-          desc="Scaled to 100 million images."
-          src="image-archive.c360adba.jpg"
-          anchor="#image-archive"
-        />
-        <Card
-          desc="A.I. Grant Finalist."
-          src="deepscatter.0b40bbf5.jpg"
-          anchor="#deep-scatter"
-        />
-        <Card
-          desc="Mary Jo Haddad SickKids Innovation Award."
-          src="matkit-cells.092d1f2f.jpg"
-          anchor="#matkit"
-        />
-      </div>
-      <div className='gallery'>
-        <Card
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
-          anchor="#matkit"
-        />
-        <Card
-          desc="Contributed to a privace cloud appliance."
-          src="breqwatr-card-3.5981857b.png"
-          anchor="#breqwtr"
-        />
-        <Card
-          desc="Contributed to a social network for rare disease patients."
-          src="rareconnect.c719a054.png"
-          anchor="#rareconnect"
-          styleImg={{objectFit: 'unset'}}
-        />
-        <Card
-          desc="Contributed to n research papers."
-          src="cell-tracking.93c9c9ec.jpg"
-          anchor="#cell-bio"
-        />
-      </div>
     </div>
   )
 }
@@ -396,22 +210,7 @@ function Card(props) {
   return (
     <div className="card-container">
       <div className="card-title">{props.title}</div>
-      <div className='index-subtitle' style={{top:'-30px', position: 'absolute'}}>{props.subtitle}</div>
-      <a className="card-wrap" href={props.anchor} style={props.styleWrap}>
-        <img className="card-img" src={props.src} style={props.styleImg}/>
-        <div className="card-description_layer">
-          <p className="card-description">{props.desc}</p>
-        </div>
-      </a>
-    </div>
-  )
-}
-
-function Card2(props) {
-  return (
-    <div className="card-container">
-      <div className="card-title2">{props.title}</div>
-      <div className='index-subtitle' style={{top:'-30px', position: 'absolute'}}>{props.subtitle}</div>
+      <div className='card-subtitle'>{props.subtitle}</div>
       <a className="card-wrap" href={props.anchor} style={props.styleWrap}>
         <img className="card-img" src={props.src} style={props.styleImg}/>
         <div className="card-description_layer">
