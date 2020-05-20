@@ -14,23 +14,6 @@ body {
   width: 100%;
 }
 
-.header-left-alt {
-  /* text-align: center; */
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  flex: 2.5;
-  margin-left: 30px;
-}
-
-.header-right-alt {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 .AltNameAndLogo {
   text-align: center;
   justify-content: center;
@@ -94,7 +77,7 @@ body {
 
 .index-title {
   font-size: 25px;
-  /* padding-top: 30px; */
+  padding-top: 30px;
   padding-bottom: 15px;
 }
 
@@ -259,13 +242,17 @@ body {
 }
 
 .gallery {
+  margin: 0px 10px 0px 130px;
+}
+
+.gallery-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 50px;
+  padding: 0px 5px;
   align-items: center;
   justify-content: center;
-  max-width: 1250px;
+  /* max-width: 1250px; */
   margin: 0 auto;
 }
 
@@ -286,12 +273,22 @@ body {
   width: 257px;
 }
 
+.card-section-title-container {
+  position: relative;
+}
+.card-section-title {
+  position: absolute;
+  font-size: 25px;
+  left: -137px;
+  text-align: right;
+}
+
 .card-title {
   position: absolute;
   top: -62px;
   text-align: left;
   z-index: 999;
-  font-size: 20px;
+  font-size: 19px;
   width: 100%;
   color: rgb(122, 124, 128);
   font-family: 'Noto Sans', sans-serif;

@@ -151,57 +151,70 @@ function Index(props) {
 function Gallery(props) {
   return (
     <div className='gallery'>
-      <Card
-        title="Teleoperated Robot"
-        subtitle="Place 21st at Competition"
-        desc="Robot placed 21st in international competition."
-        src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
-        anchor="#ros-rover"
-        styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-      />
-      <Card
-        title="Medical Image Archive"
-        desc="Scaled to 100 million images."
-        src="image-archive.c360adba.jpg"
-        anchor="#image-archive"
-      />
-      <Card
-        title="A.I. Web App"
-        desc="A.I. Grant Finalist."
-        src="deepscatter.0b40bbf5.jpg"
-        anchor="#deep-scatter"
-      />
-      <Card
-        title="Image Analysis Framework"
-        desc="Mary Jo Haddad SickKids Innovation Award."
-        src="matkit-cells.092d1f2f.jpg"
-        anchor="#matkit"
-      />
-      <Card
-        title="Reinforcement Learning"
-        desc="Contributed to a reinforcement learning framework for physical robots."
-        src="senseact-arm.29fbdd9f.jpg"
-        anchor="#matkit"
-      />
-      <Card
-        title="Datacentre Platform"
-        desc="Contributed to a privace cloud appliance."
-        src="breqwatr-card-3.5981857b.png"
-        anchor="#breqwtr"
-      />
-      <Card
-        title="Global Social Network"
-        desc="Contributed to a social network for rare disease patients."
-        src="rareconnect.c719a054.png"
-        anchor="#rareconnect"
-        styleImg={{objectFit: 'unset'}}
-      />
-      <Card
-        title="Microscopy Analysis"
-        desc="Contributed to n research papers."
-        src="cell-tracking.93c9c9ec.jpg"
-        anchor="#cell-bio"
-      />
+      <div className='gallery-section'>
+        <div className='card-section-title-container'>
+          <div className='card-section-title'>Project Lead</div>
+        </div>
+        <Card
+          title="Placed 21st in Competition"
+          subtitle='Teleoperated Mars Rover'
+          desc="Robot placed 21st in international competition."
+          src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
+          anchor="#ros-rover"
+          styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
+        />
+        <Card
+          title="Scaled to 100 million images"
+          subtitle="Medical Image Archive"
+          desc="Scaled to 100 million images."
+          src="image-archive.c360adba.jpg"
+          anchor="#image-archive"
+        />
+        <Card
+          title="A.I. Grant Finalist"
+          subtitle="Image Similarity Web App"
+          desc="A.I. Grant Finalist."
+          src="deepscatter.0b40bbf5.jpg"
+          anchor="#deep-scatter"
+        />
+        <Card
+          title="SickKids Innovation Award"
+          subtitle="Image Analysis Framework"
+          desc="Mary Jo Haddad SickKids Innovation Award."
+          src="matkit-cells.092d1f2f.jpg"
+          anchor="#matkit"
+        />
+      </div>
+      <div className='gallery-section'>
+        <div className='card-section-title-container'>
+          <div className='card-section-title' style={{top: '-5px'}}>Contributor</div>
+        </div>
+        <Card
+          title="Reinforcement Learning"
+          desc="Contributed to a reinforcement learning framework for physical robots."
+          src="senseact-arm.29fbdd9f.jpg"
+          anchor="#matkit"
+        />
+        <Card
+          title="Datacentre Platform"
+          desc="Contributed to a privace cloud appliance."
+          src="breqwatr-card-3.5981857b.png"
+          anchor="#breqwtr"
+        />
+        <Card
+          title="Global Social Network"
+          desc="Contributed to a social network for rare disease patients."
+          src="rareconnect.c719a054.png"
+          anchor="#rareconnect"
+          styleImg={{objectFit: 'unset'}}
+        />
+        <Card
+          title="Microscopy Analysis"
+          desc="Contributed to n research papers."
+          src="cell-tracking.93c9c9ec.jpg"
+          anchor="#cell-bio"
+        />
+      </div>
     </div>
   )
 }
