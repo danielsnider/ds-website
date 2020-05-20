@@ -48,7 +48,7 @@ const sections = {
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.',
     items: {
       deepScatter: {
-        id: 'deep-scatter',
+        id: 'deepscatter',
         title: 'A.I. Web App',
         src: 'deepscatter.0b40bbf5.jpg',
       },
@@ -72,17 +72,61 @@ function Main(props) {
       <Header/>
       <Gallery/>
       <div className='body'>
-        <Section {...sections.fullStack}>
-          <ImageItem {...sections.fullStack.items.breqwatr}/>
-          <ImageItem {...sections.fullStack.items.deepScatter}/>
-          <ImageItem {...sections.fullStack.items.matkit}/>
+        <Section
+          id='breqwatr'
+          title='DevOps | Full Stack'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <ImageItem
+            src='breqwatr.7131c5d5.jpg'
+          />
         </Section>
-        <Section {...sections.computerVision}>
-          <MarkdownItem {...sections.computerVision.items.cellBio}/>
-          <ImageItem {...sections.computerVision.items.objectTracking}/>
+        <Section
+          id='deepscatter'
+          title='Deep Learning | Full Stack'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <ImageItem
+            src='deepscatter.0b40bbf5.jpg'
+          />
         </Section>
-        <Section {...sections.robotics}>
-          <MarkdownItem {...sections.robotics.items.rosRover}/>
+        <Section
+          id='matkit'
+          title='Image Analysis Framework'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <ImageItem
+            src='matkit.f372a226.jpg'
+          />
+        </Section>
+        <Section
+          id='cell-bio'
+          title='Computer Vision | Data Science'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <MarkdownItem
+            src={cellBioMarkdown}
+            filename='README.md'
+          />
+        </Section>
+        <Section
+          id='object-tracking'
+          title='Computer Vision | Full Stack'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <ImageItem
+            src='object-tracking.6ad48331.jpg'
+          />
+        </Section>
+        <Section
+          id='ros-rover'
+          title='Robotics | Real Time'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <MarkdownItem
+            src={rosRoverMarkdown}
+            filename='README.md'
+          />
         </Section>
       </div>
       <Footer/>
@@ -131,7 +175,7 @@ function Index(props) {
       <div className='index-subtitle'>Scaled to 100 million images</div>
       <a href='#ros-rover'>Teleoperated, 6-wheeled, 1-armed robot</a>
       <div className='index-subtitle'>Placed 21st at international URC competition in Utah</div>
-      <a href='#deep-scatter'>DeepScatter A.I. Web App</a>
+      <a href='#deepscatter'>DeepScatter A.I. Web App</a>
       <div className='index-subtitle'>A.I. Grant Finalist</div>
       <a href='#matkit'>MatKit-Image Analysis Framework</a>
       <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
@@ -153,12 +197,12 @@ function Gallery(props) {
     <div className='gallery'>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
-          <div className='card-section-title'>Project Lead</div>
+          <div className='card-section-title'>Lead Developer</div>
         </div>
         <Card
           title="Placed 21st in Competition"
           subtitle='Teleoperated Mars Rover'
-          desc="Robot placed 21st in international competition."
+          desc="Placed 21st in an international university robotics competition."
           src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
           anchor="#ros-rover"
           styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
@@ -175,7 +219,7 @@ function Gallery(props) {
           subtitle="Image Similarity Web App"
           desc="A.I. Grant Finalist."
           src="deepscatter.0b40bbf5.jpg"
-          anchor="#deep-scatter"
+          anchor="#deepscatter"
         />
         <Card
           title="SickKids Innovation Award"
@@ -193,13 +237,13 @@ function Gallery(props) {
           title="Reinforcement Learning"
           desc="Contributed to a reinforcement learning framework for physical robots."
           src="senseact-arm.29fbdd9f.jpg"
-          anchor="#matkit"
+          anchor="#senseact"
         />
         <Card
           title="Datacentre Platform"
           desc="Contributed to a privace cloud appliance."
           src="breqwatr-card-3.5981857b.png"
-          anchor="#breqwtr"
+          anchor="#breqwatr"
         />
         <Card
           title="Global Social Network"
