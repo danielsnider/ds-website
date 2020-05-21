@@ -313,7 +313,7 @@ function ImageItem(props) {
   return (
       <ColoredScrollbars
         style={{ width: '100%',
-        height: '70vh',
+        height: '69vh',
       }}
       >
       <div className='image-item'>
