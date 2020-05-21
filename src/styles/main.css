@@ -14,14 +14,14 @@ body {
 }
 
 .header {
-  /* background-color: rgb(22, 23, 26); */
-  /* margin-bottom: 50px; */
   display: flex;
   flex-direction: row;
   font-size: 20px;
   line-height: 25px;
   width: 100%;
   padding: 65px 0px 40px 0px;
+  /* background-color: rgb(22, 23, 26); */
+  /* margin-bottom: 50px; */
 }
 
 .header-left {
@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  /* margin-left: 120px; */
 }
 
 .city {
@@ -203,8 +204,7 @@ body {
   will-change: opacity;
   bottom: 0;
   width: 100%;
-  /* height: 300px; */
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  height: -900px;
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(22, 23, 26, 1) 100%);
   z-index: 100;
 }
@@ -216,7 +216,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: rgb(255, 255, 255);
-  /* margin-top: 0px; */
+  margin: 0 0 7px 0;
   text-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.3);
 }
 

@@ -121,7 +121,7 @@ export default class ColoredScrollbars extends Component {
 
           <div ref="bottomScrollText" className="scroll-outer">
             <div className="scroll-inner">
-              <p className='scroll-text'>SCROLL</p>
+              <div className='scroll-text'>SCROLL</div>
               <img className='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
               <img className='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
               <img className='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
