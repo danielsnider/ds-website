@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 export default class ColoredScrollbars extends Component {
-
     constructor(props, ...rest) {
         super(props, ...rest);
         this.state = {
@@ -13,8 +12,7 @@ export default class ColoredScrollbars extends Component {
           scrollTop: 0,
           scrollHeight: 0,
           clientHeight: 0
-      };
-
+        };
         this.handleUpdate = this.handleUpdate.bind(this);
         this.renderView = this.renderView.bind(this);
         this.renderThumb = this.renderThumb.bind(this);
@@ -26,15 +24,12 @@ export default class ColoredScrollbars extends Component {
       const { scrollTop, scrollHeight, clientHeight } = values;
       const shadowTopOpacity = 1 / 20 * Math.min(scrollTop, 20);
       const bottomScrollTop = scrollHeight - clientHeight;
-      console.log('bottomScrollTop:', bottomScrollTop)
       const shadowBottomOpacity = 1 / 20 * (bottomScrollTop - Math.max(scrollTop, bottomScrollTop - 20));
       css(shadowTop, { opacity: shadowTopOpacity });
       css(shadowBottom, { opacity: shadowBottomOpacity });
-      console.log('shadowBottomOpacity:', shadowBottomOpacity)
       css(bottomScrollText, { opacity: shadowBottomOpacity ? 1-shadowTopOpacity: 0 });
-
-        const { top } = values;
-        this.setState({ top });
+      const { top } = values;
+      this.setState({ top });
     }
 
     renderView({ style, ...props }) {
@@ -93,16 +88,16 @@ export default class ColoredScrollbars extends Component {
           top: 0,
           left: 0,
           right: 0,
-          height: 5,
-          background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)'
+          height: 15,
+          background: 'linear-gradient(to bottom, rgba(22, 23, 26, 0.5) 0%, rgba(22, 23, 26, 0) 50%)'
       };
       const shadowBottomStyle = {
           position: 'absolute',
           bottom: 0,
           left: 0,
           right: 0,
-          height: 15,
-          background: 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)'
+          height: 20,
+          background: 'linear-gradient(to top, rgba(22, 23, 26, 0.5) 0%, rgba(22, 23, 26, 0) 50%)'
       };
       const bottomScrollTextStyle = {
       };
@@ -111,6 +106,7 @@ export default class ColoredScrollbars extends Component {
           <div style={containerStyle}>
           <Scrollbars
               ref="scrollbars"
+              className="scrollbar"
               renderView={this.renderView}
               renderThumbHorizontal={this.renderThumbHorizontal}
               renderThumbVertical={this.renderThumb}
@@ -125,7 +121,7 @@ export default class ColoredScrollbars extends Component {
 
           <div ref="bottomScrollText" className="scroll-outer">
             <div className="scroll-inner">
-              <p className='scroll-text'>GIMME A NICE SCROLL</p>
+              <p className='scroll-text'>SCROLL</p>
               <img className='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
               <img className='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
               <img className='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
