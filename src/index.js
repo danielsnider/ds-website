@@ -1,8 +1,6 @@
 import React, { useRef, useLayoutEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import { Document, Page, pdfjs } from 'react-pdf'
-import useScrollInfo from 'react-element-scroll-hook'
-import { Scrollbars } from 'react-custom-scrollbars';
 import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
@@ -312,8 +310,6 @@ function Card(props) {
 }
 
 function Section(props) {
-  const [scrollInfo, setRef, ref] = useScrollInfo()
-
   return (
     <div id={props.id} className='section'>
       <div className='section-left'>
@@ -324,24 +320,8 @@ function Section(props) {
           {props.description}
         </div>
       </div>
-      <div className='section-right' ref={setRef}>
-        {/* <ScrollOverlay scrollInfo={scrollInfo}/> */}
+      <div className='section-right'>
         {props.children}
-      </div>
-    </div>
-  )
-}
-
-function ScrollOverlay(props) {
-  const scrollInfo = props.scrollInfo
-  const opacity = scrollInfo.y.value ? scrollInfo.y.value / 50 : 0
-  return (
-    <div className="scroll-outer" style={{opacity: 1-opacity}}>
-      <div className="scroll-inner">
-        <p id='scroll-text'>GIMME A NICE SCROLL</p>
-        <img id='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
-        <img id='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
-        <img id='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
       </div>
     </div>
   )
