@@ -26,10 +26,12 @@ export default class ColoredScrollbars extends Component {
       const { scrollTop, scrollHeight, clientHeight } = values;
       const shadowTopOpacity = 1 / 20 * Math.min(scrollTop, 20);
       const bottomScrollTop = scrollHeight - clientHeight;
+      console.log('bottomScrollTop:', bottomScrollTop)
       const shadowBottomOpacity = 1 / 20 * (bottomScrollTop - Math.max(scrollTop, bottomScrollTop - 20));
       css(shadowTop, { opacity: shadowTopOpacity });
       css(shadowBottom, { opacity: shadowBottomOpacity });
-      css(bottomScrollText, { opacity: 1-shadowTopOpacity });
+      console.log('shadowBottomOpacity:', shadowBottomOpacity)
+      css(bottomScrollText, { opacity: shadowBottomOpacity ? 1-shadowTopOpacity: 0 });
 
         const { top } = values;
         this.setState({ top });
@@ -123,10 +125,10 @@ export default class ColoredScrollbars extends Component {
 
           <div ref="bottomScrollText" className="scroll-outer">
             <div className="scroll-inner">
-              <p id='scroll-text'>GIMME A NICE SCROLL</p>
-              <img id='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
-              <img id='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
-              <img id='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
+              <p className='scroll-text'>GIMME A NICE SCROLL</p>
+              <img className='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
+              <img className='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
+              <img className='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
             </div>
           </div>
 
