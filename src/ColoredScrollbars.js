@@ -92,14 +92,13 @@ export default class ColoredScrollbars extends Component {
           background: 'linear-gradient(to bottom, rgba(22, 23, 26, 0.5) 0%, rgba(22, 23, 26, 0) 50%)'
       };
       const shadowBottomStyle = {
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: 20,
-          background: 'linear-gradient(to top, rgba(22, 23, 26, 0.5) 0%, rgba(22, 23, 26, 0) 50%)'
-      };
-      const bottomScrollTextStyle = {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 20,
+        background: 'linear-gradient(to top, rgba(22, 23, 26, 0.5) 0%, rgba(22, 23, 26, 0) 50%)',
+        borderBottom: this.props.showBottomBorder ? '1px solid rgb(225, 228, 232, .2)' : undefined
       };
 
         return (

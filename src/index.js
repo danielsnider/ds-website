@@ -29,7 +29,7 @@ function useWindowSize() {
 
 function Frame(props) {
   const [width, height] = useWindowSize();
-  const frameFontSize = width > 0 ? Math.min(width/80, 18) : 0
+  const frameFontSize = width > 0 ? Math.min(width/70, 15) : 0
   const frameIconHeight = width > 0 ? Math.min(width/50, 25) : 0
 
   // Interleave tool names with html divider
@@ -70,6 +70,34 @@ function Main(props) {
       <Gallery/>
       <div className='body'>
         <Section
+          id='cell-bio'
+          title='Computer Vision | Data Science'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            githubLink='https://github.com/danielsnider/cell-bio'
+            toolList={['Matlab']}
+          />
+          <MarkdownItem
+            src={cellBioMarkdown}
+            filename='README.md'
+          />
+        </Section>
+       <Section
+          id='ros-rover'
+          title='Robotics | Real Time'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            githubLink='https://github.com/danielsnider/ros-rover'
+            toolList={['ROS', 'Autonomy', 'Point Clouds', 'Embedded']}
+          />
+          <MarkdownItem
+            src={rosRoverMarkdown}
+            filename='README.md'
+          />
+        </Section>
+        <Section
           id='breqwatr'
           title='DevOps | Full Stack'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
@@ -109,16 +137,6 @@ function Main(props) {
           />
         </Section>
         <Section
-          id='cell-bio'
-          title='Computer Vision | Data Science'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          {/* <MarkdownItem
-            src={cellBioMarkdown}
-            filename='README.md'
-          /> */}
-        </Section>
-        <Section
           id='object-tracking'
           title='Computer Vision | Full Stack'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
@@ -130,16 +148,6 @@ function Main(props) {
           <ImageItem
             src='object-tracking.6ad48331.jpg'
           />
-        </Section>
-        <Section
-          id='ros-rover'
-          title='Robotics | Real Time'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          {/* <MarkdownItem
-            src={rosRoverMarkdown}
-            filename='README.md'
-          /> */}
         </Section>
       </div>
       <Footer/>
@@ -216,7 +224,7 @@ function Gallery(props) {
           title="Placed 21st in Competition"
           subtitle='Teleoperated Mars Rover'
           desc="Placed 21st in an international university robotics competition."
-          src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/rover_half.jpg?raw=true"
+          src="rover_half.0ad913b8.jpg"
           anchor="#ros-rover"
           styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
         />
@@ -311,15 +319,11 @@ function Section(props) {
 
 function ImageItem(props) {
   return (
-      <ColoredScrollbars
-        style={{ width: '100%',
-        height: '69vh',
-      }}
-      >
+    <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
       <div className='image-item'>
         <img id={props.id} src={props.src} className='image-img' />
       </div>
-      </ColoredScrollbars>
+    </ColoredScrollbars>
   )
 }
 
@@ -379,15 +383,13 @@ function MarkdownItem(props) {
   }
 
   return (
-    <div className='markdown-item' id={props.id}>
-      <div className='markdown-header'>
-        <div className='markdown-filename'>
-          {props.filename}
+    <div style={{position: 'relative'}}>
+      <div className='bottom-line'></div>
+      <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
+        <div id={props.id} className='markdown-content-container'>
+          <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
         </div>
-      </div>
-      <div className='markdown-content-container'>
-        <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
-      </div>
+      </ColoredScrollbars>
     </div>
   )
 }
@@ -401,18 +403,19 @@ function Logo(props) {
 function Footer(props) {
   return (
     <div className='footer'>
-      <div className='slogan'>
-        <em>When I start something, I do it with everything I have. Passion, love, and devotion, to name a few.</em>
+      <div className='slogan1'>
+        When I start something,
       </div>
-      <div className='footer-text'>
-        <p>
-          Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
-        </p>
-        <p>
-          Fork on <a href='https://github.com/danielsnider/ds-website'>Gituhb</a>.
-        </p>
-        <Logo/>
+      <div className='slogan2'>
+        I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
+      <Header/>
+      <div className='made-using'>
+        Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
+      </div>
+      {/* <div className='fork-on'>
+        Fork on <a className='github-link' href='https://github.com/danielsnider/ds-website'>github</a>.
+      </div> */}
     </div>
   )
 }

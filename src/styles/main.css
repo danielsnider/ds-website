@@ -1,8 +1,43 @@
 
+@font-face {
+  font-family: 'futura-med';
+  src: url("../fonts/Futura_Medium_BT.ttf");
+}
+
+@font-face {
+  font-family: 'legnsb';
+  src: url("../fonts/LEGSNB__.TTF");
+}
+
+@font-face {
+  font-family: 'myriad-light';
+  src: url("../fonts/MyriadPro-LightSemiExt.otf");
+}
+
+@font-face {
+  font-family: 'avan';
+  src: url("../fonts/AVANGELI.TTF");
+}
+
+@font-face {
+  font-family: 'bio';
+  src: url("../fonts/bio.otf");
+}
+
+@font-face {
+  font-family: 'links';
+  src: url("../fonts/ChaparralPro-LightCapt.otf");
+}
+
+@font-face {
+  font-family: 'github';
+  src: url("../fonts/COLLEGIA.ttf");
+}
+
 body {
   background-color: black;
   color: white;
-  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial";
+  font-family: "futura-med", sans-serif;
   font-family: 'Noto Sans', sans-serif;
   margin: 0px;
   display: flex;
@@ -22,6 +57,14 @@ body {
   padding: 65px 0px 40px 0px;
   /* background-color: rgb(22, 23, 26); */
   /* margin-bottom: 50px; */
+  font-family: 'avan'; /* super thin */
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 .header-left {
@@ -95,8 +138,75 @@ body {
 .footer {
   padding: 30px 0px;
   text-align:center;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 20px;
+  font-family: 'avan'; /* super thin */
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+}
+
+.slogan1 {
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-family: 'avan'; /* super thin */
+  font-size: 69px;
+  /* font-size: 6vw; */
+}
+
+.slogan2 {
+  font-family: 'bio'; /* italic serif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-family: 'links'; /* sarif */
+  font-family: 'avan'; /* super thin */
+  font-size: 25px;
+  /* font-size: 2.5vw; */
+  padding-bottom: 30px;
+}
+
+.made-using {
+  color: rgb(122, 124, 128);
+  font-size: 18px;
+  padding: 15px;
+}
+.fork-on {
+  color: rgb(122, 124, 128);
+  font-size: 18px;
+}
+
+.github-link {
+  font-family: 'github';
+  /* color: rgb(122, 124, 128); */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.github-link:hover {
+  color: rgb(161, 163, 167);
+}
+
+a {
+  font-family: 'github';
+  /* color: rgb(122, 124, 128); */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(161, 163, 167);
 }
 
 .logo {
@@ -123,11 +233,59 @@ body {
   overflow: hidden;
   background-color: rgb(22, 23, 26);
   border-radius: 25px;
+  font-family: 'avan'; /* super thin */
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 .section-left {
   flex: 2;
   overflow: hidden;
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'avan'; /* super thin */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-family: 'futura-med'; /* wide san serif */
+}
+
+.section-title {
+  margin-top: 0px;
+  font-family: 'bio'; /* italic serif */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'avan'; /* super thin */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-family: 'myriad-light'; /* thin */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.section-description {
+  font-family: 'bio'; /* italic serif */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'avan'; /* super thin */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-weight: 900;
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 30px;
+  color: rgb(113, 115, 128);
 }
 
 .section-right {
@@ -149,17 +307,26 @@ body {
   display: flex;
   align-items: center;
   width: calc(100% - 44.5px);
-  padding: 10px 15px;
+  padding: 7px 15px;
   font-family: 'Noto Sans', sans-serif;
   background: #f2f2f2;
   box-shadow: inset 0 0 1px #000;
-  color: #999999;
 }
 
 .frame-text {
+  color: #858585;
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  font-family: 'avan'; /* super thin */
+  font-family: 'bio'; /* italic serif */
+  font-family: 'links'; /* sarif */
+  font-family: 'legnsb'; /* style san serif */
+  font-family: 'futura-med'; /* wide san serif */
+  font-family: 'github'; /* narrow san serif */
+  font-family: 'myriad-light'; /* thin */
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+
 }
 
 .frame-link {
@@ -174,18 +341,17 @@ body {
   fill: rgb(161, 163, 167);
 }
 
+.bottom-line {
+  position: absolute;
+  top: calc(69vh - 1px);
+  width: calc(100% - 15px);
+  z-index: 99;
+  border-bottom: 1px solid rgb(225, 228, 232, .2);
+}
+
 .divider {
   color: #8080803d;
   padding: 0 4px;
-}
-
-.section-title {
-  margin-top: 0px;
-}
-
-.section-description {
-  color: rgb(113, 115, 128);
-  line-height: 30px;
 }
 
 .scroll-outer {
@@ -212,6 +378,9 @@ body {
 .scroll-text {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
+  font-size: 17px;
+  line-height: 30px;
+
   font-size: 23px;
   text-transform: uppercase;
   text-align: center;
@@ -241,22 +410,17 @@ body {
   margin-bottom: 24px;
 }
 
-.markdown-header {
-  color: white;
-  /* background-color: #202f3d; */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 8px 16px;
-  display: flex;
-}
-
-.markdown-filename {
-  align-self: flex-start;
-}
-
 .markdown-content {
-  background-color: black;
-  color: white;
+  background-color: rgba(225, 228, 232, .05);
+  padding: 0 15px;
+  overflow: hidden;
+  border: 1px solid rgb(225, 228, 232, .2);
+  color: rgb(212, 212, 212);
+  line-height: 26px;
+  font-family: 'Noto Sans', sans-serif; /* less thin */
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 30px;
 }
 
 .markdown-content p {
@@ -300,14 +464,33 @@ body {
 .card-section-title-container {
   position: relative;
 }
+
 .card-section-title {
   position: absolute;
-  font-size: 25px;
+  font-size: 22px;
   left: -137px;
   text-align: right;
+  nope-font-family: 'avan'; /* super thin */
+  nope-font-family: 'bio'; /* italic serif */
+  nope-font-family: 'links'; /* sarif */
+  nope-font-family: 'legnsb'; /* style san serif */
+  nope-font-family: 'futura-med'; /* wide san serif */
+  nope-font-family: 'github'; /* narrow san serif */
+  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
+  nope-font-family: 'myriad-light'; /* thin */
+  
 }
 
 .card-title {
+  nope-font-family: 'avan'; /* super thin */
+  nope-font-family: 'bio'; /* italic serif */
+  nope-font-family: 'links'; /* sarif */
+  nope-font-family: 'legnsb'; /* style san serif */
+  nope-font-family: 'futura-med'; /* wide san serif */
+  nope-font-family: 'github'; /* narrow san serif */
+  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
+  nope-font-family: 'myriad-light'; /* thin */
+  
   position: absolute;
   top: -62px;
   text-align: left;
@@ -315,12 +498,20 @@ body {
   font-size: 19px;
   width: 100%;
   color: rgb(122, 124, 128);
-  font-family: 'Noto Sans', sans-serif;
   top: -30px;
   position: absolute;
 }
 
 .card-subtitle {
+  nope-font-family: 'avan'; /* super thin */
+  nope-font-family: 'bio'; /* italic serif */
+  nope-font-family: 'links'; /* sarif */
+  nope-font-family: 'legnsb'; /* style san serif */
+  nope-font-family: 'futura-med'; /* wide san serif */
+  nope-font-family: 'github'; /* narrow san serif */
+  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
+  nope-font-family: 'myriad-light'; /* thin */
+  
   padding-bottom: 4px;
   font-size: 16px;
   color: rgba(122, 124, 128, 0.623);
@@ -340,6 +531,7 @@ body {
   text-align: center;
   padding: 14px;
   font-size: 20px;
+  font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 .card-wrap:hover .card-description {
@@ -366,4 +558,15 @@ body {
 .card-wrap:hover .card-description_layer {
   visibility: visible;
   opacity: 1;
+}
+
+/* <div class="left-divider"/> */
+.left-divider {
+  position: relative;
+  width: 2000px;
+  height: 50px;
+  margin-left: -2015px;
+  float: left;
+  background: transparent url('../static/divider_left.gif') 0 0 no-repeat;
+  top: 46px;
 }
