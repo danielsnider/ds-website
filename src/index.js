@@ -69,42 +69,80 @@ function Main(props) {
       <Header/>
       <Gallery/>
       <div className='body'>
+      {/* <Date date='2019'/> */}
+      <Section
+          id='image-archive'
+          title='Massive Scale'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            // webLink=''
+            toolList={['ElasticSearch', 'Python', 'Linux', 'High Performance Computing (HPC)', 'OpenStack']}
+          />
+          <ImageItem
+            src='image-archive.c360adba.jpg'
+          />
+        </Section>
+      <Section
+          id='rareconnect'
+          title='Full Stack'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            webLink='https://www.rareconnect.org/'
+            toolList={['Javascript', 'React', 'Internationalization', 'PostgreSQL', 'Docker']}
+          />
+          <ImageItem
+            src='rareconnect.c719a054.png'
+          />
+        </Section>
         <Section
           id='cell-bio'
-          title='Computer Vision | Data Science'
+          title='Data Science'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
         >
           <Frame
             githubLink='https://github.com/danielsnider/cell-bio'
-            toolList={['Matlab']}
+            toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
           />
           <MarkdownItem
             src={cellBioMarkdown}
-            filename='README.md'
           />
         </Section>
        <Section
           id='ros-rover'
-          title='Robotics | Real Time'
+          title='Robotics'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
         >
           <Frame
             githubLink='https://github.com/danielsnider/ros-rover'
-            toolList={['ROS', 'Autonomy', 'Point Clouds', 'Embedded']}
+            toolList={['ROS', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
           />
           <MarkdownItem
             src={rosRoverMarkdown}
-            filename='README.md'
+          />
+        </Section>
+        <Section
+          id='senseact'
+          title='Reinforcement Learning'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            webLink='https://www.kindred.ai/senseact'
+            toolList={['OpenAI Gym', 'Numpy', 'OpenCV', 'Real-time Computing']}
+          />
+          <ImageItem
+            src='senseact.f146fc6f.GIF'
           />
         </Section>
         <Section
           id='breqwatr'
-          title='DevOps | Full Stack'
+          title='DevOps'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
         >
           <Frame
             webLink='https://breqwatr.com/'
-            toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'SQL Cluster', 'Angular']}
+            toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'MySQL Cluster', 'Angular']}
           />
           <ImageItem
             src='breqwatr.7131c5d5.jpg'
@@ -112,7 +150,7 @@ function Main(props) {
         </Section>
         <Section
           id='deepscatter'
-          title='Deep Learning | Full Stack'
+          title='Deep Learning'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
           >
           <Frame
@@ -125,20 +163,20 @@ function Main(props) {
         </Section>
         <Section
           id='matkit'
-          title='Image Analysis Framework'
+          title='Computer Vision'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
         >
           <Frame
-            // githubLink='https://github.com/danielsnider/Deep-Scatter'
+            // githubLink='https://github.com/danielsnider/??'
             toolList={['Matlab', 'App Editor']}
           />
           <ImageItem
             src='matkit.f372a226.jpg'
           />
         </Section>
-        <Section
+        {/* <Section
           id='object-tracking'
-          title='Computer Vision | Full Stack'
+          title='Computer Vision'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
         >
           <Frame
@@ -148,7 +186,7 @@ function Main(props) {
           <ImageItem
             src='object-tracking.6ad48331.jpg'
           />
-        </Section>
+        </Section> */}
       </div>
       <Footer/>
     </div>
@@ -221,33 +259,33 @@ function Gallery(props) {
           <div className='card-section-title'>Lead Developer</div>
         </div>
         <Card
+          title="Scaled to 100 million images"
+          subtitle="Medical Image Search Archive"
+          desc="Accomplished with distributed processing across 200 servers."
+          src="image-archive.c360adba.jpg"
+          anchor="#image-archive"
+        />
+        <Card
+          title="SickKids Innovation Award"
+          subtitle="Image Analysis Framework"
+          desc="Winner of the Mary Jo Haddad SickKids Innovation Award: $10k grant."
+          src="matkit-cells.092d1f2f.jpg"
+          anchor="#matkit"
+        />
+        <Card
           title="Placed 21st in Competition"
           subtitle='Teleoperated Mars Rover'
-          desc="Placed 21st in an international university robotics competition."
+          desc="Placed 21st out of 82 teams at an international university competition."
           src="rover_half.0ad913b8.jpg"
           anchor="#ros-rover"
           styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
         />
         <Card
-          title="Scaled to 100 million images"
-          subtitle="Medical Image Archive"
-          desc="Scaled to 100 million images."
-          src="image-archive.c360adba.jpg"
-          anchor="#image-archive"
-        />
-        <Card
           title="A.I. Grant Finalist"
           subtitle="Image Similarity Web App"
-          desc="A.I. Grant Finalist."
+          desc="Compared machine learning and manifold learning algorithms."
           src="deepscatter.0b40bbf5.jpg"
           anchor="#deepscatter"
-        />
-        <Card
-          title="SickKids Innovation Award"
-          subtitle="Image Analysis Framework"
-          desc="Mary Jo Haddad SickKids Innovation Award."
-          src="matkit-cells.092d1f2f.jpg"
-          anchor="#matkit"
         />
       </div>
       <div className='gallery-section'>
@@ -255,16 +293,22 @@ function Gallery(props) {
           <div className='card-section-title' style={{top: '-5px'}}>Contributor</div>
         </div>
         <Card
-          title="Reinforcement Learning"
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
-          anchor="#senseact"
-        />
-        <Card
           title="Datacentre Platform"
           desc="Contributed to a privace cloud appliance."
           src="breqwatr-card-3.5981857b.png"
           anchor="#breqwatr"
+        />
+        <Card
+          title="Microscopy Analysis"
+          desc="Contributed to academic research papers."
+          src="cell-tracking.93c9c9ec.jpg"
+          anchor="#cell-bio"
+        />
+        <Card
+          title="Reinforcement Learning"
+          desc="Contributed to a reinforcement learning framework for physical robots."
+          src="senseact-arm.29fbdd9f.jpg"
+          anchor="#senseact"
         />
         <Card
           title="Global Social Network"
@@ -272,12 +316,6 @@ function Gallery(props) {
           src="rareconnect.c719a054.png"
           anchor="#rareconnect"
           styleImg={{objectFit: 'unset'}}
-        />
-        <Card
-          title="Microscopy Analysis"
-          desc="Contributed to n research papers."
-          src="cell-tracking.93c9c9ec.jpg"
-          anchor="#cell-bio"
         />
       </div>
     </div>

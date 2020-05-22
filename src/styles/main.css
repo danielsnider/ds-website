@@ -1,16 +1,24 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/NotoSans.woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 @font-face {
-  font-family: 'futura-med';
+  font-family: 'futura-med'; /* wide san serif */
   src: url("../fonts/Futura_Medium_BT.ttf");
 }
 
 @font-face {
-  font-family: 'legnsb';
+  font-family: 'legnsb'; /* style san serif */
   src: url("../fonts/LEGSNB__.TTF");
 }
 
 @font-face {
-  font-family: 'myriad-light';
+  font-family: 'myriad-light'; /* thin */
   src: url("../fonts/MyriadPro-LightSemiExt.otf");
 }
 
@@ -20,38 +28,27 @@
 }
 
 @font-face {
-  font-family: 'bio';
+  font-family: 'bio'; /* italic serif */
   src: url("../fonts/bio.otf");
 }
 
 @font-face {
-  font-family: 'links';
+  font-family: 'links'; /* sarif */
   src: url("../fonts/ChaparralPro-LightCapt.otf");
 }
 
 @font-face {
-  font-family: 'github';
+  font-family: 'github'; /* narrow san serif */
   src: url("../fonts/COLLEGIA.ttf");
 }
-
-
-disabled-font-family: 'bio'; /* italic serif */
-disabled-font-family: 'links'; /* sarif */
-disabled-font-family: 'legnsb'; /* style san serif */
-disabled-font-family: 'myriad-light'; /* thin */
-disabled-font-family: 'github'; /* narrow san serif */
-disabled-font-family: 'futura-med'; /* wide san serif */
-disabled-font-family: 'Noto Sans', sans-serif; /* less thin */
-
 
 body {
   background-color: black;
   color: white;
-  font-family: "futura-med", sans-serif;
-  font-family: 'Noto Sans', sans-serif;
   margin: 0px;
   display: flex;
   justify-content: center;
+  font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 #app {
@@ -414,7 +411,8 @@ a:hover {
 .card-section-title {
   position: absolute;
   font-size: 22px;
-  left: -137px;
+  left: -127px;
+  margin-right: 5px;
   text-align: right;
 }
 
@@ -433,7 +431,7 @@ a:hover {
 .card-subtitle {
   padding-bottom: 4px;
   font-size: 16px;
-  color: rgba(122, 124, 128, 0.623);
+  color: rgba(122, 124, 128, 0.75);
 }
 
 .card-img {
