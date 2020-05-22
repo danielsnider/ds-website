@@ -9,6 +9,173 @@ import rosRoverMarkdown from './static/ros-rover-readme.md'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
+function Header(props) {
+  return (
+    <div className='header'>
+      <div className='header-left'>
+        <NameAndLogo/>
+      </div>
+      <div className='header-right'>
+        <Index/>
+      </div>
+    </div>
+  )
+}
+
+function NameAndLogo(props) {
+  return (
+    <div>
+      <div>
+        <Logo/>
+      </div>
+      <div className='name'>Daniel Snider</div>
+      <div className='city'>Toronto</div>
+      <div id="contact">
+        <a href="https://twitter.com/danielsnider" target="_blank">
+          <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
+        </a>
+        <a href="mailto:danielsnider12@gmail.com" target="_blank">
+          <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path></svg>
+        </a>
+      </div>
+    </div>
+  )
+}
+
+function Logo(props) {
+  return (
+    <img className='logo' src='nature.8aa98222.svg'/>
+  )
+}
+
+function Index(props) {
+  return (
+    <div className='index'>
+      <div className='index-title'>Lead Developer</div>
+      <a href='#image-archive'>Medical Image Archive</a>
+      <div className='index-subtitle'>Scaled to 100 million images</div>
+      <a href='#ros-rover'>Teleoperated, 6-wheeled, 1-armed robot</a>
+      <div className='index-subtitle'>Placed 21st at international URC competition in Utah</div>
+      <a href='#deepscatter'>DeepScatter A.I. Web App</a>
+      <div className='index-subtitle'>A.I. Grant Finalist</div>
+      <a href='#matkit'>MatKit-Image Analysis Framework</a>
+      <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
+      {/* <a href='#cell-bio'>Microscopy Image Analysis</a> */}
+      {/* <div className='index-subtitle'>Contributed to <em>n</em> research papers</div> */}
+
+      <div className='index-2nd-title'>Contributor</div>
+      <div style={{paddingTop:'3px'}}><a href='#breqwatr'>Breqwatr private cloud</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>Rareconnect social network</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#penguin'>Penguin ASI robotics</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#senseact'>SenseAct robot learning framework</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#cell-bio'>Microscopy Image Analysis</a></div>
+    </div>
+  )
+}
+
+function Gallery(props) {
+  return (
+    <div className='gallery'>
+      <div className='gallery-section'>
+        <div className='card-section-title-container'>
+          <div className='card-section-title'>Lead Developer</div>
+        </div>
+        <Card
+          title="Scaled to 100 million images"
+          subtitle="Medical Image Search Archive"
+          desc="Accomplished with distributed processing across 200 servers."
+          src="image-archive.c360adba.jpg"
+          anchor="#image-archive"
+        />
+        <Card
+          title="SickKids Innovation Award"
+          subtitle="Image Analysis Framework"
+          desc="Winner of the Mary Jo Haddad SickKids Innovation Award: $10k grant."
+          src="matkit-cells.092d1f2f.jpg"
+          anchor="#matkit"
+        />
+        <Card
+          title="Placed 21st in Competition"
+          subtitle='Teleoperated Mars Rover'
+          desc="Placed 21st out of 82 teams at an international university competition."
+          src="rover_half.0ad913b8.jpg"
+          anchor="#ros-rover"
+          styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
+        />
+        <Card
+          title="A.I. Grant Finalist"
+          subtitle="Image Similarity Web App"
+          desc="Compared machine learning and manifold learning algorithms."
+          src="deepscatter.0b40bbf5.jpg"
+          anchor="#deepscatter"
+        />
+      </div>
+      <div className='gallery-section'>
+        <div className='card-section-title-container'>
+          <div className='card-section-title' style={{top: '-5px'}}>Contributor</div>
+        </div>
+        <Card
+          title="Datacentre Platform"
+          desc="Contributed to a privace cloud appliance."
+          src="breqwatr-card-3.5981857b.png"
+          anchor="#breqwatr"
+        />
+        <Card
+          title="Microscopy Analysis"
+          desc="Contributed to academic research papers."
+          src="cell-tracking.93c9c9ec.jpg"
+          anchor="#cell-bio"
+        />
+        <Card
+          title="Reinforcement Learning"
+          desc="Contributed to a reinforcement learning framework for physical robots."
+          src="senseact-arm.29fbdd9f.jpg"
+          anchor="#senseact"
+        />
+        <Card
+          title="Global Social Network"
+          desc="Contributed to a social network for rare disease patients."
+          src="rareconnect.c719a054.png"
+          anchor="#rareconnect"
+          styleImg={{objectFit: 'unset'}}
+        />
+      </div>
+    </div>
+  )
+}
+
+function Card(props) {
+  return (
+    <div className="card-container">
+      <div className="card-title">{props.title}</div>
+      <div className='card-subtitle'>{props.subtitle}</div>
+      <a className="card-wrap" href={props.anchor} style={props.styleWrap}>
+        <img className="card-img" src={props.src} style={props.styleImg}/>
+        <div className="card-description_layer">
+          <p className="card-description">{props.desc}</p>
+        </div>
+      </a>
+    </div>
+  )
+}
+
+function Section(props) {
+  return (
+    <div id={props.id} className='section'>
+      <div className='section-left'>
+        <h1 className='section-title'>
+          {props.title}
+        </h1>
+        <div className='section-description'>
+          {props.description}
+        </div>
+      </div>
+      <div className='section-right'>
+        {props.children}
+      </div>
+    </div>
+  )
+}
 
 function Divider(props){
   return <span className='divider'>|</span>
@@ -193,168 +360,6 @@ function Main(props) {
   )
 }
 
-function Header(props) {
-  return (
-    <div className='header'>
-      <div className='header-left'>
-        <NameAndLogo/>
-      </div>
-      <div className='header-right'>
-        <Index/>
-      </div>
-    </div>
-  )
-}
-
-function NameAndLogo(props) {
-  return (
-    <div>
-      <div>
-        <Logo/>
-      </div>
-      <div className='name'>Daniel Snider</div>
-      <div className='city'>Toronto</div>
-      <div id="contact">
-        <a href="https://twitter.com/danielsnider" target="_blank">
-          <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
-        </a>
-        <a href="mailto:danielsnider12@gmail.com" target="_blank">
-          <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path></svg>
-        </a>
-      </div>
-    </div>
-  )
-}
-
-function Index(props) {
-  return (
-    <div className='index'>
-      <div className='index-title'>Lead Developer</div>
-      <a href='#image-archive'>Medical Image Archive</a>
-      <div className='index-subtitle'>Scaled to 100 million images</div>
-      <a href='#ros-rover'>Teleoperated, 6-wheeled, 1-armed robot</a>
-      <div className='index-subtitle'>Placed 21st at international URC competition in Utah</div>
-      <a href='#deepscatter'>DeepScatter A.I. Web App</a>
-      <div className='index-subtitle'>A.I. Grant Finalist</div>
-      <a href='#matkit'>MatKit-Image Analysis Framework</a>
-      <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
-      {/* <a href='#cell-bio'>Microscopy Image Analysis</a> */}
-      {/* <div className='index-subtitle'>Contributed to <em>n</em> research papers</div> */}
-
-      <div className='index-2nd-title'>Contributor</div>
-      <div style={{paddingTop:'3px'}}><a href='#breqwatr'>Breqwatr private cloud</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>Rareconnect social network</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#penguin'>Penguin ASI robotics</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#senseact'>SenseAct robot learning framework</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#cell-bio'>Microscopy Image Analysis</a></div>
-    </div>
-  )
-}
-
-function Gallery(props) {
-  return (
-    <div className='gallery'>
-      <div className='gallery-section'>
-        <div className='card-section-title-container'>
-          <div className='card-section-title'>Lead Developer</div>
-        </div>
-        <Card
-          title="Scaled to 100 million images"
-          subtitle="Medical Image Search Archive"
-          desc="Accomplished with distributed processing across 200 servers."
-          src="image-archive.c360adba.jpg"
-          anchor="#image-archive"
-        />
-        <Card
-          title="SickKids Innovation Award"
-          subtitle="Image Analysis Framework"
-          desc="Winner of the Mary Jo Haddad SickKids Innovation Award: $10k grant."
-          src="matkit-cells.092d1f2f.jpg"
-          anchor="#matkit"
-        />
-        <Card
-          title="Placed 21st in Competition"
-          subtitle='Teleoperated Mars Rover'
-          desc="Placed 21st out of 82 teams at an international university competition."
-          src="rover_half.0ad913b8.jpg"
-          anchor="#ros-rover"
-          styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-        />
-        <Card
-          title="A.I. Grant Finalist"
-          subtitle="Image Similarity Web App"
-          desc="Compared machine learning and manifold learning algorithms."
-          src="deepscatter.0b40bbf5.jpg"
-          anchor="#deepscatter"
-        />
-      </div>
-      <div className='gallery-section'>
-        <div className='card-section-title-container'>
-          <div className='card-section-title' style={{top: '-5px'}}>Contributor</div>
-        </div>
-        <Card
-          title="Datacentre Platform"
-          desc="Contributed to a privace cloud appliance."
-          src="breqwatr-card-3.5981857b.png"
-          anchor="#breqwatr"
-        />
-        <Card
-          title="Microscopy Analysis"
-          desc="Contributed to academic research papers."
-          src="cell-tracking.93c9c9ec.jpg"
-          anchor="#cell-bio"
-        />
-        <Card
-          title="Reinforcement Learning"
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
-          anchor="#senseact"
-        />
-        <Card
-          title="Global Social Network"
-          desc="Contributed to a social network for rare disease patients."
-          src="rareconnect.c719a054.png"
-          anchor="#rareconnect"
-          styleImg={{objectFit: 'unset'}}
-        />
-      </div>
-    </div>
-  )
-}
-
-function Card(props) {
-  return (
-    <div className="card-container">
-      <div className="card-title">{props.title}</div>
-      <div className='card-subtitle'>{props.subtitle}</div>
-      <a className="card-wrap" href={props.anchor} style={props.styleWrap}>
-        <img className="card-img" src={props.src} style={props.styleImg}/>
-        <div className="card-description_layer">
-          <p className="card-description">{props.desc}</p>
-        </div>
-      </a>
-    </div>
-  )
-}
-
-function Section(props) {
-  return (
-    <div id={props.id} className='section'>
-      <div className='section-left'>
-        <h1 className='section-title'>
-          {props.title}
-        </h1>
-        <div className='section-description'>
-          {props.description}
-        </div>
-      </div>
-      <div className='section-right'>
-        {props.children}
-      </div>
-    </div>
-  )
-}
-
 function ImageItem(props) {
   return (
     <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
@@ -429,12 +434,6 @@ function MarkdownItem(props) {
         </div>
       </ColoredScrollbars>
     </div>
-  )
-}
-
-function Logo(props) {
-  return (
-    <img className='logo' src='nature.8aa98222.svg'/>
   )
 }
 
