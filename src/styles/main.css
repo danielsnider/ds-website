@@ -34,6 +34,16 @@
   src: url("../fonts/COLLEGIA.ttf");
 }
 
+
+disabled-font-family: 'bio'; /* italic serif */
+disabled-font-family: 'links'; /* sarif */
+disabled-font-family: 'legnsb'; /* style san serif */
+disabled-font-family: 'myriad-light'; /* thin */
+disabled-font-family: 'github'; /* narrow san serif */
+disabled-font-family: 'futura-med'; /* wide san serif */
+disabled-font-family: 'Noto Sans', sans-serif; /* less thin */
+
+
 body {
   background-color: black;
   color: white;
@@ -57,13 +67,6 @@ body {
   padding: 65px 0px 40px 0px;
   /* background-color: rgb(22, 23, 26); */
   /* margin-bottom: 50px; */
-  font-family: 'avan'; /* super thin */
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'futura-med'; /* wide san serif */
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
@@ -139,37 +142,16 @@ body {
   padding: 30px 0px;
   text-align:center;
   font-size: 20px;
-  font-family: 'avan'; /* super thin */
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'futura-med'; /* wide san serif */
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 .slogan1 {
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'futura-med'; /* wide san serif */
-  font-family: 'Noto Sans', sans-serif; /* less thin */
   font-family: 'avan'; /* super thin */
   font-size: 69px;
   /* font-size: 6vw; */
 }
 
 .slogan2 {
-  font-family: 'bio'; /* italic serif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'futura-med'; /* wide san serif */
-  font-family: 'Noto Sans', sans-serif; /* less thin */
-  font-family: 'links'; /* sarif */
   font-family: 'avan'; /* super thin */
   font-size: 25px;
   /* font-size: 2.5vw; */
@@ -233,38 +215,17 @@ a:hover {
   overflow: hidden;
   background-color: rgb(22, 23, 26);
   border-radius: 25px;
-  font-family: 'avan'; /* super thin */
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'futura-med'; /* wide san serif */
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
 .section-left {
   flex: 2;
   overflow: hidden;
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'myriad-light'; /* thin */
-  font-family: 'avan'; /* super thin */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'Noto Sans', sans-serif; /* less thin */
   font-family: 'futura-med'; /* wide san serif */
 }
 
 .section-title {
   margin-top: 0px;
-  font-family: 'bio'; /* italic serif */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'futura-med'; /* wide san serif */
-  font-family: 'avan'; /* super thin */
-  font-family: 'Noto Sans', sans-serif; /* less thin */
   font-family: 'myriad-light'; /* thin */
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -273,14 +234,6 @@ a:hover {
 }
 
 .section-description {
-  font-family: 'bio'; /* italic serif */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'avan'; /* super thin */
-  font-family: 'futura-med'; /* wide san serif */
-  font-family: 'myriad-light'; /* thin */
-  font-weight: 900;
   font-family: 'Noto Sans', sans-serif; /* less thin */
   font-weight: 100;
   font-size: 17px;
@@ -318,13 +271,6 @@ a:hover {
   flex: 1;
   display: flex;
   justify-content: flex-start;
-  font-family: 'avan'; /* super thin */
-  font-family: 'bio'; /* italic serif */
-  font-family: 'links'; /* sarif */
-  font-family: 'legnsb'; /* style san serif */
-  font-family: 'futura-med'; /* wide san serif */
-  font-family: 'github'; /* narrow san serif */
-  font-family: 'myriad-light'; /* thin */
   font-family: 'Noto Sans', sans-serif; /* less thin */
 
 }
@@ -470,27 +416,9 @@ a:hover {
   font-size: 22px;
   left: -137px;
   text-align: right;
-  nope-font-family: 'avan'; /* super thin */
-  nope-font-family: 'bio'; /* italic serif */
-  nope-font-family: 'links'; /* sarif */
-  nope-font-family: 'legnsb'; /* style san serif */
-  nope-font-family: 'futura-med'; /* wide san serif */
-  nope-font-family: 'github'; /* narrow san serif */
-  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
-  nope-font-family: 'myriad-light'; /* thin */
-  
 }
 
 .card-title {
-  nope-font-family: 'avan'; /* super thin */
-  nope-font-family: 'bio'; /* italic serif */
-  nope-font-family: 'links'; /* sarif */
-  nope-font-family: 'legnsb'; /* style san serif */
-  nope-font-family: 'futura-med'; /* wide san serif */
-  nope-font-family: 'github'; /* narrow san serif */
-  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
-  nope-font-family: 'myriad-light'; /* thin */
-  
   position: absolute;
   top: -62px;
   text-align: left;
@@ -503,15 +431,6 @@ a:hover {
 }
 
 .card-subtitle {
-  nope-font-family: 'avan'; /* super thin */
-  nope-font-family: 'bio'; /* italic serif */
-  nope-font-family: 'links'; /* sarif */
-  nope-font-family: 'legnsb'; /* style san serif */
-  nope-font-family: 'futura-med'; /* wide san serif */
-  nope-font-family: 'github'; /* narrow san serif */
-  nope-font-family: 'Noto Sans', sans-serif; /* less thin */
-  nope-font-family: 'myriad-light'; /* thin */
-  
   padding-bottom: 4px;
   font-size: 16px;
   color: rgba(122, 124, 128, 0.623);
