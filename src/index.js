@@ -6,7 +6,19 @@ import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
 import rosRoverMarkdown from './static/ros-rover-readme.md'
 
-// import imageArchiveUi from './images/image-archive.jpg'
+// import imageArchiveImage from './images/image-archive.jpg'
+import breqwatrCardImage from './images/breqwatr-card-3.png'
+import breqwatrMontage from './images/breqwatr.jpg'
+import cellTrackingImage from './images/cell-tracking.jpg'
+import deepscatterImage from './images/deepscatter.jpg'
+import matkitCellsImage from './images/matkit-cells.jpg'
+import matkitMontage from './images/matkit.jpg'
+import natureSvg from './images/nature.svg'
+import objectTrackingImage from './images/object-tracking.jpg'
+import rareconnectImage from './images/rareconnect.png'
+import rosRoverImage from './images/rover_half.jpg'
+import senseactArmImage from './images/senseact-arm.jpg'
+import senseactDiagram from './images/senseact.GIF'
 
 function Header(props) {
   return (
@@ -43,7 +55,7 @@ function NameAndLogo(props) {
 
 function Logo(props) {
   return (
-    <img className='logo' src='nature.8aa98222.svg'/>
+    <img className='logo' src={natureSvg}/>
   )
 }
 
@@ -83,21 +95,21 @@ function Gallery(props) {
           title="Scaled to 100 million images"
           subtitle="Medical Image Search Archive"
           desc="Accomplished with distributed processing across 200 servers."
-          src={imageArchiveUi}
+          src={'imageArchiveImage'}
           anchor="#image-archive"
         />
         <Card
           title="SickKids Innovation Award"
           subtitle="Image Analysis Framework"
           desc="Winner of the Mary Jo Haddad SickKids Innovation Award."
-          src="matkit-cells.092d1f2f.jpg"
+          src={matkitCellsImage}
           anchor="#matkit"
         />
         <Card
           title="Placed 21st in Competition"
           subtitle='Teleoperated Mars Rover'
           desc="Placed 21st out of 82 teams at an international university competition."
-          src="rover_half.0ad913b8.jpg"
+          src={rosRoverImage}
           anchor="#ros-rover"
           styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
         />
@@ -105,7 +117,7 @@ function Gallery(props) {
           title="A.I. Grant Finalist"
           subtitle="Image Similarity Web App"
           desc="Compared machine learning and manifold learning algorithms."
-          src="deepscatter.0b40bbf5.jpg"
+          src={deepscatterImage}
           anchor="#deepscatter"
         />
       </div>
@@ -116,19 +128,19 @@ function Gallery(props) {
         <Card
           title="Datacentre Platform"
           desc="Contributed to a privace cloud appliance."
-          src="breqwatr-card-3.5981857b.png"
+          src={breqwatrCardImage}
           anchor="#breqwatr"
         />
         <Card
           title="Microscopy Analysis"
           desc="Contributed to academic research papers."
-          src="cell-tracking.93c9c9ec.jpg"
+          src={cellTrackingImage}
           anchor="#cell-bio"
         />
         <Card
           title="Reinforcement Learning"
           desc="Contributed to a reinforcement learning framework for physical robots."
-          src="senseact-arm.29fbdd9f.jpg"
+          src={senseactArmImage}
           anchor="#senseact"
         />
         <Card
@@ -268,7 +280,7 @@ function Main(props) {
             toolList={['Javascript', 'React', 'Internationalization', 'PostgreSQL', 'Docker']}
           />
           <ImageItem
-            src='rareconnect.c719a054.png'
+            src={rareconnectImage}
           />
         </Section>
         <DateDivider year='2018'/>
@@ -295,7 +307,7 @@ function Main(props) {
             toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
           />
           <ImageItem
-            src='matkit.f372a226.jpg'
+            src={matkitMontage}
           />
         </Section>
         <Section
@@ -308,7 +320,7 @@ function Main(props) {
             toolList={['OpenAI Gym', 'Numpy', 'Real-time Computing']}
           />
           <ImageItem
-            src='senseact.f146fc6f.GIF'
+            src={senseactDiagram}
           />
         </Section>
         <DateDivider year='2017'/>
@@ -336,7 +348,7 @@ function Main(props) {
             toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'Zookeeper', 'MySQL Cluster']}
           />
           <ImageItem
-            src='breqwatr.7131c5d5.jpg'
+            src={breqwatrMontage}
           />
         </Section>
         <Section
@@ -362,7 +374,7 @@ function Main(props) {
             toolList={['OpenCV', 'Raspberry Pi', 'AMQP', 'Websockets']}
           />
           <ImageItem
-            src='object-tracking.6ad48331.jpg'
+            src={objectTrackingImage}
           />
         </Section> */}
       </div>

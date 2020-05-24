@@ -1,8 +1,10 @@
 import css from 'dom-css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import { Scrollbars } from 'react-custom-scrollbars';
+
+import mouseArrowSvg from './images/mouse-arrow.svg'
+import mouseBodySvg from './images/mouse-body.svg'
 
 export default class ColoredScrollbars extends Component {
     constructor(props, ...rest) {
@@ -121,9 +123,9 @@ export default class ColoredScrollbars extends Component {
           <div ref="bottomScrollText" className="scroll-outer">
             <div className="scroll-inner">
               <div className='scroll-text'>SCROLL</div>
-              <img className='scroll-svg1' alt="" src="mouse-body.28bf2410.svg" />
-              <img className='scroll-svg2' alt="" src="mouse-arrow.3422f057.svg" />
-              <img className='scroll-svg3' alt="" src="mouse-arrow.3422f057.svg" />
+              <img className='scroll-svg1' alt="" src={mouseBodySvg} />
+              <img className='scroll-svg2' alt="" src={mouseArrowSvg} />
+              <img className='scroll-svg3' alt="" src={mouseArrowSvg} />
             </div>
           </div>
 
