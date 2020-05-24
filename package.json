@@ -22,6 +22,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "marked": "^1.1.0",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {

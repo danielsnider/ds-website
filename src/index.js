@@ -6,7 +6,7 @@ import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
 import rosRoverMarkdown from './static/ros-rover-readme.md'
 
-import imageArchiveUi from './images/image-archive.jpg'
+// import imageArchiveUi from './images/image-archive.jpg'
 
 function Header(props) {
   return (
