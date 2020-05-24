@@ -7,6 +7,8 @@ import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
 import rosRoverMarkdown from './static/ros-rover-readme.md'
 
+import imageArchiveUi from './static/image-archive.jpg'
+
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
 function Header(props) {
@@ -84,7 +86,7 @@ function Gallery(props) {
           title="Scaled to 100 million images"
           subtitle="Medical Image Search Archive"
           desc="Accomplished with distributed processing across 200 servers."
-          src="image-archive.c360adba.jpg"
+          src={imageArchiveUi}
           anchor="#image-archive"
         />
         <Card
@@ -159,7 +161,16 @@ function Card(props) {
   )
 }
 
-function Section(props) {
+function DateDivider(props) {
+  return (
+    <div className='date-divider-text'>
+      {props.year}
+      <div className='date-divider'/>
+    </div>
+  )
+}
+
+  function Section(props) {
   return (
     <div id={props.id} className='section'>
       <div className='section-left'>
@@ -175,7 +186,7 @@ function Section(props) {
       </div>
     </div>
   )
-}
+  }
 
 function Divider(props){
   return <span className='divider'>|</span>
@@ -236,7 +247,7 @@ function Main(props) {
       <Header/>
       <Gallery/>
       <div className='body'>
-      {/* <Date date='2019'/> */}
+      <DateDivider year='2019'/>
       <Section
           id='image-archive'
           title='Massive Scale'
@@ -244,7 +255,7 @@ function Main(props) {
         >
           <Frame
             // webLink=''
-            toolList={['ElasticSearch', 'Python', 'Linux', 'High Performance Computing (HPC)', 'OpenStack']}
+            toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
           />
           <ImageItem
             src='image-archive.c360adba.jpg'
@@ -263,58 +274,7 @@ function Main(props) {
             src='rareconnect.c719a054.png'
           />
         </Section>
-        <Section
-          id='cell-bio'
-          title='Data Science'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          <Frame
-            githubLink='https://github.com/danielsnider/cell-bio'
-            toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
-          />
-          <MarkdownItem
-            src={cellBioMarkdown}
-          />
-        </Section>
-       <Section
-          id='ros-rover'
-          title='Robotics'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          <Frame
-            githubLink='https://github.com/danielsnider/ros-rover'
-            toolList={['ROS', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
-          />
-          <MarkdownItem
-            src={rosRoverMarkdown}
-          />
-        </Section>
-        <Section
-          id='senseact'
-          title='Reinforcement Learning'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          <Frame
-            webLink='https://www.kindred.ai/senseact'
-            toolList={['OpenAI Gym', 'Numpy', 'OpenCV', 'Real-time Computing']}
-          />
-          <ImageItem
-            src='senseact.f146fc6f.GIF'
-          />
-        </Section>
-        <Section
-          id='breqwatr'
-          title='DevOps'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          <Frame
-            webLink='https://breqwatr.com/'
-            toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'MySQL Cluster', 'Angular']}
-          />
-          <ImageItem
-            src='breqwatr.7131c5d5.jpg'
-          />
-        </Section>
+        <DateDivider year='2018'/>
         <Section
           id='deepscatter'
           title='Deep Learning'
@@ -335,10 +295,64 @@ function Main(props) {
         >
           <Frame
             // githubLink='https://github.com/danielsnider/??'
-            toolList={['Matlab', 'App Editor']}
+            toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
           />
           <ImageItem
             src='matkit.f372a226.jpg'
+          />
+        </Section>
+        <Section
+          id='senseact'
+          title='Reinforcement Learning'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            webLink='https://www.kindred.ai/senseact'
+            toolList={['OpenAI Gym', 'Numpy', 'Real-time Computing']}
+          />
+          <ImageItem
+            src='senseact.f146fc6f.GIF'
+          />
+        </Section>
+        <DateDivider year='2017'/>
+        <Section
+          id='ros-rover'
+          title='Robotics'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            githubLink='https://github.com/danielsnider/ros-rover'
+            toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
+          />
+          <MarkdownItem
+            src={rosRoverMarkdown}
+          />
+        </Section>
+        <DateDivider year='2016'/>
+        <Section
+          id='breqwatr'
+          title='DevOps'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            webLink='https://breqwatr.com/'
+            toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'Zookeeper', 'MySQL Cluster']}
+          />
+          <ImageItem
+            src='breqwatr.7131c5d5.jpg'
+          />
+        </Section>
+        <Section
+          id='cell-bio'
+          title='Data Science'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+        >
+          <Frame
+            githubLink='https://github.com/danielsnider/cell-bio'
+            toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
+          />
+          <MarkdownItem
+            src={cellBioMarkdown}
           />
         </Section>
         {/* <Section
@@ -446,7 +460,7 @@ function Footer(props) {
       <div className='slogan2'>
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
-      <Header/>
+      {/* <Header/> */}
       <div className='made-using'>
         Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
       </div>

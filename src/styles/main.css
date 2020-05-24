@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'avan';
+  font-family: 'avan'; /* super thin */
   src: url("../fonts/AVANGELI.TTF");
 }
 
@@ -202,11 +202,29 @@ a:hover {
   width: 100%;
 }
 
+.date-divider-text {
+  font-family: 'avan'; /* super thin */
+  font-size: 35px;
+  position: relative;
+  font-weight: 100;
+  padding-left: 57px;
+  color: rgb(122, 124, 128);
+}
+
+.date-divider {
+  position: absolute;
+  width: 2000px;
+  height: 50px;
+  background: transparent url('../static/divider_left.gif') 0 0 no-repeat;
+  top: 15px;
+  left: -1950px;
+}
+
 .section {
   display: flex;
   flex-direction: row;
   width: 80%;
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
   padding: 40px;
   max-width: 2000px;
   overflow: hidden;
@@ -475,15 +493,4 @@ a:hover {
 .card-wrap:hover .card-description_layer {
   visibility: visible;
   opacity: 1;
-}
-
-/* <div class="left-divider"/> */
-.left-divider {
-  position: relative;
-  width: 2000px;
-  height: 50px;
-  margin-left: -2015px;
-  float: left;
-  background: transparent url('../static/divider_left.gif') 0 0 no-repeat;
-  top: 46px;
 }
