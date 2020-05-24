@@ -1,15 +1,12 @@
 import React, { useRef, useLayoutEffect, useState } from "react"
 import ReactDOM from "react-dom"
-import { Document, Page, pdfjs } from 'react-pdf'
 import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
 import rosRoverMarkdown from './static/ros-rover-readme.md'
 
-import imageArchiveUi from './static/image-archive.jpg'
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+import imageArchiveUi from './images/image-archive.jpg'
 
 function Header(props) {
   return (
@@ -92,7 +89,7 @@ function Gallery(props) {
         <Card
           title="SickKids Innovation Award"
           subtitle="Image Analysis Framework"
-          desc="Winner of the Mary Jo Haddad SickKids Innovation Award: $10k grant."
+          desc="Winner of the Mary Jo Haddad SickKids Innovation Award."
           src="matkit-cells.092d1f2f.jpg"
           anchor="#matkit"
         />
@@ -409,29 +406,31 @@ function IframeItem(props) {
   )
 }
 
-function PdfItem(props) {
-  /*
-    1. Do the import the file
-    import objectTrackingPdf from './static/object-tracking.pdf'
+// function PdfItem(props) {
+//   /*
+//     1. Do the import the file
+//     import { Document, Page, pdfjs } from 'react-pdf'
+//     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+//     import objectTrackingPdf from './static/object-tracking.pdf'
 
-    2. Add item data to a content section
-    objectTrackingPdf: {
-      id: 'object-tracking',
-      title: 'Object Tracking',
-      file: objectTrackingPdf,
-    }
+//     2. Add item data to a content section
+//     objectTrackingPdf: {
+//       id: 'object-tracking',
+//       title: 'Object Tracking',
+//       file: objectTrackingPdf,
+//     }
 
-    3. Then use this component:
-    <PdfItem {...sections.computerVision.items.objectTrackingPdf}/>
-  */
-  return (
-    <div className='image-item' id={props.id} className='image-img'>
-      <Document file={props.file} >
-        <Page pageNumber={1} />
-      </Document>
-    </div>
-  )
-}
+//     3. Then use this component:
+//     <PdfItem {...sections.computerVision.items.objectTrackingPdf}/>
+//   */
+//   return (
+//     <div className='image-item' id={props.id} className='image-img'>
+//       <Document file={props.file} >
+//         <Page pageNumber={1} />
+//       </Document>
+//     </div>
+//   )
+// }
 
 function MarkdownItem(props) {
   const getMarkdownText = () => {
