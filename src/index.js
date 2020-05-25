@@ -146,7 +146,7 @@ function Gallery(props) {
         <Card
           title="Global Social Network"
           desc="Contributed to a social network for rare disease patients."
-          src="rareconnect.c719a054.png"
+          src={rareconnectImage}
           anchor="#rareconnect"
           styleImg={{objectFit: 'unset'}}
         />
@@ -267,7 +267,7 @@ function Main(props) {
             toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
           />
           <ImageItem
-            src='image-archive.c360adba.jpg'
+            src={'imageArchiveImage'}
           />
         </Section>
       <Section
@@ -294,7 +294,7 @@ function Main(props) {
             toolList={['Numpy', 'Pandas', 'Scikit-Learn', 'Matplotlib', 'Flask']}
           />
           <ImageItem
-            src='deepscatter.0b40bbf5.jpg'
+            src={deepscatterImage}
           />
         </Section>
         <Section
