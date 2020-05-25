@@ -5,20 +5,22 @@ import ColoredScrollbars from './ColoredScrollbars';
 import './styles/main.css'
 import cellBioMarkdown from './static/cell-bio-readme.md'
 import rosRoverMarkdown from './static/ros-rover-readme.md'
-
-// import imageArchiveImage from './images/image-archive.jpg'
-import breqwatrCardImage from './images/breqwatr-card-3.png'
+import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
+import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
+import breqwatrCardImage from './images/breqwatr-card-50.jpg'
 import breqwatrMontage from './images/breqwatr.jpg'
 import cellTrackingImage from './images/cell-tracking.jpg'
 import deepscatterImage from './images/deepscatter.jpg'
-import matkitCellsImage from './images/matkit-cells.jpg'
-import matkitMontage from './images/matkit.jpg'
+import deepscatterImage33 from './images/deepscatter_cropped_33.jpg'
+import matkitCellsImage from './images/matkit-cells_40.jpg'
+import matkitMontage from './images/matkit-short.jpg'
 import natureSvg from './images/nature.svg'
 import objectTrackingImage from './images/object-tracking.jpg'
 import rareconnectImage from './images/rareconnect.png'
-import rosRoverImage from './images/rover_half.jpg'
+import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact.GIF'
+
 
 function Header(props) {
   return (
@@ -95,7 +97,7 @@ function Gallery(props) {
           title="Scaled to 100 million images"
           subtitle="Medical Image Search Archive"
           desc="Accomplished with distributed processing across 200 servers."
-          src={'imageArchiveImage'}
+          src={imageArchiveImage20}
           anchor="#image-archive"
         />
         <Card
@@ -117,7 +119,7 @@ function Gallery(props) {
           title="A.I. Grant Finalist"
           subtitle="Image Similarity Web App"
           desc="Compared machine learning and manifold learning algorithms."
-          src={deepscatterImage}
+          src={deepscatterImage33}
           anchor="#deepscatter"
         />
       </div>
@@ -267,7 +269,7 @@ function Main(props) {
             toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
           />
           <ImageItem
-            src={'imageArchiveImage'}
+            src={imageArchiveImage50}
           />
         </Section>
       <Section
@@ -333,9 +335,9 @@ function Main(props) {
             githubLink='https://github.com/danielsnider/ros-rover'
             toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
           />
-          <MarkdownItem
+          {/* <MarkdownItem
             src={rosRoverMarkdown}
-          />
+          /> */}
         </Section>
         <DateDivider year='2016'/>
         <Section
@@ -360,9 +362,9 @@ function Main(props) {
             githubLink='https://github.com/danielsnider/cell-bio'
             toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
           />
-          <MarkdownItem
+          {/* <MarkdownItem
             src={cellBioMarkdown}
-          />
+          /> */}
         </Section>
         {/* <Section
           id='object-tracking'
