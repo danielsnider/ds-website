@@ -29,7 +29,16 @@ function Header(props) {
         <NameAndLogo/>
       </div>
       <div className='header-right'>
-        <Index/>
+        {/* <Index/> */}
+        <div className='about'>
+          {/* <span className='hello'>Hello</span> */}
+          <span className='about-sentance'>
+            Hello, my name is Daniel and <span className='about-emphasis'>I automate</span>.
+          </span>
+          <div className='about-sentance'>
+            In collaboration with great engineers, designers, and managers I create user-centered solutions that enhance the capabilites of people.
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -37,11 +46,10 @@ function Header(props) {
 
 function NameAndLogo(props) {
   return (
-    <div>
-      <div>
-        <Logo/>
-      </div>
+    <div className='name-and-logo'>
+      <Logo/>
       <div className='name'>Daniel Snider</div>
+      <div className='city'>Software Developer</div>
       <div className='city'>Toronto</div>
       <div id="contact">
         <a href="https://twitter.com/danielsnider" target="_blank">
@@ -89,69 +97,79 @@ function Index(props) {
 function Gallery(props) {
   return (
     <div className='gallery'>
+      <DateDivider year='Lead Developer'/>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
-          <div className='card-section-title'>Lead Developer</div>
+          {/* <div className='card-section-title'>Lead Developer</div> */}
         </div>
-        <Card
-          title="Scaled to 100 million images"
-          subtitle="Medical Image Search Archive"
-          desc="Accomplished with distributed processing across 200 servers."
-          src={imageArchiveImage20}
-          anchor="#image-archive"
-        />
-        <Card
-          title="SickKids Innovation Award"
-          subtitle="Image Analysis Framework"
-          desc="Winner of the Mary Jo Haddad SickKids Innovation Award."
-          src={matkitCellsImage}
-          anchor="#matkit"
-        />
-        <Card
-          title="Placed 21st in Competition"
-          subtitle='Teleoperated Mars Rover'
-          desc="Placed 21st out of 82 teams at an international university competition."
-          src={rosRoverImage}
-          anchor="#ros-rover"
-          styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
-        />
-        <Card
-          title="A.I. Grant Finalist"
-          subtitle="Image Similarity Web App"
-          desc="Compared machine learning and manifold learning algorithms."
-          src={deepscatterImage33}
-          anchor="#deepscatter"
-        />
+        <span className='card-group'>
+          <Card
+            title="Scaled to 100 million images"
+            subtitle="Medical Image Search Archive"
+            desc="Accomplished with distributed processing across 200 servers."
+            src={imageArchiveImage20}
+            anchor="#image-archive"
+            />
+          <Card
+            title="SickKids Innovation Award"
+            subtitle="Image Analysis Framework"
+            desc="Winner of the Mary Jo Haddad SickKids Innovation Award."
+            src={matkitCellsImage}
+            anchor="#matkit"
+            />
+        </span>
+        <span className='card-group'>
+          <Card
+            title="Placed 21st in Competition"
+            subtitle='Teleoperated Mars Rover'
+            desc="Placed 21st out of 82 teams at an international university competition."
+            src={rosRoverImage}
+            anchor="#ros-rover"
+            styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
+          />
+          <Card
+            title="A.I. Grant Finalist"
+            subtitle="Image Similarity Web App"
+            desc="Compared machine learning and manifold learning algorithms."
+            src={deepscatterImage33}
+            anchor="#deepscatter"
+          />
+        </span>
       </div>
+      <DateDivider year='Contributor'/>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
-          <div className='card-section-title' style={{top: '-5px'}}>Contributor</div>
+          {/* <div className='card-section-title' style={{top: '-5px'}}>Contributor</div> */}
         </div>
-        <Card
-          title="Datacentre Platform"
-          desc="Contributed to a privace cloud appliance."
-          src={breqwatrCardImage}
-          anchor="#breqwatr"
-        />
-        <Card
-          title="Microscopy Analysis"
-          desc="Contributed to academic research papers."
-          src={cellTrackingImage}
-          anchor="#cell-bio"
-        />
-        <Card
-          title="Reinforcement Learning"
-          desc="Contributed to a reinforcement learning framework for physical robots."
-          src={senseactArmImage}
-          anchor="#senseact"
-        />
-        <Card
-          title="Global Social Network"
-          desc="Contributed to a social network for rare disease patients."
-          src={rareconnectImage}
-          anchor="#rareconnect"
-          styleImg={{objectFit: 'unset'}}
-        />
+        <span className='card-group'>
+          <Card
+            title="Datacentre Platform"
+            desc="Contributed to a privace cloud appliance."
+            src={breqwatrCardImage}
+            anchor="#breqwatr"
+            />
+          <Card
+            title="Microscopy Analysis"
+            desc="Contributed to academic research papers."
+            src={cellTrackingImage}
+            anchor="#cell-bio"
+          />
+        </span>
+        <span className='card-group'>
+          <Card
+            title="Reinforcement Learning"
+            desc="Contributed to a reinforcement learning framework for physical robots."
+            src={senseactArmImage}
+            anchor="#senseact"
+          />
+          <Card
+            title="Global Social Network"
+            desc="Contributed to a social network for rare disease patients."
+            src={rareconnectImage}
+            anchor="#rareconnect"
+            styleImg={{objectFit: 'unset'}}
+          />
+        </span>
       </div>
     </div>
   )
@@ -173,10 +191,11 @@ function Card(props) {
 }
 
 function DateDivider(props) {
+  const alignRight = props.alignRight ? '-right' : ''
   return (
-    <div className='date-divider-text'>
+    <div className={`date-divider-text${alignRight}`}>
       {props.year}
-      <div className='date-divider'/>
+      <div className={`date-divider${alignRight}`}/>
     </div>
   )
 }
@@ -262,7 +281,7 @@ function Main(props) {
       <Section
           id='image-archive'
           title='Massive Scale'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description='A Picture Archive System (PACS) built for the SickKids Research Institute and used by medical and A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, image metadata, and PHI burned into the image pixels. De-identification of burned-in PHI is no easy task, and we have developed a computer algorithm to automate the process with a high degree of success.'
         >
           <Frame
             // webLink=''
@@ -475,7 +494,7 @@ function Footer(props) {
       </div>
       {/* <Header/> */}
       <div className='made-using'>
-        Made using <a href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a href='https://parceljs.org/'>Parcel</a>.
+        Made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://parceljs.org/'>Parcel</a>.
       </div>
       {/* <div className='fork-on'>
         Fork on <a className='github-link' href='https://github.com/danielsnider/ds-website'>github</a>.

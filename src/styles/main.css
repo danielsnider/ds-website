@@ -60,10 +60,9 @@ body {
   flex-direction: row;
   font-size: 20px;
   line-height: 25px;
-  width: 100%;
-  padding: 65px 0px 40px 0px;
-  /* background-color: rgb(22, 23, 26); */
-  /* margin-bottom: 50px; */
+  padding: 65px 9vw 40px 9vw;
+  background-color: rgb(22, 23, 26);
+  margin-bottom: 45px;
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
@@ -74,6 +73,10 @@ body {
   flex-direction: column;
   flex: 1;
   /* margin-left: 120px; */
+}
+
+.name-and-logo {
+
 }
 
 .city {
@@ -98,10 +101,33 @@ body {
 }
 
 .header-right {
-  text-align: center;
-  display: none;
   flex-direction: column;
   flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about {
+  text-align: left;
+  padding-bottom: 4px;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgb(122, 124, 128);
+  max-width: 600px;
+  /* padding-top: 40px; */
+}
+
+.about-sentance {
+  padding: 10px 0;
+}
+
+.about-emphasis {
+  color: white;
+}
+
+.hello {
+  color: rgba(122, 124, 128, 0.75);
+  padding-right: 20px;
 }
 
 .index {
@@ -172,6 +198,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   font-size: 18px;
+  padding: 0 1px;
 }
 .github-link:hover {
   color: rgb(161, 163, 167);
@@ -197,8 +224,8 @@ a:hover {
 }
 
 .image-img {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   width: 100%;
 }
 
@@ -218,6 +245,26 @@ a:hover {
   background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
   top: 15px;
   left: calc(-1982px + 5vw);
+}
+
+.date-divider-text-right {
+  font-family: 'avan'; /* super thin */
+  font-size: 35px;
+  position: relative;
+  font-weight: 100;
+  padding-right: calc(28px + 5vw) ;
+  text-align: right;
+  color: rgb(122, 124, 128);
+}
+
+.date-divider-right {
+  position: absolute;
+  width: 2000px;
+  height: 50px;
+  background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
+  right: calc(-1982px + 5vw);
+  top: -23px;
+  transform: rotate(180deg);
 }
 
 .section {
@@ -251,8 +298,8 @@ a:hover {
 .section-description {
   font-family: 'Noto Sans', sans-serif; /* less thin */
   font-weight: 100;
-  font-size: 17px;
-  line-height: 30px;
+  font-size: min(calc(6px + 1vw), 22px);
+  line-height: min(calc(12px + 1.5vw), 40px);
   color: rgb(113, 115, 128);
 }
 
@@ -392,7 +439,7 @@ a:hover {
 }
 
 .gallery {
-  margin: 0px 10px 0px 130px;
+  /* margin: 0px 130px 0px 130px; */
 }
 
 .gallery-section {
@@ -403,6 +450,11 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.card-group {
+  display: flex;
 }
 
 .card-wrap {
