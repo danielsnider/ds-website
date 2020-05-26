@@ -126,8 +126,9 @@ body {
 }
 
 .hello {
-  color: rgba(122, 124, 128, 0.75);
-  padding-right: 20px;
+  /* color: rgba(122, 124, 128, 0.65); */
+  /* padding-right: 20px; */
+  padding: 10px 0;
 }
 
 .index {
@@ -224,8 +225,7 @@ a:hover {
 }
 
 .image-img {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   width: 100%;
 }
 

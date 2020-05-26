@@ -17,6 +17,7 @@ import matkitMontage from './images/matkit-short.jpg'
 import natureSvg from './images/nature.svg'
 import objectTrackingImage from './images/object-tracking.jpg'
 import rareconnectImage from './images/rareconnect.png'
+import rareconnectWysiwygImage from './images/rareconnect-wysiwyg.jpg'
 import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact.GIF'
@@ -31,12 +32,12 @@ function Header(props) {
       <div className='header-right'>
         {/* <Index/> */}
         <div className='about'>
-          {/* <span className='hello'>Hello</span> */}
+          <div className='about-sentance'>Hello and Welcome!</div>
           <span className='about-sentance'>
-            Hello, my name is Daniel and <span className='about-emphasis'>I automate</span>.
+            My name is Daniel and <span className='about-emphasis'>I automate for the benefit of all people</span>.
           </span>
           <div className='about-sentance'>
-            In collaboration with great engineers, designers, and managers I create user-centered solutions that enhance the capabilites of people.
+            In collaboration with great engineers, scientists, and managers I create user-focused solutions to enhance the capabilites of people.
           </div>
         </div>
       </div>
@@ -252,21 +253,36 @@ function Frame(props) {
   }
   toolList.pop(); // Remove the <Divider/> that is after the last list item
 
+  // Set 0px border radius on the first child element in the frame becuase it looks nice
+  const children = props.hasOwnProperty('children') && props.children !== undefined ? (Array.isArray(props.children) ? props.children : [props.children]) : []
+  const newChildren = children.map((child, index) => {
+    const borderRadius = index === 0 ? '0px' : undefined
+    return React.cloneElement(child, {
+      style: {borderTopLeftRadius: borderRadius, borderTopRightRadius: borderRadius},
+      key: index,
+    })
+  })
+
   return (
-    <div className='frame-top'>
-      <span className='frame-text' style={{fontSize:frameFontSize}}>{toolList}</span>
-      { props.webLink ?
-        <a href={props.webLink} target="_blank">
-        <svg className='frame-link' style={{height:frameIconHeight}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
-      </a>
-       : null
-      }
-      { props.githubLink ?
-        <a href={props.githubLink} target="_blank">
-        <svg className='frame-link' style={{height:frameIconHeight}} viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg>
-      </a>
-       : null
-      }
+    <div className='frame'>
+      <div className='frame-top'>
+        <span className='frame-text' style={{fontSize:frameFontSize}}>{toolList}</span>
+        { props.webLink ?
+          <a href={props.webLink} target="_blank">
+          <svg className='frame-link' style={{height:frameIconHeight}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+        </a>
+        : null
+        }
+        { props.githubLink ?
+          <a href={props.githubLink} target="_blank">
+          <svg className='frame-link' style={{height:frameIconHeight}} viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg>
+        </a>
+        : null
+        }
+      </div>
+      <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
+        {newChildren}
+      </ColoredScrollbars>
   </div>
   )
 }
@@ -281,15 +297,16 @@ function Main(props) {
       <Section
           id='image-archive'
           title='Massive Scale'
-          description='A Picture Archive System (PACS) built for the SickKids Research Institute and used by medical and A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, image metadata, and PHI burned into the image pixels. De-identification of burned-in PHI is no easy task, and we have developed a computer algorithm to automate the process with a high degree of success.'
+          description='In 2019 at the SickKids Research Institute I created a Picture Archive System (PACS) to assist A.I. researchers in modeling disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, image metadata, and PHI burned into the image pixels. De-identifying burned-in PHI is no easy task, and we developed an algorithm to automate the process with a high degree of accuracy.'
         >
           <Frame
             // webLink=''
             toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
-          />
-          <ImageItem
-            src={imageArchiveImage50}
-          />
+          >
+            <ImageItem
+              src={imageArchiveImage50}
+            />
+          </Frame>
         </Section>
       <Section
           id='rareconnect'
@@ -299,10 +316,14 @@ function Main(props) {
           <Frame
             webLink='https://www.rareconnect.org/'
             toolList={['Javascript', 'React', 'Internationalization', 'PostgreSQL', 'Docker']}
-          />
-          <ImageItem
-            src={rareconnectImage}
-          />
+          >
+            <ImageItem
+              src={rareconnectImage}
+            />
+            <ImageItem
+              src={rareconnectWysiwygImage}
+            />
+          </Frame>
         </Section>
         <DateDivider year='2018'/>
         <Section
@@ -313,10 +334,11 @@ function Main(props) {
           <Frame
             githubLink='https://github.com/danielsnider/Deep-Scatter'
             toolList={['Numpy', 'Pandas', 'Scikit-Learn', 'Matplotlib', 'Flask']}
-          />
-          <ImageItem
-            src={deepscatterImage}
-          />
+          >
+            <ImageItem
+              src={deepscatterImage}
+            />
+          </Frame>
         </Section>
         <Section
           id='matkit'
@@ -326,10 +348,11 @@ function Main(props) {
           <Frame
             // githubLink='https://github.com/danielsnider/??'
             toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
-          />
-          <ImageItem
-            src={matkitMontage}
-          />
+          >
+            <ImageItem
+              src={matkitMontage}
+            />
+          </Frame>
         </Section>
         <Section
           id='senseact'
@@ -339,10 +362,11 @@ function Main(props) {
           <Frame
             webLink='https://www.kindred.ai/senseact'
             toolList={['OpenAI Gym', 'Numpy', 'Real-time Computing']}
-          />
-          <ImageItem
-            src={senseactDiagram}
-          />
+          >
+            <ImageItem
+              src={senseactDiagram}
+            />
+          </Frame>
         </Section>
         <DateDivider year='2017'/>
         <Section
@@ -353,10 +377,11 @@ function Main(props) {
           <Frame
             githubLink='https://github.com/danielsnider/ros-rover'
             toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
-          />
-          {/* <MarkdownItem
-            src={rosRoverMarkdown}
-          /> */}
+          >
+            {/* <MarkdownItem
+              src={rosRoverMarkdown}
+            /> */}
+          </Frame>
         </Section>
         <DateDivider year='2016'/>
         <Section
@@ -367,10 +392,11 @@ function Main(props) {
           <Frame
             webLink='https://breqwatr.com/'
             toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'Zookeeper', 'MySQL Cluster']}
-          />
-          <ImageItem
-            src={breqwatrMontage}
-          />
+          >
+            <ImageItem
+              src={breqwatrMontage}
+            />
+          </Frame>
         </Section>
         <Section
           id='cell-bio'
@@ -380,10 +406,11 @@ function Main(props) {
           <Frame
             githubLink='https://github.com/danielsnider/cell-bio'
             toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
-          />
-          {/* <MarkdownItem
-            src={cellBioMarkdown}
-          /> */}
+          >
+            {/* <MarkdownItem
+              src={cellBioMarkdown}
+            /> */}
+          </Frame>
         </Section>
         {/* <Section
           id='object-tracking'
@@ -406,11 +433,9 @@ function Main(props) {
 
 function ImageItem(props) {
   return (
-    <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
-      <div className='image-item'>
-        <img id={props.id} src={props.src} className='image-img' />
-      </div>
-    </ColoredScrollbars>
+    <div className='image-item'>
+      <img id={props.id} src={props.src} style={props.style} className='image-img' />
+    </div>
   )
 }
 
