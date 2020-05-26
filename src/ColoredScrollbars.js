@@ -35,12 +35,14 @@ export default class ColoredScrollbars extends Component {
     }
 
     renderView({ style, ...props }) {
-        const { top } = this.state;
-        const viewStyle = {
-            backgroundColor: 'white',
-            padding: '0px 15px 0px 0px',
-            backgroundColor: 'rgb(22, 23, 26)',
-        };
+      const { top } = this.state;
+      const viewStyle = {
+        backgroundColor: 'white',
+        padding: '0px 15px 0px 0px',
+        backgroundColor: 'rgb(22, 23, 26)',
+      };
+      style['marginBottom'] = style['marginBottom'] - 1
+      style['marginRight'] = style['marginRight'] - 1
         return (
             <div
                 className="scroll-box"

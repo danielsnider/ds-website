@@ -87,7 +87,7 @@ function Index(props) {
 
       <div className='index-2nd-title'>Contributor</div>
       <div style={{paddingTop:'3px'}}><a href='#breqwatr'>Breqwatr private cloud</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>Rareconnect social network</a></div>
+      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>RareConnect social network</a></div>
       <div style={{paddingTop:'3px'}}><a href='#penguin'>Penguin ASI robotics</a></div>
       <div style={{paddingTop:'3px'}}><a href='#senseact'>SenseAct robot learning framework</a></div>
       <div style={{paddingTop:'3px'}}><a href='#cell-bio'>Microscopy Image Analysis</a></div>
@@ -220,7 +220,7 @@ function DateDivider(props) {
   }
 
 function Divider(props){
-  return <span className='divider'>|</span>
+  return <span className='frame-text-dividers'>|</span>
 }
 
 function useWindowSize() {
@@ -256,9 +256,10 @@ function Frame(props) {
   // Set 0px border radius on the first child element in the frame becuase it looks nice
   const children = props.hasOwnProperty('children') && props.children !== undefined ? (Array.isArray(props.children) ? props.children : [props.children]) : []
   const newChildren = children.map((child, index) => {
+    const existingStyle = child.props.hasOwnProperty('style') ? child.props.style : {}
     const borderRadius = index === 0 ? '0px' : undefined
     return React.cloneElement(child, {
-      style: {borderTopLeftRadius: borderRadius, borderTopRightRadius: borderRadius},
+      style: {borderTopLeftRadius: borderRadius, borderTopRightRadius: borderRadius, ...existingStyle },
       key: index,
     })
   })
@@ -293,11 +294,11 @@ function Main(props) {
       <Header/>
       <Gallery/>
       <div className='body'>
-      <DateDivider year='2019'/>
+      <DateDivider year='2019–2020'/>
       <Section
           id='image-archive'
           title='Massive Scale'
-          description='In 2019 at the SickKids Research Institute I created a Picture Archive System (PACS) to assist A.I. researchers in modeling disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, image metadata, and PHI burned into the image pixels. De-identifying burned-in PHI is no easy task, and we developed an algorithm to automate the process with a high degree of accuracy.'
+          description='At the SickKids Research Institute I lead the developement of a Picture Archive System (PACS). The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, metadata, and PHI burned into the image pixels. De-identifying burned-in PHI is no easy task, and we developed an algorithm to automate the process with a high degree of accuracy.'
         >
           <Frame
             // webLink=''
@@ -311,25 +312,44 @@ function Main(props) {
       <Section
           id='rareconnect'
           title='Full Stack'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description="At the SickKids Research Institute I contributed to the RareConnect social network for rare disease patients. I worked on all technical aspects of the project with major contributions to the areas of microservices, testing, and user experience (UX)."
         >
           <Frame
             webLink='https://www.rareconnect.org/'
-            toolList={['Javascript', 'React', 'Internationalization', 'PostgreSQL', 'Docker']}
+            toolList={['Javascript', 'React', 'PostgreSQL', 'Docker', 'Internationalization']}
           >
+            <div className='markdown-content'>
             <ImageItem
               src={rareconnectImage}
+              style={{ /* Make this image flush with the top and sides of the Frame */
+                width: 'calc(100% + 30px)',
+                marginLeft: '-15px',
+                marginTop: '-1px',
+                borderTopLeftRadius: '0px',
+                borderTopRightRadius: '0px',
+              }}
             />
+            <div className='content-title'>UX Redesign — Social Post Editor</div>
+            <div className='content-text'>
+              The social post editor that I designed and implemented supports WYSIWYG formatting and Markdown formatting. Additional features include mentions, notifications, and mobile & desktop layouts. Posts are <b>automatically translated between 12 languages</b> including right-to-left written languages.
+            </div>
             <ImageItem
               src={rareconnectWysiwygImage}
-            />
+              style={{ /* Make this image smaller and centered */
+                width: '80%',
+                margin: '0 auto',
+                display: 'block',
+                borderRadius: '5px',
+              }}
+              />
+              </div>
           </Frame>
         </Section>
         <DateDivider year='2018'/>
         <Section
           id='deepscatter'
           title='Deep Learning'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a className='section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
           >
           <Frame
             githubLink='https://github.com/danielsnider/Deep-Scatter'
@@ -343,7 +363,7 @@ function Main(props) {
         <Section
           id='matkit'
           title='Computer Vision'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description='While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award.'
         >
           <Frame
             // githubLink='https://github.com/danielsnider/??'
@@ -383,7 +403,6 @@ function Main(props) {
             /> */}
           </Frame>
         </Section>
-        <DateDivider year='2016'/>
         <Section
           id='breqwatr'
           title='DevOps'
@@ -398,6 +417,7 @@ function Main(props) {
             />
           </Frame>
         </Section>
+        <DateDivider year='2016'/>
         <Section
           id='cell-bio'
           title='Data Science'
