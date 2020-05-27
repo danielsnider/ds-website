@@ -521,13 +521,8 @@ function MarkdownItem(props) {
   }
 
   return (
-    <div style={{position: 'relative'}}>
-      <div className='bottom-line'></div>
-      <ColoredScrollbars style={{ width: '100%', height: '69vh'}}>
-        <div id={props.id} className='markdown-content-container'>
-          <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
-        </div>
-      </ColoredScrollbars>
+    <div id={props.id} className='markdown-content-container'>
+      <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
     </div>
   )
 }

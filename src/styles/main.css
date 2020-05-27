@@ -365,14 +365,6 @@ a:hover {
   padding: 0 4px;
 }
 
-.bottom-line {
-  position: absolute;
-  top: calc(69vh - 1px);
-  width: calc(100% - 15px);
-  z-index: 99;
-  border-bottom: 1px solid rgb(225, 228, 232, .2);
-}
-
 .scroll-outer {
   position: relative;
   pointer-events: none;
