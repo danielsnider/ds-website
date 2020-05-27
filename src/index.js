@@ -9,7 +9,7 @@ import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
 import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
 import breqwatrCardImage from './images/breqwatr-card-50.jpg'
 import breqwatrMontage from './images/breqwatr.jpg'
-import cellTrackingImage from './images/cell-tracking.jpg'
+import cellGrowthPlot from './images/bio-graph1-grey-background.JPG'
 import deepscatterImage from './images/deepscatter.jpg'
 import deepscatterImage33 from './images/deepscatter_cropped_33.jpg'
 import matkitCellsImage from './images/matkit-cells_40.jpg'
@@ -153,7 +153,8 @@ function Gallery(props) {
           <Card
             title="Microscopy Analysis"
             desc="Contributed to academic research papers."
-            src={cellTrackingImage}
+            src={cellGrowthPlot}
+            styleImg={{transform: 'scale(2, 2) scaleX(-1) translateY(-12%) translateX(4%)'}}
             anchor="#cell-bio"
           />
         </span>
@@ -515,14 +516,9 @@ function IframeItem(props) {
 // }
 
 function MarkdownItem(props) {
-  const getMarkdownText = () => {
-    // var rawMarkup = marked(cellBioMarkdown.toString(), {sanitize: true})
-    return { __html: props.src }
-  }
-
   return (
-    <div id={props.id} className='markdown-content-container'>
-      <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
+    <div className='markdown-content-container'>
+      <div className='markdown-content' dangerouslySetInnerHTML={{ __html: props.src }} />
     </div>
   )
 }
