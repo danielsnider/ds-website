@@ -113,7 +113,7 @@ body {
   font-size: 18px;
   line-height: 25px;
   color: rgb(122, 124, 128);
-  max-width: 600px;
+  max-width: 537px;
   /* padding-top: 40px; */
 }
 
@@ -123,6 +123,17 @@ body {
 
 .about-emphasis {
   color: white;
+}
+
+.about-emphasis2 {
+  color: #f1aaae;
+}
+
+.about-percent {
+  color: #ff3623;
+  transform: rotate(2deg) translate(-5px, -5px);
+  display: inline-block;
+  /* -webkit-text-stroke: .1px black; */
 }
 
 .hello {

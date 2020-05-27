@@ -5,6 +5,7 @@ import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
 import rosRoverMarkdown from './rosRoverReadme.js'
+import cellBioMarkdown from './cellBioReadme.js'
 import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
 import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
 import breqwatrCardImage from './images/breqwatr-card-50.jpg'
@@ -35,10 +36,10 @@ function Header(props) {
         <div className='about'>
           <div className='about-sentance'>Hello and Welcome!</div>
           <span className='about-sentance'>
-            My name is Daniel and <span className='about-emphasis'>I automate for the benefit of all people</span>.
+            My name is Daniel and <span className='about-emphasis'>I automate for people with </span><span className='about-emphasis2'>❤</span>.
           </span>
           <div className='about-sentance'>
-            In collaboration with great engineers, scientists, and managers I create user-focused solutions to enhance the capabilites of people.
+            In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are 💯<span className='about-percent'>﹪</span>toil-free.
           </div>
         </div>
       </div>
@@ -432,9 +433,9 @@ function Main(props) {
             githubLink='https://github.com/danielsnider/cell-bio'
             toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
           >
-            {/* <MarkdownItem
+            <MarkdownItem
               src={cellBioMarkdown}
-            /> */}
+            />
           </Frame>
         </Section>
         {/* <Section

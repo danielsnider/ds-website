@@ -1,3 +1,5 @@
+
+export default `
 This page lists fully automatic computer vision projects by Daniel Snider at the SickKids Research Institute in Toronto, Canada.
 
 ## Segmentation in Transmission Electron Microscopy (TEM)
@@ -5,17 +7,17 @@ This page lists fully automatic computer vision projects by Daniel Snider at the
 The green area is the glomerular basement membrane and each colored contour line is a podocyte foot process.
 
 <p align="center">
- <img src="https://github.com/danielsnider/cell-bio/blob/master/images/EMResults.gif?raw=true" width="99%">
+ <img src="https://github.com/danielsnider/cell-bio/blob/master/images/EMResults2.gif?raw=true" width="99%">
 </p>
 
 
 
 ## Interaction of organelles inside single cells
 <p align="center">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/0_gif_distance_visualization%20type_zoom_decon%20cell_001.gif?raw=true" width="98%">
+ <img src="https://github.com/danielsnider/cell-bio/raw/master/images/0_gif_distance_visualization%20type_zoom_decon%20cell_001-2.gif?raw=true" width="98%">
  <img src="https://github.com/danielsnider/cell-bio/blob/master/images/distance_plot.PNG?raw=true" width="98%">
  <img src="https://github.com/danielsnider/cell-bio/raw/master/images/pero_mito_zoom2.jpg?raw=true" width="50%">
- <img src="https://github.com/danielsnider/cell-bio/blob/master/images/0_gif_rotate%20type_zoom_decon%20cell_001%20compressed.gif?raw=true" width="46%">
+ <img src="https://github.com/danielsnider/cell-bio/blob/master/images/0_gif_rotate%20type_zoom_decon%20cell_001%20compressed2.gif?raw=true" width="46%">
 </p>
 
 Project homepage: [https://github.com/danielsnider/peroxi_mito_analysis](https://github.com/danielsnider/peroxi_mito_analysis)
@@ -23,9 +25,8 @@ Project homepage: [https://github.com/danielsnider/peroxi_mito_analysis](https:/
 ## 3D Measurements of Pancreatic Islets
 
 <p align="center">
- <img src="https://github.com/Kafri-Lab/Cell-3D-Image-Analysis/raw/master/readme_images/segmentation.gif?raw=true" height="270px">
- <img src="https://github.com/danielsnider/cell-bio/blob/master/images/3d_islet.gif?raw=true" height="270px">
- <!--img src="https://github.com/Kafri-Lab/Cell-3D-Image-Analysis/raw/master/readme_images/cell_size_plot.png" height="270px"-->
+ <img src="https://raw.githubusercontent.com/danielsnider/cell-bio/master/images/islet-segmentation2.gif" height="270px">
+ <img src="https://github.com/danielsnider/cell-bio/blob/master/images/3d_islet2.gif?raw=true" height="270px">
 </p>
 
 Project homepage: [https://github.com/Kafri-Lab/Cell-3D-Image-Analysis](https://github.com/Kafri-Lab/Cell-3D-Image-Analysis)
@@ -43,7 +44,7 @@ Project homepage: [https://github.com/Kafri-Lab/E-cadherin-Cell-Size](https://gi
 ## Track 2D cell motion and mitosis in time-lapse microscopy
 
 <p align="center">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/tracking_dpc.gif?raw=true" height="330px">
+ <img src="https://github.com/danielsnider/cell-bio/raw/master/images/tracking_dpc2.gif?raw=true" height="330px">
  <img src="https://github.com/danielsnider/cell-bio/blob/master/images/tracking_traces.gif?raw=true" height="330px">
 </p>
 
@@ -95,9 +96,11 @@ Anzi, Shira et al. (2018). **Postnatal Exocrine Pancreas Growth by Cellular Hype
 Daniel contributed figures, statistics, and image analysis to the surprising discovery that acinar cell size is strongly correlated with animal life span.
 
 <p align="center">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/my_contribution.PNG" alt="Drawing" height="400px">
+ <img src="https://github.com/danielsnider/cell-bio/raw/master/images/my_contribution.jpg" alt="Drawing" height="400px">
  </p>
 
 **Journal Article: [https://www.cell.com/developmental-cell/abstract/S1534-5807(18)30417-9](https://www.cell.com/developmental-cell/abstract/S1534-5807(18)30417-9)**
 
 **Full source code: [https://github.com/Kafri-Lab/E-cadherin-Cell-Size](https://github.com/Kafri-Lab/E-cadherin-Cell-Size)**
+
+`;
