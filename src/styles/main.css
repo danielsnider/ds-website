@@ -193,7 +193,7 @@ body {
 }
 
 .section-link {
-  font-family: 'legnsb'; /* style san serif */
+  font-family: 'futura-med'; /* wide san serif */
   /* color: rgb(122, 124, 128); */
   color: white;
   text-decoration: none;
@@ -219,8 +219,6 @@ body {
 }
 
 a {
-  font-family: 'legnsb'; /* style san serif */
-  /* color: rgb(122, 124, 128); */
   color: white;
   text-decoration: none;
   cursor: pointer;

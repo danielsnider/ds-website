@@ -1,6 +1,6 @@
 
 <p align="center">
- <img src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/montage.PNG?raw=true" alt="Drawing" width="96%">
+ <img src="https://github.com/danielsnider/ros-rover/blob/master/diagrams/montage.jpg?raw=true" alt="Drawing" width="96%">
  <img src="http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png" alt="Drawing" width="54%">
  <img src="https://raw.githubusercontent.com/danielsnider/ros-rover/master/diagrams/Rover_Diagram.png" alt="Drawing" width="41%">
 </p>
@@ -107,7 +107,7 @@ Project homepage: [http://wiki.ros.org/simple_drive](http://wiki.ros.org/simple_
 Simple 6-axis robot arm teleoperation software and Arduino firmware.
 
 <p align="center">
- <img src="http://wiki.ros.org/simple_arm?action=AttachFile&do=get&target=simple+arm+joystick+diagram.png" alt="Drawing" width="99%">
+ <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/simple_arm.jpg" alt="Drawing" width="99%">
 </p>
 
 Project homepage: [http://wiki.ros.org/simple_arm](http://wiki.ros.org/simple_arm)
@@ -171,8 +171,8 @@ Project homepage: [http://wiki.ros.org/GPS_goal](http://wiki.ros.org/GPS_goal)
 ROS robots are often controlled by many bash terminals and the startup sequence involves many roslaunch commands in different terminals. I demonstrate how you can use Tmux on your robot to codify your terminal layout into a powerful ROS administration system. The organized, repeatable tmux view can be shared in real-time by all of your teammembers for a consistent view of the robot's inner workings.
 
 <p align="center">
- <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/tmuxinator_ROS.png" alt="Drawing" width="500px">
- <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/tmuxinator_ROS2.PNG" alt="Drawing" width="500px">
+ <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/tmuxinator_ROS_60.jpg" alt="Drawing" width="500px">
+ <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/tmuxinator_ROS2_60.jpg" alt="Drawing" width="500px">
 </p>
 
 - The tmuxinator config used by Team R3 to start all the rover software components is here: 

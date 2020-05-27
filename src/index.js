@@ -3,8 +3,8 @@ import ReactDOM from "react-dom"
 import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
-// import cellBioMarkdown from './static/cell-bio-readme.md'
-// import rosRoverMarkdown from './static/ros-rover-readme.md'
+// // import cellBioMarkdown from './static/cell-bio-readme.md'
+import rosRoverMarkdown from './static/ros-rover-readme.md'
 import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
 import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
 import breqwatrCardImage from './images/breqwatr-card-50.jpg'
@@ -21,6 +21,7 @@ import rareconnectWysiwygImage from './images/rareconnect-wysiwyg.jpg'
 import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact.GIF'
+import senseactPresentation from './images/senseact-presenting_40.jpg'
 
 
 function Header(props) {
@@ -377,14 +378,17 @@ function Main(props) {
         <Section
           id='senseact'
           title='Reinforcement Learning'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description={['For Toronto startup, ', <a className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I also presented workshops at Toronto Machine Machine Learning Summit to introduce the audience to the challenges of reinforcement learning and to the SenseAct framework. Demonstrations included hardware from iRobot, Dynamixel, and a 6-axis robot arm from Universal Robots.']}
         >
           <Frame
             webLink='https://www.kindred.ai/senseact'
-            toolList={['OpenAI Gym', 'Numpy', 'Real-time Computing']}
+            toolList={['OpenAI Gym', 'Numpy', 'Real-Time Computing']}
           >
             <ImageItem
               src={senseactDiagram}
+            />
+            <ImageItem
+              src={senseactPresentation}
             />
           </Frame>
         </Section>
@@ -398,15 +402,15 @@ function Main(props) {
             githubLink='https://github.com/danielsnider/ros-rover'
             toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
           >
-            {/* <MarkdownItem
+            <MarkdownItem
               src={rosRoverMarkdown}
-            /> */}
+            />
           </Frame>
         </Section>
         <Section
           id='breqwatr'
           title='DevOps'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description='At Breqwatr Inc. I contributed to the OpenStack-based private cloud with the goal of helping IT departments modernize their datacentre. I made major contributions to the areas of network booting (PXE), configuration management (Chef), fault-tolerant coordination (Zookeeper), load-balancing (HAProxy), and health monitoring (custom). '
         >
           <Frame
             webLink='https://breqwatr.com/'
