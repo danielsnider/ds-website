@@ -1,4 +1,7 @@
 node_modules/
 .cache/
-dist/
+dist/*
 old/
+
+# But not these files...
+!dist/_headers
