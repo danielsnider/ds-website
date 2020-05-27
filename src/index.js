@@ -3,8 +3,7 @@ import ReactDOM from "react-dom"
 import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
-// // import cellBioMarkdown from './static/cell-bio-readme.md'
-import rosRoverMarkdown from './images/ros-rover-readme.md' // https://danielsnider.ca/ros-rover-readme.b1516c05.html
+import rosRoverMarkdown from './rosRoverReadme.js'
 import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
 import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
 import breqwatrCardImage from './images/breqwatr-card-50.jpg'
