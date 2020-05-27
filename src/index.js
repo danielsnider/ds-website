@@ -1,5 +1,6 @@
 import React, { useRef, useLayoutEffect, useState } from "react"
 import ReactDOM from "react-dom"
+import marked from 'marked'
 import ColoredScrollbars from './ColoredScrollbars';
 
 import './styles/main.css'
@@ -350,7 +351,7 @@ function Main(props) {
         <Section
           id='deepscatter'
           title='Deep Learning'
-          description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a className='section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
+          description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='aigrant-section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
           >
           <Frame
             githubLink='https://github.com/danielsnider/Deep-Scatter'
@@ -378,7 +379,7 @@ function Main(props) {
         <Section
           id='senseact'
           title='Reinforcement Learning'
-          description={['For Toronto startup, ', <a className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I also presented workshops at Toronto Machine Machine Learning Summit to introduce the audience to the challenges of reinforcement learning and to the SenseAct framework. Demonstrations included hardware from iRobot, Dynamixel, and a 6-axis robot arm from Universal Robots.']}
+          description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I also presented workshops at Toronto Machine Machine Learning Summit to introduce the audience to the challenges of reinforcement learning and to the SenseAct framework. Demonstrations included hardware from iRobot, Dynamixel, and a 6-axis robot arm from Universal Robots.']}
         >
           <Frame
             webLink='https://www.kindred.ai/senseact'
@@ -515,9 +516,14 @@ function IframeItem(props) {
 // }
 
 function MarkdownItem(props) {
+  const getMarkdownText = () => {
+    var rawMarkup = marked(props.src)
+    return { __html: rawMarkup }
+  }
+
   return (
     <div className='markdown-content-container'>
-      <div className='markdown-content' dangerouslySetInnerHTML={{ __html: props.src }} />
+      <div className='markdown-content' dangerouslySetInnerHTML={getMarkdownText()} />
     </div>
   )
 }
