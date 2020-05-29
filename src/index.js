@@ -6,6 +6,10 @@ import ColoredScrollbars from './ColoredScrollbars';
 import './styles/main.css'
 import rosRoverMarkdown from './rosRoverReadme.js'
 import cellBioMarkdown from './cellBioReadme.js'
+// import loveBot from './images/lovebot.png'
+// import loveBot from './images/lovebot-decal.png'
+// import loveBot from './images/lovebot-decal-with-baby.png'
+import loveBot from './images/lovebot-isometric.png'
 import imageArchiveImage50 from './images/image-archive-UI_50.jpg'
 import imageArchiveImage20 from './images/image-archive-UI_20.jpg'
 import breqwatrCardImage from './images/breqwatr-card-50.jpg'
@@ -21,7 +25,7 @@ import rareconnectImage from './images/rareconnect.png'
 import rareconnectWysiwygImage from './images/rareconnect-wysiwyg.jpg'
 import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
-import senseactDiagram from './images/senseact.GIF'
+import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
 
 
@@ -35,11 +39,20 @@ function Header(props) {
         {/* <Index/> */}
         <div className='about'>
           <div className='about-sentance'>Hello and Welcome!</div>
-          <span className='about-sentance'>
-            My name is Daniel and <span className='about-emphasis'>I automate for people with </span><span className='about-emphasis2'>❤</span>.
-          </span>
+          {/* <div className='about-sentance'>
+            My name is Daniel and <span className='about-emphasis'>I <span className='about-emphasis2'>❤</span> automation.</span>
+          </div>
           <div className='about-sentance'>
-            In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are 💯<span className='about-percent'>﹪</span>toil-free.
+            I want to help people do more.
+          </div>
+          <div className='about-sentance'>
+            I want to help people do more.
+          </div> */}
+          <div className='about-sentance'>
+            My name is Daniel and <span className='about-emphasis'>I automate for people with <span className='about-emphasis2'>❤</span>.</span>
+          </div>
+          <div className='about-sentance'>
+            In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are both powerful and 💯<span className='about-percent'>﹪</span>effortless.
           </div>
         </div>
       </div>
@@ -68,7 +81,7 @@ function NameAndLogo(props) {
 
 function Logo(props) {
   return (
-    <img className='logo' src={natureSvg}/>
+    <img className='logo' src={loveBot}/>
   )
 }
 
@@ -79,8 +92,8 @@ function Index(props) {
       <a href='#image-archive'>Medical Image Archive</a>
       <div className='index-subtitle'>Scaled to 100 million images</div>
       <a href='#ros-rover'>Teleoperated, 6-wheeled, 1-armed robot</a>
-      <div className='index-subtitle'>Placed 21st at international URC competition in Utah</div>
-      <a href='#deepscatter'>DeepScatter A.I. Web App</a>
+      <div className='index-subtitle'>Finalist at international robotics competition in Utah</div>
+      <a href='#deepscatter'>Deep Learning Web App</a>
       <div className='index-subtitle'>A.I. Grant Finalist</div>
       <a href='#matkit'>MatKit-Image Analysis Framework</a>
       <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
@@ -107,15 +120,15 @@ function Gallery(props) {
         </div>
         <span className='card-group'>
           <Card
-            title="Scaled to 100 million images"
-            subtitle="Medical Image Search Archive"
+            subtitle="Scaled to 100 million images"
+            title="Medical Image Search"
             desc="Accomplished with distributed processing across 200 servers."
             src={imageArchiveImage20}
             anchor="#image-archive"
             />
           <Card
-            title="SickKids Innovation Award"
-            subtitle="Image Analysis Framework"
+            subtitle="SickKids Innovation Award"
+            title="Image Analysis Framework"
             desc="Winner of the Mary Jo Haddad SickKids Innovation Award."
             src={matkitCellsImage}
             anchor="#matkit"
@@ -123,16 +136,16 @@ function Gallery(props) {
         </span>
         <span className='card-group'>
           <Card
-            title="Placed 21st in Competition"
-            subtitle='Teleoperated Mars Rover'
-            desc="Placed 21st out of 82 teams at an international university competition."
+            subtitle="Finalist in Robotics Competition"
+            title='Teleoperated Mars Rover'
+            desc="Depth camera, self-driving, and robot arm."
             src={rosRoverImage}
             anchor="#ros-rover"
             styleImg={{transform: 'scale(1.15, 1.15) translateY(5%) translateX(4%)'}}
           />
           <Card
-            title="A.I. Grant Finalist"
-            subtitle="Image Similarity Web App"
+            subtitle="A.I. Grant Finalist"
+            title="Deep Learning Web App"
             desc="Compared machine learning and manifold learning algorithms."
             src={deepscatterImage33}
             anchor="#deepscatter"
@@ -152,7 +165,7 @@ function Gallery(props) {
             anchor="#breqwatr"
             />
           <Card
-            title="Microscopy Analysis"
+            title="Research Data Analysis"
             desc="Contributed to academic research papers."
             src={cellGrowthPlot}
             styleImg={{transform: 'scale(2, 2) scaleX(-1) translateY(-12%) translateX(4%)'}}
@@ -301,7 +314,7 @@ function Main(props) {
       <Section
           id='image-archive'
           title='Massive Scale'
-          description='At the SickKids Research Institute I lead the developement of a Picture Archive System (PACS). The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports, metadata, and PHI burned into the image pixels. De-identifying burned-in PHI is no easy task, and we developed an algorithm to automate the process with a high degree of accuracy.'
+          description='At the SickKids Research Institute I lead the developement of a medical Picture Archive System. The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
         >
           <Frame
             // webLink=''
@@ -380,7 +393,7 @@ function Main(props) {
         <Section
           id='senseact'
           title='Reinforcement Learning'
-          description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I also presented workshops at Toronto Machine Machine Learning Summit to introduce the audience to the challenges of reinforcement learning and to the SenseAct framework. Demonstrations included hardware from iRobot, Dynamixel, and a 6-axis robot arm from Universal Robots.']}
+          description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
         >
           <Frame
             webLink='https://www.kindred.ai/senseact'
@@ -398,7 +411,7 @@ function Main(props) {
         <Section
           id='ros-rover'
           title='Robotics'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description={['I lead the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
         >
           <Frame
             githubLink='https://github.com/danielsnider/ros-rover'
@@ -427,11 +440,11 @@ function Main(props) {
         <Section
           id='cell-bio'
           title='Data Science'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+          description='Working with scientists at the Peter Gilgan Centre For Research and Learning (SickKids), I contributed statistical analysis derived from high throughput microscopy of cell biology experiments in the areas of cancer and diabetes research.'
         >
           <Frame
             githubLink='https://github.com/danielsnider/cell-bio'
-            toolList={['Computer Vision', 'R²', 'p–value', 'Variance', 'Normalization']}
+            toolList={['R²', 'p–value', 'Computer Vision', 'Variance', 'Normalization']}
           >
             <MarkdownItem
               src={cellBioMarkdown}
@@ -540,7 +553,7 @@ function Footer(props) {
       </div>
       {/* <Header/> */}
       <div className='made-using'>
-        Made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://parceljs.org/'>Parcel</a>.
+        Website made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://parceljs.org/'>Parcel</a>.
       </div>
       {/* <div className='fork-on'>
         Fork on <a className='github-link' href='https://github.com/danielsnider/ds-website'>github</a>.
