@@ -333,9 +333,9 @@ function Main(props) {
   return (
     <div className='main'>
       <Header/>
-      {/* <Gallery/>
+      <Gallery/>
       <Portfolio/>
-      <Footer/> */}
+      <Footer/>
       <Animations/>
     </div>
   )
