@@ -1,16 +1,4 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-*:not(a):not(a *) {
-  cursor: default;
-}
-
 html {
   height: 100%;
 }
