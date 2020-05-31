@@ -2,6 +2,7 @@ node_modules/
 .cache/
 dist/*
 old/
+simple-python-temp/
 
 # But not these files...
 !dist/_headers

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 import marked from 'marked'
 import ColoredScrollbars from './ColoredScrollbars';
 
+import './styles/index.css'
 import './styles/main.css'
 import rosRoverMarkdown from './rosRoverReadme.js'
 import cellBioMarkdown from './cellBioReadme.js'
@@ -28,6 +29,9 @@ import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
 
+import dynamics from './dynamics'
+import tinycolor from './tinycolor'
+
 
 function Header(props) {
   return (
@@ -37,7 +41,7 @@ function Header(props) {
       </div>
       <div className='header-right'>
         {/* <Index/> */}
-        <div className='about'>
+        <div className='about' id="content">
           <div className='about-sentance'>Hello and Welcome!</div>
           {/* <div className='about-sentance'>
             My name is Daniel and <span className='about-emphasis'>I <span className='about-emphasis2'>❤</span> automation.</span>
@@ -62,7 +66,7 @@ function Header(props) {
 
 function NameAndLogo(props) {
   return (
-    <div className='name-and-logo'>
+    <div id="header-content" className='name-and-logo'>
       <Logo/>
       <div className='name'>Daniel Snider</div>
       <div className='city'>Software Developer</div>
@@ -80,8 +84,29 @@ function NameAndLogo(props) {
 }
 
 function Logo(props) {
+  // const logoEl = useRef(null);
+  // const onButtonClick = () => {
+  //   // `current` points to the mounted text input element
+  //   var color = tinycolor("red");
+  //   console.log('color:', color)
+  //   logoEl.current.focus();
+  //   dynamics.animate(logoEl.current, {
+  //     translateX: 350,
+  //     scale: 2,
+  //     opacity: 0.5
+  //   }, {
+  //     type: dynamics.spring,
+  //     frequency: 200,
+  //     friction: 200,
+  //     duration: 1500
+  //   })
+  // }
+  
   return (
-    <img className='logo' src={loveBot}/>
+    // <img ref={logoEl} onClick={onButtonClick} id='header-logo' className='logo' src={loveBot}/>
+    <div id="header-logo">
+      <svg id="logo" width="80" height="67" viewBox="0 0 160 134" xmlns="http://www.w3.org/2000/svg"><path d="M24.44 78.157L0 53.53 53.417 0l26.39 26.612L106.38 0l53.482 53.614L136.25 77.31l-29.312-29.2-26.46 26.946-26.548-26.58-29.49 29.68zm5.335 5.375l50.033 50.415 51.108-51.286-23.775-23.684-26.712 26.72-26.372-26.404-24.28 24.24z" fill="white" fillRule="evenodd"></path></svg>
+    </div>
   )
 }
 
@@ -308,164 +333,185 @@ function Main(props) {
   return (
     <div className='main'>
       <Header/>
-      <Gallery/>
-      <div className='body'>
-      <DateDivider year='2019–2020'/>
-      <Section
-          id='image-archive'
-          title='Massive Scale'
-          description='At the SickKids Research Institute I lead the developement of a medical Picture Archive System. The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+      {/* <Gallery/>
+      <Portfolio/>
+      <Footer/> */}
+      <Animations/>
+    </div>
+  )
+}
+
+function Animations(props) {
+  return (
+    <div>
+      <svg id="clip-paths" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"><g></g></svg>
+      <svg id="page-stripes" className="full-size" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="intro" className="full-size">
+        <div id="logo-container" className="full-size">
+          <svg viewBox="0 0 640 536" version="1.1" xmlns="http://www.w3.org/2000/svg"><path transform="scale(4 4)" d="M24.44 78.157L0 53.53 53.417 0l26.39 26.612L106.38 0l53.482 53.614L136.25 77.31l-29.312-29.2-26.46 26.946-26.548-26.58-29.49 29.68zm5.335 5.375l50.033 50.415 51.108-51.286-23.775-23.684-26.712 26.72-26.372-26.404-24.28 24.24z" fill="#101214" fillRule="evenodd"/></svg>
+        </div>
+        <svg id="stripes" className="full-size" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </div>
+  )
+}
+function Portfolio(props) {
+  return (
+    <div className='portfolio'>
+    <DateDivider year='2019–2020'/>
+    <Section
+        id='image-archive'
+        title='Massive Scale'
+        description='At the SickKids Research Institute I lead the developement of a medical Picture Archive System. The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+      >
+        <Frame
+          // webLink=''
+          toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
         >
-          <Frame
-            // webLink=''
-            toolList={['ElasticSearch', 'Python', 'Ubuntu', 'High Performance Computing']}
-          >
-            <ImageItem
-              src={imageArchiveImage50}
-            />
-          </Frame>
-        </Section>
-      <Section
-          id='rareconnect'
-          title='Full Stack'
-          description="At the SickKids Research Institute I contributed to the RareConnect social network for rare disease patients. I worked on all technical aspects of the project with major contributions to the areas of microservices, testing, and user experience (UX)."
+          <ImageItem
+            src={imageArchiveImage50}
+          />
+        </Frame>
+      </Section>
+    <Section
+        id='rareconnect'
+        title='Full Stack'
+        description="At the SickKids Research Institute I contributed to the RareConnect social network for rare disease patients. I worked on all technical aspects of the project with major contributions to the areas of microservices, testing, and user experience (UX)."
+      >
+        <Frame
+          webLink='https://www.rareconnect.org/'
+          toolList={['Javascript', 'React', 'PostgreSQL', 'Docker', 'Internationalization']}
         >
-          <Frame
-            webLink='https://www.rareconnect.org/'
-            toolList={['Javascript', 'React', 'PostgreSQL', 'Docker', 'Internationalization']}
-          >
-            <div className='markdown-content'>
-            <ImageItem
-              src={rareconnectImage}
-              style={{ /* Make this image flush with the top and sides of the Frame */
-                width: 'calc(100% + 30px)',
-                marginLeft: '-15px',
-                marginTop: '-1px',
-                borderTopLeftRadius: '0px',
-                borderTopRightRadius: '0px',
-              }}
+          <div className='markdown-content'>
+          <ImageItem
+            src={rareconnectImage}
+            style={{ /* Make this image flush with the top and sides of the Frame */
+              width: 'calc(100% + 30px)',
+              marginLeft: '-15px',
+              marginTop: '-1px',
+              borderTopLeftRadius: '0px',
+              borderTopRightRadius: '0px',
+            }}
+          />
+          <div className='content-title'>UX Redesign — Social Post Editor</div>
+          <div className='content-text'>
+            The social post editor that I designed and implemented supports WYSIWYG formatting and Markdown formatting. Additional features include mentions, notifications, and mobile & desktop layouts. Posts are <b>automatically translated between 12 languages</b> including right-to-left written languages.
+          </div>
+          <ImageItem
+            src={rareconnectWysiwygImage}
+            style={{ /* Make this image smaller and centered */
+              width: '80%',
+              margin: '0 auto',
+              display: 'block',
+              borderRadius: '5px',
+            }}
             />
-            <div className='content-title'>UX Redesign — Social Post Editor</div>
-            <div className='content-text'>
-              The social post editor that I designed and implemented supports WYSIWYG formatting and Markdown formatting. Additional features include mentions, notifications, and mobile & desktop layouts. Posts are <b>automatically translated between 12 languages</b> including right-to-left written languages.
             </div>
-            <ImageItem
-              src={rareconnectWysiwygImage}
-              style={{ /* Make this image smaller and centered */
-                width: '80%',
-                margin: '0 auto',
-                display: 'block',
-                borderRadius: '5px',
-              }}
-              />
-              </div>
-          </Frame>
-        </Section>
-        <DateDivider year='2018'/>
-        <Section
-          id='deepscatter'
-          title='Deep Learning'
-          description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='aigrant-section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
-          >
-          <Frame
-            githubLink='https://github.com/danielsnider/Deep-Scatter'
-            toolList={['Numpy', 'Pandas', 'Scikit-Learn', 'Matplotlib', 'Flask']}
-          >
-            <ImageItem
-              src={deepscatterImage}
-            />
-          </Frame>
-        </Section>
-        <Section
-          id='matkit'
-          title='Computer Vision'
-          description='While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award.'
+        </Frame>
+      </Section>
+      <DateDivider year='2018'/>
+      <Section
+        id='deepscatter'
+        title='Deep Learning'
+        description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='aigrant-section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
         >
-          <Frame
-            // githubLink='https://github.com/danielsnider/??'
-            toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
-          >
-            <ImageItem
-              src={matkitMontage}
-            />
-          </Frame>
-        </Section>
-        <Section
-          id='senseact'
-          title='Reinforcement Learning'
-          description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
+        <Frame
+          githubLink='https://github.com/danielsnider/Deep-Scatter'
+          toolList={['Numpy', 'Pandas', 'Scikit-Learn', 'Matplotlib', 'Flask']}
         >
-          <Frame
-            webLink='https://www.kindred.ai/senseact'
-            toolList={['OpenAI Gym', 'Numpy', 'Real-Time Computing']}
-          >
-            <ImageItem
-              src={senseactDiagram}
-            />
-            <ImageItem
-              src={senseactPresentation}
-            />
-          </Frame>
-        </Section>
-        <DateDivider year='2017'/>
-        <Section
-          id='ros-rover'
-          title='Robotics'
-          description={['I lead the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
+          <ImageItem
+            src={deepscatterImage}
+          />
+        </Frame>
+      </Section>
+      <Section
+        id='matkit'
+        title='Computer Vision'
+        description='While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award.'
+      >
+        <Frame
+          // githubLink='https://github.com/danielsnider/??'
+          toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
         >
-          <Frame
-            githubLink='https://github.com/danielsnider/ros-rover'
-            toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
-          >
-            <MarkdownItem
-              src={rosRoverMarkdown}
-            />
-          </Frame>
-        </Section>
-        <Section
-          id='breqwatr'
-          title='DevOps'
-          description='At Breqwatr Inc. I contributed to the OpenStack-based private cloud with the goal of helping IT departments modernize their datacentre. I made major contributions to the areas of network booting (PXE), configuration management (Chef), fault-tolerant coordination (Zookeeper), load-balancing (HAProxy), and health monitoring (custom). '
+          <ImageItem
+            src={matkitMontage}
+          />
+        </Frame>
+      </Section>
+      <Section
+        id='senseact'
+        title='Reinforcement Learning'
+        description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
+      >
+        <Frame
+          webLink='https://www.kindred.ai/senseact'
+          toolList={['OpenAI Gym', 'Numpy', 'Real-Time Computing']}
         >
-          <Frame
-            webLink='https://breqwatr.com/'
-            toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'Zookeeper', 'MySQL Cluster']}
-          >
-            <ImageItem
-              src={breqwatrMontage}
-            />
-          </Frame>
-        </Section>
-        <DateDivider year='2016'/>
-        <Section
-          id='cell-bio'
-          title='Data Science'
-          description='Working with scientists at the Peter Gilgan Centre For Research and Learning (SickKids), I contributed statistical analysis derived from high throughput microscopy of cell biology experiments in the areas of cancer and diabetes research.'
-        >
-          <Frame
-            githubLink='https://github.com/danielsnider/cell-bio'
-            toolList={['R²', 'p–value', 'Computer Vision', 'Variance', 'Normalization']}
-          >
-            <MarkdownItem
-              src={cellBioMarkdown}
-            />
-          </Frame>
-        </Section>
-        {/* <Section
-          id='object-tracking'
-          title='Computer Vision'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-        >
-          <Frame
-            githubLink='https://github.com/danielsnider/object-tracking'
-            toolList={['OpenCV', 'Raspberry Pi', 'AMQP', 'Websockets']}
+          <ImageItem
+            src={senseactDiagram}
           />
           <ImageItem
-            src={objectTrackingImage}
+            src={senseactPresentation}
           />
-        </Section> */}
-      </div>
-      <Footer/>
+        </Frame>
+      </Section>
+      <DateDivider year='2017'/>
+      <Section
+        id='ros-rover'
+        title='Robotics'
+        description={['I lead the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
+      >
+        <Frame
+          githubLink='https://github.com/danielsnider/ros-rover'
+          toolList={['ROS', 'OpenCV', 'Self-Driving', 'Point Clouds', 'Embedded Computing']}
+        >
+          <MarkdownItem
+            src={rosRoverMarkdown}
+          />
+        </Frame>
+      </Section>
+      <Section
+        id='breqwatr'
+        title='DevOps'
+        description='At Breqwatr Inc. I contributed to the OpenStack-based private cloud with the goal of helping IT departments modernize their datacentre. I made major contributions to the areas of network booting (PXE), configuration management (Chef), fault-tolerant coordination (Zookeeper), load-balancing (HAProxy), and health monitoring (custom). '
+      >
+        <Frame
+          webLink='https://breqwatr.com/'
+          toolList={['OpenStack', 'HAProxy', 'RabbitMQ', 'Chef', 'Zookeeper', 'MySQL Cluster']}
+        >
+          <ImageItem
+            src={breqwatrMontage}
+          />
+        </Frame>
+      </Section>
+      <DateDivider year='2016'/>
+      <Section
+        id='cell-bio'
+        title='Data Science'
+        description='Working with scientists at the Peter Gilgan Centre For Research and Learning (SickKids), I contributed statistical analysis derived from high throughput microscopy of cell biology experiments in the areas of cancer and diabetes research.'
+      >
+        <Frame
+          githubLink='https://github.com/danielsnider/cell-bio'
+          toolList={['R²', 'p–value', 'Computer Vision', 'Variance', 'Normalization']}
+        >
+          <MarkdownItem
+            src={cellBioMarkdown}
+          />
+        </Frame>
+      </Section>
+      {/* <Section
+        id='object-tracking'
+        title='Computer Vision'
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
+      >
+        <Frame
+          githubLink='https://github.com/danielsnider/object-tracking'
+          toolList={['OpenCV', 'Raspberry Pi', 'AMQP', 'Websockets']}
+        />
+        <ImageItem
+          src={objectTrackingImage}
+        />
+      </Section> */}
     </div>
   )
 }
@@ -564,3 +610,611 @@ function Footer(props) {
 
 var mountNode = document.getElementById("app")
 ReactDOM.render(<Main name="Daniel" />, mountNode)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createEl(template) {
+  var el = document.createElement('div');
+  el.innerHTML = template.trim();
+  return el.firstChild;
+}
+
+function createSvgEl(template) {
+  var el = createEl('\n    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + template.trim() + '</svg>\n  ');
+  return el;
+}
+
+function createSvgChildEl(template) {
+  return createSvgEl(template).firstChild;
+}
+
+function createLine(options) {
+  var el = createSvgChildEl('\n    <rect x="' + options.x + '" y="' + options.y + '" width="' + options.width + '" height="' + options.height + '" fill="' + options.color + '">\n  ');
+  return el;
+}
+
+var pageEl = document.querySelector('#page');
+var introEl = document.querySelector('#intro');
+var stripesEl = document.querySelector('#stripes');
+var logoContainer = document.querySelector('#logo-container');
+var logo = logoContainer.querySelector('svg');
+var logoPath = logo.querySelector('path');
+var windowWidth = document.body.clientWidth;
+var windowHeight = document.body.clientHeight;
+
+
+// animate stripes
+function _animateStripes(container) {
+  var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  options.count = options.count || 10;
+  options.sizeRatio = options.sizeRatio || 1;
+  var stripes = [];
+
+  var _loop = function _loop(i) {
+    var color = void 0;
+    if (options.color) {
+      color = options.color;
+    } else {
+      color = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)').toRgbString();
+    }
+    var baseWidth = Math.max(windowWidth, 1000);
+    var width = Math.round(baseWidth / 10 + Math.random() * baseWidth / 10) * options.sizeRatio;
+    var height = Math.round(Math.random() * 10 + 2) * options.sizeRatio;
+    var point = void 0;
+    if (options.point) {
+      point = {
+        x: Math.round(options.point.x - width / 2 + Math.random() * 200 - 100),
+        y: Math.round(options.point.y - height / 2 + Math.random() * 50 - 25)
+      };
+    } else {
+      point = {
+        x: Math.round((windowWidth + width) * Math.random() - width),
+        y: Math.round(windowHeight * Math.random())
+      };
+    }
+    var lineOptions = {
+      x: point.x,
+      y: point.y,
+      width: width,
+      height: height,
+      color: color
+    };
+    var lineEl = createLine(lineOptions);
+    lineEl.style.display = 'none';
+    container.appendChild(lineEl);
+
+    dynamics.setTimeout(function () {
+      lineEl.style.display = 'block';
+
+      dynamics.setTimeout(function () {
+        lineOptions.x += Math.random() * 100 - 50;
+        lineOptions.y += Math.random() * 20 - 10;
+        lineEl.setAttribute('x', lineOptions.x);
+        lineEl.setAttribute('y', lineOptions.y);
+
+        var newLineOptions = options.transform({
+          width: lineOptions.width,
+          height: lineOptions.height
+        });
+        lineEl.setAttribute('width', newLineOptions.width);
+        lineEl.setAttribute('height', newLineOptions.height);
+
+        dynamics.setTimeout(function () {
+          container.removeChild(lineEl);
+        }, options.delay('hide', i));
+      }, options.delay('transform', i));
+    }, options.delay('show', i));
+
+    stripes.push(lineEl);
+  };
+
+  for (var i = 0; i < options.count; i++) {
+    _loop(i);
+  }
+  return stripes;
+}
+function animateBlackStripes(container) {
+  var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  options.sizeRatio = 3;
+  options.color = '#101214';
+  options.delay = function (type, i) {
+    if (type === 'show') {
+      if (options.delayShow) {
+        return Math.random() * 50;
+      }
+      return 0;
+    } else if (type === 'transform') {
+      return Math.random() * 20 + i * 2;
+    } else if (type === 'hide') {
+      return 100;
+    }
+  };
+  options.transform = function (size) {
+    return {
+      width: size.width / 2,
+      height: size.height / 5
+    };
+  };
+  _animateStripes(container, options);
+}
+function animateColoredStripes(container) {
+  var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  options.delay = function (type, i) {
+    if (type === 'show') {
+      return Math.random() * 300;
+    } else if (type === 'transform') {
+      return Math.random() * 20;
+    } else if (type === 'hide') {
+      return 100;
+    }
+  };
+  options.transform = function (size) {
+    return {
+      width: size.width / 2,
+      height: size.height / 5
+    };
+  };
+  _animateStripes(container, options);
+}
+
+var totalMaskIdx = 0;
+function createMasksWithStripes(count, box) {
+  var averageHeight = arguments.length <= 2 || arguments[2] === undefined ? 10 : arguments[2];
+
+  var masks = [];
+  for (var i = 0; i < count; i++) {
+    masks.push([]);
+  }
+  var maskNames = [];
+  for (var _i = totalMaskIdx; _i < totalMaskIdx + masks.length; _i++) {
+    maskNames.push('clipPath' + _i);
+  }
+  totalMaskIdx += masks.length;
+  var maskIdx = 0;
+  var x = 0;
+  var y = 0;
+  var stripeHeight = averageHeight;
+  while (true) {
+    var w = Math.max(stripeHeight * 10, Math.round(Math.random() * box.width));
+    masks[maskIdx].push('\n      M ' + x + ',' + y + ' L ' + (x + w) + ',' + y + ' L ' + (x + w) + ',' + (y + stripeHeight) + ' L ' + x + ',' + (y + stripeHeight) + ' Z\n    ');
+
+    maskIdx += 1;
+    if (maskIdx >= masks.length) {
+      maskIdx = 0;
+    }
+
+    x += w;
+    if (x > box.width) {
+      x = 0;
+      y += stripeHeight;
+      stripeHeight = Math.round(Math.random() * averageHeight + averageHeight / 2);
+    }
+    if (y >= box.height) {
+      break;
+    }
+  }
+
+  masks.forEach(function (rects, i) {
+    var el = createSvgChildEl('<clipPath id="' + maskNames[i] + '">\n      <path d="' + rects.join(' ') + '" fill="white"></path>\n    </clipPath>');
+    document.querySelector('#clip-paths g').appendChild(el);
+  });
+
+  return maskNames;
+}
+
+
+function cloneAndStripeElement(element, clipPathName, parent) {
+  var el = element.cloneNode(true);
+  var box = element.getBoundingClientRect();
+  var parentBox = parent.getBoundingClientRect();
+  box = {
+    top: box.top - parentBox.top,
+    left: box.left - parentBox.left,
+    width: box.width,
+    height: box.height
+  };
+  var style = window.getComputedStyle(element);
+
+  dynamics.css(el, {
+    position: 'absolute',
+    left: Math.round(box.left + window.scrollX),
+    top: Math.round(box.top + window.scrollY),
+    width: Math.ceil(box.width),
+    height: Math.ceil(box.height),
+    display: 'none',
+    pointerEvents: 'none',
+    background: '#101214',
+    fontSize: style.fontSize,
+    fontFamily: style.fontFamily,
+    color: style.color,
+    textDecoration: style.textDecoration
+  });
+  parent.appendChild(el);
+  el.style['-webkit-clip-path'] = 'url(/#' + clipPathName + ')';
+  el.style['clip-path'] = 'url(/#' + clipPathName + ')';
+
+  return el;
+}
+
+
+var contentEls = [];
+var originalContentEls = document.querySelectorAll('#header-content, #content');
+(function () {
+  var els = originalContentEls;
+  var pageBox = pageEl.getBoundingClientRect();
+  for (var j = 0; j < els.length; j++) {
+    var el = els[j];
+    var box = el.getBoundingClientRect();
+    var masks = createMasksWithStripes(6, box);
+    for (var i = 0; i < masks.length; i++) {
+      var clonedEl = cloneAndStripeElement(el, masks[i], pageEl);
+      clonedEl.setAttribute('data-idx', i);
+      contentEls.push(clonedEl);
+      var childrenEls = clonedEl.querySelectorAll('h2, ul > li > a, a.more, h1, p, path');
+      for (var k = 0; k < childrenEls.length; k++) {
+        var _color = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)');
+        var rgb = _color.toRgbString();
+        dynamics.css(childrenEls[k], {
+          color: rgb,
+          fill: rgb
+        });
+      }
+    }
+    el.style.visibility = 'hidden';
+  }
+})();
+
+
+function showContent() {
+  var maxDelay = 0;
+
+  var _loop2 = function _loop2(i) {
+    var el = contentEls[i];
+    var d = 50 + Math.round(Math.random() * 350);
+    var transform = {
+      translateX: Math.round(Math.random() * 40 - 20)
+    };
+    var more = el.getAttribute('data-idx') <= 3;
+    dynamics.css(el, transform);
+    dynamics.setTimeout(function () {
+      dynamics.css(el, {
+        display: ''
+      });
+    }, d);
+    maxDelay = Math.max(maxDelay, d);
+    dynamics.setTimeout(function () {
+      dynamics.css(el, {
+        translateX: Math.round(transform.translateX / -5)
+      });
+    }, d + 100);
+    dynamics.setTimeout(function () {
+      dynamics.css(el, {
+        translateX: 0,
+        translateY: 0
+      });
+      if (!more) {
+        el.parentNode.removeChild(el);
+      }
+    }, d + 150);
+    if (more) {
+      dynamics.setTimeout(function () {
+        dynamics.css(el, {
+          translateX: Math.round(transform.translateX / -2)
+        });
+      }, d + 300);
+      dynamics.setTimeout(function () {
+        el.parentNode.removeChild(el);
+      }, d + 550);
+    }
+  };
+
+  for (var i = 0; i < contentEls.length; i++) {
+    _loop2(i);
+  }
+  dynamics.setTimeout(function () {
+    for (var _i2 = 0; _i2 < originalContentEls.length; _i2++) {
+      originalContentEls[_i2].style.visibility = 'visible';
+    }
+  }, maxDelay);
+}
+
+
+// intro
+(function () {
+  animateBlackStripes(stripesEl, {
+    count: 200
+  });
+  animateColoredStripes(stripesEl, {
+    count: 100
+  });
+
+  dynamics.css(pageEl, {
+    scale: 0.95
+  });
+  dynamics.animate(pageEl, {
+    scale: 1
+  }, {
+    type: dynamics.easeInOut,
+    friction: 500,
+    duration: 4000
+  });
+
+  dynamics.css(logo, {
+    scale: 1
+  });
+  dynamics.animate(logo, {
+    scale: 0.90
+  }, {
+    duration: 1500,
+    type: dynamics.easeOut
+  });
+
+  var color = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)');
+  dynamics.animate(logoPath, {
+    fill: color.toRgbString()
+  }, {
+    duration: 700
+  });
+
+  color = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)');
+  dynamics.animate(logoPath, {
+    fill: color.toRgbString()
+  }, {
+    duration: 700,
+    delay: 700
+  });
+
+  function animateLogo() {
+    dynamics.css(logoContainer, {
+      scale: 0.5,
+      translateX: Math.random() * 100 - 50
+    });
+
+    dynamics.setTimeout(function () {
+      dynamics.css(logoContainer, {
+        translateX: 10,
+        scale: 0.55
+      });
+    }, 100);
+
+    dynamics.setTimeout(function () {
+      dynamics.css(logoContainer, {
+        translateX: 0,
+        scale: 0.5
+      });
+    }, 150);
+  };
+
+  animateLogo();
+
+  dynamics.setTimeout(function () {
+    logoContainer.style.visibility = 'visible';
+  }, 1);
+
+  dynamics.setTimeout(function () {
+    animateLogo();
+    animateBlackStripes(stripesEl, {
+      count: 200,
+      delayShow: true
+    });
+    animateColoredStripes(stripesEl, {
+      count: 100
+    });
+  }, 1000);
+
+  dynamics.setTimeout(function () {
+    introEl.style.backgroundColor = 'transparent';
+    dynamics.css(logoContainer, {
+      scale: 1,
+      translateX: Math.random() * windowWidth - windowWidth / 2,
+      translateY: Math.random() * windowHeight - windowHeight / 2
+    });
+    showContent();
+  }, 1300);
+
+  dynamics.setTimeout(function () {
+    dynamics.css(logoContainer, {
+      scale: 0.75
+    });
+  }, 1350);
+
+  dynamics.setTimeout(function () {
+    logo.style.display = 'none';
+  }, 1400);
+
+})();
+
+
+// page
+(function () {
+  var pageStripesEl = document.querySelector('#page-stripes');
+  var linkEls = document.querySelectorAll('a');
+
+  function animateCrazyLogo() {
+    var el = document.querySelector('#header-logo');
+    var box = el.getBoundingClientRect();
+    var count = 10 + Math.random() * 10;
+    var masks = createMasksWithStripes(count, box, Math.round(100 / count));
+    var clonedEls = [];
+
+    for (var i = 0; i < masks.length; i++) {
+      var clonedEl = cloneAndStripeElement(el, masks[i], document.body);
+      var path = clonedEl.querySelector('path');
+      var _color2 = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)');
+      dynamics.css(path, {
+        fill: _color2.toRgbString()
+      });
+      clonedEls.push(clonedEl);
+    }
+
+    var _loop3 = function _loop3(_i3) {
+      var clonedEl = clonedEls[_i3];
+      var d = Math.random() * 100;
+
+      dynamics.setTimeout(function () {
+        clonedEl.style.display = '';
+        dynamics.css(clonedEl, {
+          translateX: Math.random() * 100 - 50
+        });
+      }, d);
+
+      dynamics.setTimeout(function () {
+        dynamics.css(clonedEl, {
+          translateX: Math.random() * 20 - 10
+        });
+      }, d + 50);
+
+      dynamics.setTimeout(function () {
+        dynamics.css(clonedEl, {
+          translateX: Math.random() * 5 - 2.5
+        });
+      }, d + 100);
+
+      dynamics.setTimeout(function () {
+        document.body.removeChild(clonedEl);
+      }, d + 150);
+    };
+
+    for (var _i3 = 0; _i3 < clonedEls.length; _i3++) {
+      _loop3(_i3);
+    }
+  };
+
+  function logoAnimationLoop() {
+    dynamics.setTimeout(function () {
+      animateCrazyLogo();
+      logoAnimationLoop();
+    }, 100 + Math.random() * 5000);
+  };
+
+  dynamics.setTimeout(logoAnimationLoop, 4000);
+  document.querySelector('#header-logo').addEventListener('mouseover', animateCrazyLogo);
+
+  function handleMouseOver(e) {
+    var el = e.target;
+    while (el && el.tagName.toLowerCase() !== 'a') {
+      el = el.parentNode;
+    }
+    if (!el) {
+      return;
+    }
+    var r = animateLink(el);
+
+    var handleMouseOut = function handleMouseOut(e) {
+      el.removeEventListener('mouseout', handleMouseOut);
+      r.stop();
+    };
+
+    el.addEventListener('mouseout', handleMouseOut);
+  }
+
+  function animateLink(el) {
+    var animating = true;
+    var box = el.getBoundingClientRect();
+
+    var animate = function animate() {
+      var masks = createMasksWithStripes(3, box, 3);
+      var clonedEls = [];
+
+      for (var i = 0; i < masks.length; i++) {
+        var clonedEl = cloneAndStripeElement(el, masks[i], document.body);
+        var childrenEls = Array.prototype.slice.apply(clonedEl.querySelectorAll('path'));
+        childrenEls.push(clonedEl);
+        for (var k = 0; k < childrenEls.length; k++) {
+          var _color3 = tinycolor('hsl(' + Math.round(Math.random() * 360) + ', 80%, 65%)');
+          var rgb = _color3.toRgbString();
+          dynamics.css(childrenEls[k], {
+            color: rgb,
+            fill: rgb
+          });
+        }
+        clonedEl.style.display = '';
+        clonedEls.push(clonedEl);
+      }
+
+      var _loop4 = function _loop4(_i4) {
+        var clonedEl = clonedEls[_i4];
+        dynamics.css(clonedEl, {
+          translateX: Math.random() * 10 - 5
+        });
+
+        dynamics.setTimeout(function () {
+          dynamics.css(clonedEl, {
+            translateX: 0
+          });
+        }, 50);
+
+        dynamics.setTimeout(function () {
+          dynamics.css(clonedEl, {
+            translateX: Math.random() * 5 - 2.5
+          });
+        }, 100);
+
+        dynamics.setTimeout(function () {
+          document.body.removeChild(clonedEl);
+        }, 150);
+      };
+
+      for (var _i4 = 0; _i4 < clonedEls.length; _i4++) {
+        _loop4(_i4);
+      }
+
+      dynamics.setTimeout(function () {
+        if (animating) {
+          animate();
+        }
+        for (var _i5 = 0; _i5 < masks.length; _i5++) {
+          var maskEl = document.querySelector('#' + masks[_i5]);
+          maskEl.parentNode.removeChild(maskEl);
+        }
+      }, Math.random() * 1000);
+    };
+
+    animate();
+
+    return {
+      stop: function stop() {
+        animating = false;
+      }
+    };
+  };
+
+  if (!('ontouchstart' in window)) {
+    for (var i = 0; i < linkEls.length; i++) {
+      linkEls[i].addEventListener('mouseover', handleMouseOver);
+    }
+  }
+})();
