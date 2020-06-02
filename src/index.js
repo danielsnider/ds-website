@@ -1,15 +1,10 @@
 import React, { useRef, useLayoutEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import marked from 'marked'
-import dynamics from './dynamics'
-import tinycolor from './tinycolor'
 
-import ColoredScrollbars from './ColoredScrollbars'
+import ColoredScrollbars from './coloredScrollbars'
 import Animations from './animations'
 import RobotSvg from './robotSvg'
-
-import './styles/index.css'
-import './styles/main.css'
 
 import rosRoverMarkdown from './rosRoverReadme.js'
 import cellBioMarkdown from './cellBioReadme.js'
@@ -31,7 +26,8 @@ import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
-
+import './styles/index.css'
+import './styles/main.css'
 
 
 function Header(props) {
