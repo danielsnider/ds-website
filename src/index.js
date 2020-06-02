@@ -49,8 +49,8 @@ function Header(props) {
       </div>
       <div className='header-right'>
         <div className='about animate-on-mouse-over'>
-          <div className='about-sentance'>Hello and Welcome! My name is Daniel.</div>
-          <div className='about-sentance'>
+          <div className='about-sentence'>Hello and Welcome! My name is Daniel.</div>
+          <div className='about-sentence'>
             <span className='about-emphasis'>I automate for people with</span>
             <svg style={{paddingLeft: '5px'}} version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28">
               <title>heart</title>
@@ -58,7 +58,7 @@ function Header(props) {
             </svg>
             .
           </div>
-          <div className='about-sentance'>
+          <div className='about-sentence'>
             In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are both powerful and 💯<span className='about-percent'>﹪</span>effortless.
           </div>
         </div>
@@ -111,7 +111,7 @@ function Gallery(props) {
         <span className='card-group'>
           <Card
             subtitle="Scaled to 100 million images"
-            title="Medical Image Search"
+            title="Medical Image Archive"
             desc="Accomplished with distributed processing across 200 servers."
             src={imageArchiveImage20}
             anchor="#image-archive"
@@ -149,7 +149,7 @@ function Gallery(props) {
         <span className='card-group'>
           <Card
             title="Datacentre Platform"
-            desc="Contributed to a privace cloud appliance."
+            desc="Contributed to a private cloud appliance."
             src={breqwatrCardImage}
             anchor="#breqwatr"
             />
@@ -258,7 +258,7 @@ function Frame(props) {
   }
   toolList.pop(); // Remove the <Divider/> that is after the last list item
 
-  // Set 0px border radius on the first child element in the frame becuase it looks nice
+  // Set 0px border radius on the first child element in the frame because it looks nice
   const children = props.hasOwnProperty('children') && props.children !== undefined ? (Array.isArray(props.children) ? props.children : [props.children]) : []
   const newChildren = children.map((child, index) => {
     const existingStyle = child.props.hasOwnProperty('style') ? child.props.style : {}
@@ -313,7 +313,7 @@ function Portfolio(props) {
     <Section
         id='image-archive'
         title='Massive Scale'
-        description='At the SickKids Research Institute I lead the developement of a medical Picture Archive System. The pictures are used by A.I. researchers creating models of disease. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+        description='At the SickKids Research Institute I lead the development of a medical Picture Archive System. It is web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
       >
         <Frame
           // webLink=''
@@ -364,7 +364,7 @@ function Portfolio(props) {
       <Section
         id='deepscatter'
         title='Deep Learning'
-        description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='aigrant-section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
+        description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
         >
         <Frame
           githubLink='https://github.com/danielsnider/Deep-Scatter'
@@ -382,7 +382,7 @@ function Portfolio(props) {
       >
         <Frame
           // githubLink='https://github.com/danielsnider/??'
-          toolList={['Matlab', 'Morphology', 'Adaptive Thresholding', 'Segmentation']}
+          toolList={['Matlab', 'Morphology', 'Adaptive Threshold', 'Segmentation']}
         >
           <ImageItem
             src={matkitMontage}
