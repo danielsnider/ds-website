@@ -44,11 +44,12 @@
 
 body {
   /* background-color: black; */
-  background-color: #101214;
+  background-color: rgb(22, 23, 26);
   color: white;
   margin: 0px;
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
@@ -58,6 +59,7 @@ h1, h2, h3, h4 {
 
 #app {
   width: 100%;
+  text-align: left;
 }
 
 .header {
@@ -66,7 +68,7 @@ h1, h2, h3, h4 {
   font-size: 20px;
   line-height: 25px;
   padding: 100px 9vw 90px 9vw;
-  background-color: #101214;
+  background-color: rgb(22, 23, 26);
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
@@ -92,7 +94,6 @@ h1, h2, h3, h4 {
 }
 
 .social-icon {
-  padding: 0 4px;
   fill: rgb(122, 124, 128);
   width: 25px;
   height: 19px;
@@ -164,15 +165,6 @@ h1, h2, h3, h4 {
   color: rgba(122, 124, 128, 0.623);
 }
 
-.index a {
-  color: rgb(122, 124, 128);
-  text-decoration: none;
-  cursor: pointer;
-}
-.index a:hover {
-  color: rgb(161, 163, 167);
-}
-
 .status {
   padding: 0px 0px 60px 0;
 }
@@ -195,6 +187,7 @@ h1, h2, h3, h4 {
   padding: 30px 0px;
   text-align: center;
   font-size: 20px;
+  background-color: black;
 }
 
 .slogan1 {
@@ -210,7 +203,7 @@ h1, h2, h3, h4 {
 
 .made-using {
   color: rgb(122, 124, 128);
-  font-size: 18px;
+  font-size: 17px;
   padding: 15px;
 }
 .fork-on {
@@ -277,7 +270,18 @@ a:hover {
   background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
   top: 15px;
   left: calc(-1982px + 5vw);
+  animation: 3.3s ease-out 0s 1 slideInFromLeft;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 .date-divider-text-right {
   font-family: 'avan'; /* super thin */
@@ -297,6 +301,12 @@ a:hover {
   right: calc(-1982px + 5vw);
   top: -23px;
   transform: rotate(180deg);
+}
+
+.portfolio {
+  width: 100%;
+  background-color: black;
+  padding-bottom: 5px;
 }
 
 .section {
@@ -332,7 +342,7 @@ a:hover {
   font-weight: 100;
   font-size: min(calc(6px + 1vw), 22px);
   line-height: min(calc(12px + 1.5vw), 40px);
-  color: rgb(113, 115, 128);
+  color: rgb(122, 124, 128);
 }
 
 .section-right {
@@ -487,7 +497,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .card-group {

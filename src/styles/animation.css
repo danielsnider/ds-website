@@ -34,7 +34,7 @@ body {
 }
 
 #intro {
-  background: #101214;
+  background: rgb(22, 23, 26);
   pointer-events: none;
 }
 
@@ -52,4 +52,8 @@ body {
   height: 70vh;
   max-width: 640px;
   max-height: 536px;
+}
+
+.animated-text-stripes {
+  text-align: left;
 }

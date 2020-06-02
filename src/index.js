@@ -29,8 +29,10 @@ import './styles/main.css'
 function Main(props) {
   return (
     <div className='main'>
-      <Header/>
-      <Status/>
+      <div className='animate-on-load'>
+        <Header/>
+        <Status/>
+      </div>
       <Gallery/>
       <Portfolio/>
       <Footer/>
@@ -46,15 +48,15 @@ function Header(props) {
         <NameAndLogo/>
       </div>
       <div className='header-right'>
-        <div className='about' id="content">
-          <div className='about-sentance'>Hello and Welcome!</div>
+        <div className='about animate-on-mouse-over'>
+          <div className='about-sentance'>Hello and Welcome! My name is Daniel.</div>
           <div className='about-sentance'>
-            My name is Daniel and <span className='about-emphasis'>I automate for people with
+            <span className='about-emphasis'>I automate for people with</span>
             <svg style={{paddingLeft: '5px'}} version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28">
               <title>heart</title>
               <path d="M14 26c-0.25 0-0.5-0.094-0.688-0.281l-9.75-9.406c-0.125-0.109-3.563-3.25-3.563-7 0-4.578 2.797-7.313 7.469-7.313 2.734 0 5.297 2.156 6.531 3.375 1.234-1.219 3.797-3.375 6.531-3.375 4.672 0 7.469 2.734 7.469 7.313 0 3.75-3.437 6.891-3.578 7.031l-9.734 9.375c-0.187 0.187-0.438 0.281-0.688 0.281z" fill="#f1aaae"></path>
             </svg>
-            .</span>
+            .
           </div>
           <div className='about-sentance'>
             In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are both powerful and 💯<span className='about-percent'>﹪</span>effortless.
@@ -67,16 +69,20 @@ function Header(props) {
 
 function NameAndLogo(props) {
   return (
-    <div id="header-content" className='name-and-logo'>
+    <div>
       <Logo/>
       <div className='name'>Daniel Snider</div>
       <div className='city'>Software Developer</div>
       {/* <div className='city'>Toronto</div> */}
       <div className="contact">
-        <a href="https://twitter.com/danielsnider" target="_blank">
+        {/* <a className='animate-on-mouse-over social-icon-link' href="https://twitter.com/danielsnider" target="_blank">
           <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
+        </a> */}
+        <a className='animate-on-mouse-over social-icon-link' href="https://github.com/danielsnider" target="_blank">
+          <svg className='social-icon' style={{transform:'scale(1.2, 1.2)'}} viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg>
         </a>
-        <a href="mailto:danielsnider12@gmail.com" target="_blank">
+        <span style={{margin:'5px'}}> </span>
+        <a className='animate-on-mouse-over social-icon-link' href="mailto:danielsnider12@gmail.com" target="_blank">
           <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path></svg>
         </a>
       </div>
@@ -204,7 +210,7 @@ function DateDivider(props) {
   return (
     <div id={props.id} className='section'>
       <div className='section-left'>
-        <h1 className='section-title'>
+        <h1 className='section-title animate-on-mouse-over'>
           {props.title}
         </h1>
         <div className='section-description'>
@@ -479,7 +485,7 @@ function Footer(props) {
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
       <div className='made-using'>
-        Website made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://parceljs.org/'>Parcel</a>.
+        Website made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://github.com/michaelvillar/dynamics.js'>Dynamics.js</a>.
       </div>
     </div>
   )

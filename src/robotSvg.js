@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function svg(props) {
-  console.log('robot svg')
   return (
   <svg id="logo" width="92" height="92" x="0px" y="0px" viewBox="0 0 512.011 512.011"  version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g><g >

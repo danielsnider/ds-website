@@ -8,7 +8,11 @@ import './styles/animation.css'
 
 export default function Animations(props) {
   useEffect(() => {
-    // Run Once
+    /*
+    ****************
+    **************** Setup
+    ****************
+    */
     function createEl(template) {
       var el = document.createElement('div');
       el.innerHTML = template.trim();
@@ -38,8 +42,11 @@ export default function Animations(props) {
     var windowWidth = document.body.clientWidth;
     var windowHeight = document.body.clientHeight;
 
-
-    // animate stripes
+    /*
+    ****************
+    **************** animate stripes
+    ****************
+    */
     function _animateStripes(container) {
       var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
@@ -114,7 +121,7 @@ export default function Animations(props) {
       var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
       options.sizeRatio = 3;
-      options.color = '#101214';
+      options.color = 'rgb(22, 23, 26)';
       options.delay = function (type, i) {
         if (type === 'show') {
           if (options.delayShow) {
@@ -217,12 +224,12 @@ export default function Animations(props) {
       dynamics.css(el, {
         position: 'absolute',
         left: Math.round(box.left + window.scrollX),
-        top: Math.round(box.top + window.scrollY),
+        top: Math.round(box.top ),
         width: Math.ceil(box.width),
         height: Math.ceil(box.height),
         display: 'none',
         pointerEvents: 'none',
-        background: '#101214',
+        background: 'rgb(22, 23, 26)',
         fontSize: style.fontSize,
         fontFamily: style.fontFamily,
         color: style.color,
@@ -237,7 +244,7 @@ export default function Animations(props) {
 
 
     var contentEls = [];
-    var originalContentEls = document.querySelectorAll('#header-content, #content');
+    var originalContentEls = document.querySelectorAll('.animate-on-load');
     (function () {
       var els = originalContentEls;
       var pageBox = pageEl.getBoundingClientRect();
@@ -318,7 +325,11 @@ export default function Animations(props) {
     }
 
 
-    // intro
+    /*
+    ****************
+    **************** intro
+    ****************
+    */
     (function () {
       animateBlackStripes(stripesEl, {
         count: 200
@@ -424,10 +435,14 @@ export default function Animations(props) {
     })();
 
 
-    // page
+    /*
+    ****************
+    **************** page
+    ****************
+    */
     (function () {
       var pageStripesEl = document.querySelector('#page-stripes');
-      var linkEls = document.querySelectorAll('a');
+      var linkEls = document.querySelectorAll('.animate-on-mouse-over');
 
       function animateCrazyLogo() {
         var el = document.querySelector('#header-logo');
@@ -492,12 +507,12 @@ export default function Animations(props) {
 
       function handleMouseOver(e) {
         var el = e.target;
-        while (el && el.tagName.toLowerCase() !== 'a') {
-          el = el.parentNode;
-        }
-        if (!el) {
-          return;
-        }
+        // while (el && el.tagName.toLowerCase() !== 'a') {
+        //   el = el.parentNode;
+        // }
+        // if (!el) {
+        //   return;
+        // }
         var r = animateLink(el);
 
         var handleMouseOut = function handleMouseOut(e) {
@@ -518,6 +533,7 @@ export default function Animations(props) {
 
           for (var i = 0; i < masks.length; i++) {
             var clonedEl = cloneAndStripeElement(el, masks[i], document.body);
+            clonedEl.classList.add('animated-text-stripes');
             var childrenEls = Array.prototype.slice.apply(clonedEl.querySelectorAll('path'));
             childrenEls.push(clonedEl);
             for (var k = 0; k < childrenEls.length; k++) {
@@ -586,10 +602,10 @@ export default function Animations(props) {
       }
     })();
 
-  }, []);
+  }, []); // The empty [] is for UseEffect and means run this code block once
 
   return (
-    <div>
+    <div style={{backgroundColor: 'black'}}>
       <svg id="clip-paths" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"><g></g></svg>
       <svg id="page-stripes" className="full-size" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
       <div id="intro" className="full-size">
