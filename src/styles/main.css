@@ -43,7 +43,8 @@
 }
 
 body {
-  background-color: black;
+  /* background-color: black; */
+  background-color: #101214;
   color: white;
   margin: 0px;
   display: flex;
@@ -64,9 +65,8 @@ h1, h2, h3, h4 {
   flex-direction: row;
   font-size: 20px;
   line-height: 25px;
-  padding: 65px 9vw 40px 9vw;
-  background-color: rgb(22, 23, 26);
-  margin-bottom: 45px;
+  padding: 100px 9vw 90px 9vw;
+  background-color: #101214;
   font-family: 'Noto Sans', sans-serif; /* less thin */
 }
 
@@ -76,7 +76,6 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* margin-left: 120px; */
 }
 
 .name-and-logo {
@@ -118,7 +117,6 @@ h1, h2, h3, h4 {
   line-height: 25px;
   color: rgb(122, 124, 128);
   max-width: 546px;
-  /* padding-top: 40px; */
 }
 
 .about-sentance {
@@ -138,12 +136,9 @@ h1, h2, h3, h4 {
   width: 15px;
   transform: rotate(2deg) translate(-6px, -5px);
   display: inline-block;
-  /* -webkit-text-stroke: .1px black; */
 }
 
 .hello {
-  /* color: rgba(122, 124, 128, 0.65); */
-  /* padding-right: 20px; */
   padding: 10px 0;
 }
 
@@ -188,13 +183,11 @@ h1, h2, h3, h4 {
 .slogan1 {
   font-family: 'avan'; /* super thin */
   font-size: 69px;
-  /* font-size: 6vw; */
 }
 
 .slogan2 {
   font-family: 'avan'; /* super thin */
   font-size: 25px;
-  /* font-size: 2.5vw; */
   padding-bottom: 30px;
 }
 
@@ -210,12 +203,9 @@ h1, h2, h3, h4 {
 
 .section-link {
   font-family: 'futura-med'; /* wide san serif */
-  /* color: rgb(122, 124, 128); */
   color: white;
   text-decoration: none;
   cursor: pointer;
-  /* font-size: 18px; */
-  /* padding: 0 1px; */
 }
 .github-link:hover {
   color: rgb(161, 163, 167);
@@ -223,7 +213,6 @@ h1, h2, h3, h4 {
 
 .github-link {
   font-family: 'legnsb'; /* style san serif */
-  /* color: rgb(122, 124, 128); */
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -244,7 +233,6 @@ a:hover {
 }
 
 .logo {
-  /* width: 73px; */
   height: 101px;
   padding-bottom: 10px;
   fill: white;
@@ -470,7 +458,8 @@ a:hover {
 }
 
 .gallery {
-  /* margin: 0px 130px 0px 130px; */
+  background-color: black;
+  padding-top: 50px;
 }
 
 .gallery-section {
@@ -521,7 +510,6 @@ a:hover {
   position: absolute;
   top: -62px;
   text-align: left;
-  z-index: 999;
   font-size: 19px;
   width: 100%;
   color: rgb(122, 124, 128);
@@ -532,7 +520,6 @@ a:hover {
 .card-subtitle {
   padding-bottom: 4px;
   font-size: 16px;
-  /* color: rgba(122, 124, 128, 0.75); */
   color: rgb(212, 212, 212);
 }
 

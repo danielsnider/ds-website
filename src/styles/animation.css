@@ -17,11 +17,11 @@ body {
 
 #page {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
-  margin-top: -280px;
-  height: 560px;
+  margin-top: 0px;
+  height: 103%;
 }
 
 #header-logo {
@@ -30,6 +30,11 @@ body {
 }
 
 #page-stripes {
+  pointer-events: none;
+}
+
+#intro {
+  background: #101214;
   pointer-events: none;
 }
 
