@@ -78,21 +78,21 @@ h1, h2, h3, h4 {
   flex: 1;
 }
 
-.name-and-logo {
-
-}
-
 .city {
   color: rgb(122, 124, 128);
 }
 
 .name {
   font-size: 25px;
-  padding: 7px 0px;
+  padding: 12px 0px;
+}
+
+.contact {
+  margin-top: 12px;
 }
 
 .social-icon {
-  padding: 10px 5px;
+  padding: 0 4px;
   fill: rgb(122, 124, 128);
   width: 25px;
   height: 19px;
