@@ -485,7 +485,7 @@ function Footer(props) {
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
       <div className='made-using'>
-        Website made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://github.com/michaelvillar/dynamics.js'>Dynamics.js</a>.
+        Website made using <a className='github-link' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' target="_blank" href='https://github.com/michaelvillar/dynamics.js'>Dynamics.js</a>.
       </div>
     </div>
   )

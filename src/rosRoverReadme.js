@@ -6,7 +6,7 @@ export default `
     margin-left: -15px;
     margin-top: -17px;'
  >
- <img src="http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png" alt="Drawing" width="55%">
+ <img src="https://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png" alt="Drawing" width="55%">
  <img src="https://raw.githubusercontent.com/danielsnider/ros-rover/master/diagrams/Rover_Diagram.png" alt="Drawing" width="42%">
 </p>
 
@@ -49,20 +49,20 @@ Link to [book on Amazon](https://www.amazon.com/Robot-Operating-System-ROS-Compu
 Rover Diagram in Visio Format: [Rover_Diagram.vsdx](https://github.com/danielsnider/ros-rover/blob/master/diagrams/Rover_Diagram.vsdx?raw=true)
 
 
-### simple_drive [![Build Status](http://build.ros.org/buildStatus/icon?job=Kbin_uX64__simple_drive__ubuntu_xenial_amd64__binary)](http://build.ros.org/job/Kbin_uX64__simple_drive__ubuntu_xenial_amd64__binary)
+### simple_drive
 
 A simple robot drive system for skid steering joystick teleoperation, control of a panning servo to look around the robot, and Arduino firmware.
 
 <p align="center">
- <img src="http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png" alt="Drawing" width="50%">
- <img src="http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=R3+in+Utah-low.JPG" alt="Drawing" width="45%">
- <img src="http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Simple_Drive_Diagram.png" alt="Drawing" width="95%">
+ <img src="https://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png" alt="Drawing" width="50%">
+ <img src="https://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=R3+in+Utah-low.JPG" alt="Drawing" width="45%">
+ <img src="https://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Simple_Drive_Diagram.png" alt="Drawing" width="95%">
 </p>
 
-Project homepage: [http://wiki.ros.org/simple_drive](http://wiki.ros.org/simple_drive)
+Project homepage: [https://wiki.ros.org/simple_drive](https://wiki.ros.org/simple_drive)
 
 
-### simple_arm [![Build Status](http://build.ros.org/buildStatus/icon?job=Kbin_uX64__simple_arm__ubuntu_xenial_amd64__binary)](http://build.ros.org/job/Kbin_uX64__simple_arm__ubuntu_xenial_amd64__binary)
+### simple_arm
 
 Simple 6-axis robot arm teleoperation software and Arduino firmware.
 
@@ -70,10 +70,10 @@ Simple 6-axis robot arm teleoperation software and Arduino firmware.
  <img src="https://github.com/danielsnider/ros-rover/raw/master/diagrams/simple_arm.jpg" alt="Drawing" width="100%">
 </p>
 
-Project homepage: [http://wiki.ros.org/simple_arm](http://wiki.ros.org/simple_arm)
+Project homepage: [https://wiki.ros.org/simple_arm](https://wiki.ros.org/simple_arm)
 
 
-### follow_waypoints [![Build Status](http://build.ros.org/buildStatus/icon?job=Kbin_uX64__follow_waypoints__ubuntu_xenial_amd64__binary)](http://build.ros.org/job/Kbin_uX64__follow_waypoints__ubuntu_xenial_amd64__binary)
+### follow_waypoints
 
 A package that will buffer \`move_base\` goals until instructed to navigate to all waypoints in sequence.
 
@@ -81,18 +81,18 @@ A package that will buffer \`move_base\` goals until instructed to navigate to a
  <img src="https://raw.githubusercontent.com/danielsnider/follow_waypoints/master/readme_images/follow_waypoints_rviz.png" alt="Drawing" width="100%">
 </p>
 
-Project homepage: [http://wiki.ros.org/follow_waypoints](http://wiki.ros.org/follow_waypoints)
+Project homepage: [https://wiki.ros.org/follow_waypoints](https://wiki.ros.org/follow_waypoints)
 
 
-### image_overlay_scale_and_compass [![Build Status](http://build.ros.org/buildStatus/icon?job=Kbin_uX64__image_overlay_scale_and_compass__ubuntu_xenial_amd64__binary)](http://build.ros.org/job/Kbin_uX64__image_overlay_scale_and_compass__ubuntu_xenial_amd64__binary)
+### image_overlay_scale_and_compass
 
 Add an indication of scale and compass to live images.
 
 <p align="center">
- <img src="http://wiki.ros.org/image_overlay_scale_and_compass?action=AttachFile&do=get&target=mars.png" alt="Drawing" width="80%">
+ <img src="https://wiki.ros.org/image_overlay_scale_and_compass?action=AttachFile&do=get&target=mars.png" alt="Drawing" width="80%">
 </p>
 
-Project homepage: [http://wiki.ros.org/image_overlay_scale_and_compass](http://wiki.ros.org/image_overlay_scale_and_compass)
+Project homepage: [https://wiki.ros.org/image_overlay_scale_and_compass](https://wiki.ros.org/image_overlay_scale_and_compass)
 
 ### Advanced Terminal Organization
 
