@@ -1,21 +1,14 @@
-import React, { useRef, useEffect, useState } from "react"
-import ReactDOM from "react-dom"
+import React, { useEffect} from "react"
 import dynamics from './dynamics'
 import tinycolor from './tinycolor'
 
-
-
 import RobotSvg from './robotSvg'
-
+import './styles/animation.css'
 
 
 export default function Animations(props) {
   useEffect(() => {
     // Run Once
-    
-
-
-
     function createEl(template) {
       var el = document.createElement('div');
       el.innerHTML = template.trim();
