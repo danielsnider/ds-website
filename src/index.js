@@ -86,30 +86,9 @@ function NameAndLogo(props) {
 }
 
 function Logo(props) {
-  // const logoEl = useRef(null);
-  // const onButtonClick = () => {
-  //   // `current` points to the mounted text input element
-  //   var color = tinycolor("red");
-  //   console.log('color:', color)
-  //   logoEl.current.focus();
-  //   dynamics.animate(logoEl.current, {
-  //     translateX: 350,
-  //     scale: 2,
-  //     opacity: 0.5
-  //   }, {
-  //     type: dynamics.spring,
-  //     frequency: 200,
-  //     friction: 200,
-  //     duration: 1500
-  //   })
-  // }
-  // <img ref={logoEl} onClick={onButtonClick} id='header-logo' className='logo' src={loveBot}/>
-
-
   return (
     <div id="header-logo">
       {/* <img id='logo' className='logo' src={loveBot}/> */}
-      {/* <img id='logo' className='logo' src={robotWhite}/> */}
       {/* <svg id="logo" width="80" height="67" viewBox="0 0 160 134" xmlns="http://www.w3.org/2000/svg"><path d="M24.44 78.157L0 53.53 53.417 0l26.39 26.612L106.38 0l53.482 53.614L136.25 77.31l-29.312-29.2-26.46 26.946-26.548-26.58-29.49 29.68zm5.335 5.375l50.033 50.415 51.108-51.286-23.775-23.684-26.712 26.72-26.372-26.404-24.28 24.24z" fill="white" fillRule="evenodd"></path></svg> */}
       <RobotSvg/>
 
