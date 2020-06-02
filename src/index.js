@@ -290,10 +290,8 @@ function Frame(props) {
 function Status(props) {
   return (
     <div className='status'>
-      <div className='status-slogan1'>
-      </div>
-      <div className='status-slogan2'>
-      <span className='status-slogan2-emphasis'>
+      <div className='status-text'>
+      <span className='status-text-emphasis'>
         Current status: 
       </span>
       Looking to join a passionate team. I am based in Toronto.

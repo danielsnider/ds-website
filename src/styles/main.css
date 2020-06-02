@@ -174,25 +174,20 @@ h1, h2, h3, h4 {
 }
 
 .status {
-  padding: 0px 0px 30px 0;
-  text-align: center;
-  font-size: 20px;
-  color: rgb(122, 124, 128);
+  padding: 0px 0px 60px 0;
 }
 
-.status-slogan1 {
-  font-family: 'avan'; /* super thin */
-  font-size: 40px;
-}
-
-.status-slogan2 {
+.status-text {
   font-family: 'avan'; /* super thin */
   font-size: 25px;
-  padding-bottom: 30px;
+  text-align: center;
+  font-size: 22px;
+  color: rgb(122, 124, 128);
+  font-weight: bold;
 }
 
-.status-slogan2-emphasis {
-  font-weight: bold;
+.status-text-emphasis {
+  color: white;
   padding-right: 10px;
 }
 
