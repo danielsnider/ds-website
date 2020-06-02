@@ -36,7 +36,6 @@ function Header(props) {
         <NameAndLogo/>
       </div>
       <div className='header-right'>
-        {/* <Index/> */}
         <div className='about' id="content">
           <div className='about-sentance'>Hello and Welcome!</div>
           <div className='about-sentance'>
@@ -82,31 +81,6 @@ function Logo(props) {
       {/* <svg id="logo" width="80" height="67" viewBox="0 0 160 134" xmlns="http://www.w3.org/2000/svg"><path d="M24.44 78.157L0 53.53 53.417 0l26.39 26.612L106.38 0l53.482 53.614L136.25 77.31l-29.312-29.2-26.46 26.946-26.548-26.58-29.49 29.68zm5.335 5.375l50.033 50.415 51.108-51.286-23.775-23.684-26.712 26.72-26.372-26.404-24.28 24.24z" fill="white" fillRule="evenodd"></path></svg> */}
       <RobotSvg/>
 
-    </div>
-  )
-}
-
-function Index(props) {
-  return (
-    <div className='index'>
-      <div className='index-title'>Lead Developer</div>
-      <a href='#image-archive'>Medical Image Archive</a>
-      <div className='index-subtitle'>Scaled to 100 million images</div>
-      <a href='#ros-rover'>Teleoperated, 6-wheeled, 1-armed robot</a>
-      <div className='index-subtitle'>Finalist at international robotics competition in Utah</div>
-      <a href='#deepscatter'>Deep Learning Web App</a>
-      <div className='index-subtitle'>A.I. Grant Finalist</div>
-      <a href='#matkit'>MatKit-Image Analysis Framework</a>
-      <div className='index-subtitle'>Mary Jo Haddad SickKids Innovation Award</div>
-      {/* <a href='#cell-bio'>Microscopy Image Analysis</a> */}
-      {/* <div className='index-subtitle'>Contributed to <em>n</em> research papers</div> */}
-
-      <div className='index-2nd-title'>Contributor</div>
-      <div style={{paddingTop:'3px'}}><a href='#breqwatr'>Breqwatr private cloud</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#rareconnect'>RareConnect social network</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#penguin'>Penguin ASI robotics</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#senseact'>SenseAct robot learning framework</a></div>
-      <div style={{paddingTop:'3px'}}><a href='#cell-bio'>Microscopy Image Analysis</a></div>
     </div>
   )
 }
