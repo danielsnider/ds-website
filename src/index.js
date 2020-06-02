@@ -504,57 +504,6 @@ function ImageItem(props) {
   )
 }
 
-function IframeItem(props) {
-  /*
-    1. To embed any webpage into an iframe these scripts are needed in index.html
-    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
-    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-    From: https://github.com/niutech/x-frame-bypass
-
-    2. Add item data to a content section
-      rosRover: {
-        id: 'ros-rover',
-        title: 'Mars Rover',
-        src: 'https://github.com/danielsnider/ros-rover/blob/master/README.md',
-        description: 'How to build a one-armed, self-driving, University Rover Challenge robot with ROS',
-      },
-
-    3. Then use this component:
-    <IframeItem {...sections.robotics.items.rosRover}/>
-  */
-  return (
-    <div className='image-item' id={props.id}>
-      <iframe width='800' height='700' is="x-frame-bypass" src={props.src}></iframe>
-    </div>
-  )
-}
-
-// function PdfItem(props) {
-//   /*
-//     1. Do the import the file
-//     import { Document, Page, pdfjs } from 'react-pdf'
-//     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
-//     import objectTrackingPdf from './static/object-tracking.pdf'
-
-//     2. Add item data to a content section
-//     objectTrackingPdf: {
-//       id: 'object-tracking',
-//       title: 'Object Tracking',
-//       file: objectTrackingPdf,
-//     }
-
-//     3. Then use this component:
-//     <PdfItem {...sections.computerVision.items.objectTrackingPdf}/>
-//   */
-//   return (
-//     <div className='image-item' id={props.id} className='image-img'>
-//       <Document file={props.file} >
-//         <Page pageNumber={1} />
-//       </Document>
-//     </div>
-//   )
-// }
-
 function MarkdownItem(props) {
   const getMarkdownText = () => {
     var rawMarkup = marked(props.src)
