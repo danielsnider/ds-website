@@ -24,6 +24,7 @@ import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
+import './styles/index.css'
 import './styles/main.css'
 
 
