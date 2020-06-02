@@ -26,6 +26,18 @@ import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
 import './styles/main.css'
 
+function Main(props) {
+  return (
+    <div className='main'>
+      <Header/>
+      <Status/>
+      <Gallery/>
+      <Portfolio/>
+      <Footer/>
+      <Animations/>
+    </div>
+  )
+}
 
 function Header(props) {
   return (
@@ -275,15 +287,17 @@ function Frame(props) {
   )
 }
 
-function Main(props) {
+function Status(props) {
   return (
-    <div className='main'>
-      <Header/>
-      {/* <Status/> */}
-      <Gallery/>
-      <Portfolio/>
-      <Footer/>
-      <Animations/>
+    <div className='status'>
+      <div className='status-slogan1'>
+      </div>
+      <div className='status-slogan2'>
+      <span className='status-slogan2-emphasis'>
+        Current status: 
+      </span>
+      Looking to join a passionate team. I am based in Toronto.
+      </div>
     </div>
   )
 }
