@@ -148,7 +148,6 @@ function Gallery(props) {
       <DateDivider year='Lead Developer'/>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
-          {/* <div className='card-section-title'>Lead Developer</div> */}
         </div>
         <span className='card-group'>
           <Card
@@ -187,7 +186,6 @@ function Gallery(props) {
       <DateDivider year='Contributor'/>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
-          {/* <div className='card-section-title' style={{top: '-5px'}}>Contributor</div> */}
         </div>
         <span className='card-group'>
           <Card
@@ -526,13 +524,9 @@ function Footer(props) {
       <div className='slogan2'>
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
-      {/* <Header/> */}
       <div className='made-using'>
         Website made using <a className='github-link' href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' href='https://parceljs.org/'>Parcel</a>.
       </div>
-      {/* <div className='fork-on'>
-        Fork on <a className='github-link' href='https://github.com/danielsnider/ds-website'>github</a>.
-      </div> */}
     </div>
   )
 }
