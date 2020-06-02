@@ -19,7 +19,6 @@ import deepscatterImage33 from './images/deepscatter_cropped_33.jpg'
 import matkitCellsImage from './images/matkit-cells_40.jpg'
 import matkitMontage from './images/matkit-short.jpg'
 import natureSvg from './images/nature.svg'
-import objectTrackingImage from './images/object-tracking.jpg'
 import rareconnectImage from './images/rareconnect.png'
 import rareconnectWysiwygImage from './images/rareconnect-wysiwyg.jpg'
 import rosRoverImage from './images/rover_half_33.jpg'
@@ -493,19 +492,6 @@ function Portfolio(props) {
           />
         </Frame>
       </Section>
-      {/* <Section
-        id='object-tracking'
-        title='Computer Vision'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum ultrices libero, id venenatis quam facilisis et. Mauris ultrices volutpat commodo. Proin at fringilla lectus. Pellentesque aliquet mi ac nunc finibus sagittis. Nulla non finibus velit.'
-      >
-        <Frame
-          githubLink='https://github.com/danielsnider/object-tracking'
-          toolList={['OpenCV', 'Raspberry Pi', 'AMQP', 'Websockets']}
-        />
-        <ImageItem
-          src={objectTrackingImage}
-        />
-      </Section> */}
     </div>
   )
 }
