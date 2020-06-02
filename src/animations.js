@@ -443,6 +443,7 @@ export default function Animations(props) {
           dynamics.css(path, {
             fill: _color2.toRgbString()
           });
+          clonedEl.style.top = '100px';
           clonedEls.push(clonedEl);
         }
 
