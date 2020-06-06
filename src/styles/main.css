@@ -60,6 +60,7 @@ h1, h2, h3, h4 {
 #app {
   width: 100%;
   text-align: left;
+  overflow-x: hidden;
 }
 
 .header {
@@ -254,24 +255,6 @@ a:hover {
   width: 100%;
 }
 
-.date-divider-text {
-  font-family: 'avan'; /* super thin */
-  font-size: calc(35px + 0vw);
-  position: relative;
-  font-weight: 100;
-  padding-left: calc(28px + 5vw) ;
-  color: rgb(122, 124, 128);
-}
-
-.date-divider {
-  position: absolute;
-  width: 2000px;
-  height: 50px;
-  background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
-  top: 15px;
-  left: calc(-1982px + 5vw);
-  animation: 3.3s ease-out 0s 1 slideInFromLeft;
-}
 
 @keyframes slideInFromLeft {
   0% {
@@ -282,26 +265,44 @@ a:hover {
   }
 }
 
-
-.date-divider-text-right {
+.date-divider-text {
   font-family: 'avan'; /* super thin */
-  font-size: 35px;
+  font-size: calc(35px + 0vw);
   position: relative;
   font-weight: 100;
-  padding-right: calc(28px + 5vw) ;
-  text-align: right;
+  left: max(calc(50% - 635px), calc(28px + 5vw));
   color: rgb(122, 124, 128);
 }
 
-.date-divider-right {
+.date-divider {
   position: absolute;
   width: 2000px;
   height: 50px;
   background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
-  right: calc(-1982px + 5vw);
-  top: -23px;
-  transform: rotate(180deg);
+  top: 15px;
+  left: -2012px;
+  animation: 3.3s ease-out 0s 1 slideInFromLeft;
 }
+
+.date-divider-text-section {
+  font-family: 'avan'; /* super thin */
+  font-size: calc(35px + 0vw);
+  position: relative;
+  font-weight: 100;
+  left: max(calc(50% - 1000px), calc(28px + 5vw));
+  color: rgb(122, 124, 128);
+}
+
+.date-divider-section {
+  position: absolute;
+  width: 2000px;
+  height: 50px;
+  background: transparent url('../images/divider_left.gif') 0 0 no-repeat;
+  top: 15px;
+  left: -2012px;
+  animation: 3.3s ease-out 0s 1 slideInFromLeft;
+}
+
 
 .portfolio {
   width: 100%;

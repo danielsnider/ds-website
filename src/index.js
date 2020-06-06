@@ -197,11 +197,11 @@ function Card(props) {
 }
 
 function DateDivider(props) {
-  const alignRight = props.alignRight ? '-right' : ''
+  const alignSection = props.alignSection ? '-section' : ''
   return (
-    <div className={`date-divider-text${alignRight}`}>
+    <div className={`date-divider-text${alignSection}`}>
       {props.year}
-      <div className={`date-divider${alignRight}`}/>
+      <div className={`date-divider${alignSection}`}/>
     </div>
   )
 }
@@ -300,7 +300,7 @@ function Status(props) {
       <span className='status-text-emphasis'>
         Current status: 
       </span>
-      Looking to join a passionate team. I am based in Toronto.
+      Looking to join a passionate team. I am based in Toronto. <a href='https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view?usp=sharing' target='_blank'>Here is my resume.</a>
       </div>
     </div>
   )
@@ -309,11 +309,11 @@ function Status(props) {
 function Portfolio(props) {
   return (
     <div className='portfolio'>
-    <DateDivider year='2019–2020'/>
+    <DateDivider year='2019–2020' alignSection={true}/>
     <Section
         id='image-archive'
         title='Massive Scale'
-        description='At the SickKids Research Institute I lead the development of a medical Picture Archive System. It is web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+        description='At the SickKids Research Institute I led the development of a medical Picture Archive System. It is web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
       >
         <Frame
           // webLink=''
@@ -360,7 +360,7 @@ function Portfolio(props) {
             </div>
         </Frame>
       </Section>
-      <DateDivider year='2018'/>
+      <DateDivider year='2018' alignSection={true}/>
       <Section
         id='deepscatter'
         title='Deep Learning'
@@ -406,11 +406,11 @@ function Portfolio(props) {
           />
         </Frame>
       </Section>
-      <DateDivider year='2017'/>
+      <DateDivider year='2017' alignSection={true}/>
       <Section
         id='ros-rover'
         title='Robotics'
-        description={['I lead the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
+        description={['I led the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
       >
         <Frame
           githubLink='https://github.com/danielsnider/ros-rover'
@@ -435,7 +435,7 @@ function Portfolio(props) {
           />
         </Frame>
       </Section>
-      <DateDivider year='2016'/>
+      <DateDivider year='2016' alignSection={true}/>
       <Section
         id='cell-bio'
         title='Data Science'
@@ -485,7 +485,7 @@ function Footer(props) {
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
       <div className='made-using'>
-        Website made using <a className='github-link' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' target="_blank" href='https://github.com/michaelvillar/dynamics.js'>Dynamics.js</a>.
+        Website made using <a className='github-link' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' target="_blank" href='http://dynamicsjs.com/'>Dynamics.js</a>.
       </div>
     </div>
   )
