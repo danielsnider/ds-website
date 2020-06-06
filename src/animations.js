@@ -332,10 +332,10 @@ export default function Animations(props) {
     */
     (function () {
       animateBlackStripes(stripesEl, {
-        count: 200
+        count: 75
       });
       animateColoredStripes(stripesEl, {
-        count: 100
+        count: 50
       });
 
       dynamics.css(pageEl, {
@@ -404,11 +404,11 @@ export default function Animations(props) {
       dynamics.setTimeout(function () {
         animateLogo();
         animateBlackStripes(stripesEl, {
-          count: 200,
+          count: 5,
           delayShow: true
         });
         animateColoredStripes(stripesEl, {
-          count: 100
+          count: 50
         });
       }, 1000);
 
@@ -447,7 +447,7 @@ export default function Animations(props) {
       function animateCrazyLogo() {
         var el = document.querySelector('#header-logo');
         var box = el.getBoundingClientRect();
-        var count = 10 + Math.random() * 10;
+        var count = 15 + Math.random() * 3;
         var masks = createMasksWithStripes(count, box, Math.round(100 / count));
         var clonedEls = [];
 
