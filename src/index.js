@@ -48,7 +48,7 @@ function Header(props) {
         <NameAndLogo/>
       </div>
       <div className='header-right'>
-        <div className='about animate-on-mouse-over'>
+        <div className='about'>
           <div className='about-sentence'>Hello and Welcome! My name is Daniel.</div>
           <div className='about-sentence'>
             <span className='about-emphasis'>I automate for people with</span>
@@ -300,7 +300,7 @@ function Status(props) {
       <span className='status-text-emphasis'>
         Current status: 
       </span>
-      Looking to join a passionate team. I am based in Toronto. <a href='https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view?usp=sharing' target='_blank'>Here is my resume.</a>
+      Looking to join a passionate team. I am based in Toronto. <a className='animate-on-mouse-over' href='https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view?usp=sharing' target='_blank'>Here is my resume.</a>
       </div>
     </div>
   )
@@ -364,7 +364,7 @@ function Portfolio(props) {
       <Section
         id='deepscatter'
         title='Deep Learning'
-        description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='section-link' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
+        description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='section-link animate-on-mouse-over' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
         >
         <Frame
           githubLink='https://github.com/danielsnider/Deep-Scatter'
@@ -392,7 +392,7 @@ function Portfolio(props) {
       <Section
         id='senseact'
         title='Reinforcement Learning'
-        description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
+        description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link animate-on-mouse-over' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
       >
         <Frame
           webLink='https://www.kindred.ai/senseact'
@@ -410,7 +410,7 @@ function Portfolio(props) {
       <Section
         id='ros-rover'
         title='Robotics'
-        description={['I led the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
+        description={['I led the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
       >
         <Frame
           githubLink='https://github.com/danielsnider/ros-rover'
@@ -485,7 +485,7 @@ function Footer(props) {
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
       <div className='made-using'>
-        Website made using <a className='github-link' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='github-link' target="_blank" href='http://dynamicsjs.com/'>Dynamics.js</a>.
+        Website made using <a className='section-link animate-on-mouse-over' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='section-link animate-on-mouse-over' target="_blank" href='http://dynamicsjs.com/'>Dynamics.js</a>.
       </div>
     </div>
   )
