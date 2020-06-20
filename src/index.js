@@ -381,7 +381,7 @@ function Portfolio(props) {
         description='While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award.'
       >
         <Frame
-          // githubLink='https://github.com/danielsnider/??'
+          githubLink='https://github.com/danielsnider/Single_Cell_Analysis_Toolkit'
           toolList={['Matlab', 'Morphology', 'Adaptive Threshold', 'Segmentation']}
         >
           <ImageItem
