@@ -37,6 +37,9 @@ Investigating the trends seen in the localization of protein signal inside singl
  <img src="https://github.com/danielsnider/cell-bio/blob/master/images/STRADa_nuc_vs_cell_mass_bins29_hidepoints_true.png?raw=true" width="100%">
 </p>
 
+Project homepage: [https://github.com/danielsnider/Outlier-Analysis](https://github.com/danielsnider/Outlier-Analysis)
+
+
 ### Cell Size Variety in Histology of Many Animal Species
 
 <p align="center">
@@ -56,7 +59,6 @@ Project homepage: [https://github.com/danielsnider/E-cadherin-Cell-Size](https:/
 
 Project homepage: [https://github.com/danielsnider/Cell-3D-Image-Analysis](https://github.com/danielsnider/Cell-3D-Image-Analysis)
 
-
 ### Kidney Substructure Segmentation in Electron Microscopy
 
 The green area is the glomerular basement membrane and each colored contour line is a podocyte foot process.
@@ -65,20 +67,7 @@ The green area is the glomerular basement membrane and each colored contour line
  <img src="https://github.com/danielsnider/cell-bio/blob/master/images/EMResults2.gif?raw=true" width="99%">
 </p>
 
-
-<!--
-### Growth of Intestinal Organoids
-
-<p align="center">
- <span style=
-  'width: 42%;
-   overflow:hidden;'
-  >
- ><img src="https://github.com/danielsnider/cell-bio/blob/master/images/organoid2.gif?raw=true" width="42%"></span>
- <img src="https://github.com/danielsnider/cell-bio/blob/master/images/organoid1.png?raw=true" width="54%">
-</p>
--->
-
+Project homepage: [https://github.com/danielsnider/TEM-glomerular-basement-segmentation](https://github.com/danielsnider/TEM-glomerular-basement-segmentation)
 
 ### Interaction of organelles inside single cells
 <p align="center">
@@ -89,24 +78,5 @@ The green area is the glomerular basement membrane and each colored contour line
 </p>
 
 Project homepage: [https://github.com/danielsnider/peroxi_mito_analysis](https://github.com/danielsnider/peroxi_mito_analysis)
-
-
-<!---
-
-### High Throughput Cell Analysis Toolkit
-
-A GUI for nontechnical users to perform cell segmentation, measuring, tracking, and plotting of high-content screens.
-
-<p align="center">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/my.gif?raw=true" height="400px">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/ToolkitGUI.png?raw=true" height="600px">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/gui-seg1.jpg?raw=true" height="400px">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/gui-seg2.png?raw=true" height="400px">
- <img src="https://github.com/danielsnider/cell-bio/raw/master/images/gui-seg3.png?raw=true" height="400px">
-</p>
-
-Project homepage: [https://github.com/danielsnider/Single_Cell_Analysis_Toolkit](https://github.com/danielsnider/Single_Cell_Analysis_Toolkit)
--->
-
 
 `;
