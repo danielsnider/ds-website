@@ -111,7 +111,7 @@ function Gallery(props) {
         <span className='card-group'>
           <Card
             subtitle="Scaled to 100 million images"
-            title="Medical Image Archive"
+            title="Medical Image Archive for AI"
             desc="Accomplished with distributed processing across 200 servers."
             src={imageArchiveImage20}
             anchor="#image-archive"
