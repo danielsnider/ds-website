@@ -59,7 +59,7 @@ function Header(props) {
             .
           </div>
           <div className='about-sentence'>
-            In collaboration with great engineers, scientists, and managers, I create user-focused solutions that are both powerful and 💯<span className='about-percent'>﹪</span>effortless.
+            In collaboration with great engineers, scientists, and managers, I create people-focused solutions that are powerful and 💯<span className='about-percent'>﹪</span>effortless.
           </div>
         </div>
       </div>
