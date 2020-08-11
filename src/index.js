@@ -410,7 +410,7 @@ function Portfolio(props) {
       <Section
         id='ros-rover'
         title='Robotics'
-        description={['I led the software development of a self-driving, 6-wheeled robotic rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
+        description={['I led the software development of a self-driving, 6-wheeled rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
       >
         <Frame
           githubLink='https://github.com/danielsnider/ros-rover'
