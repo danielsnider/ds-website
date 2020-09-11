@@ -72,7 +72,7 @@ function NameAndLogo(props) {
     <div>
       <Logo/>
       <div className='name'>Daniel Snider</div>
-      <div className='city'>Software Developer</div>
+      <div className='city'>Senior Software Developer</div>
       {/* <div className='city'>Toronto</div> */}
       <div className="contact">
         {/* <a className='animate-on-mouse-over social-icon-link' href="https://twitter.com/danielsnider" target="_blank">
@@ -127,7 +127,7 @@ function Gallery(props) {
         <span className='card-group'>
           <Card
             subtitle="Finalist in Robotics Competition"
-            title='Teleoperated Mars Rover'
+            title='Autonomous Mars Rover'
             desc="Depth camera, self-driving, and robot arm."
             src={rosRoverImage}
             anchor="#ros-rover"
