@@ -322,6 +322,7 @@ function Portfolio(props) {
           <ImageItem
             src={imageArchiveImage50}
           />
+          <p class='text-item'>* The medical images above are samples sourced from Wikipedia and Google Images.</p>
         </Frame>
       </Section>
     <Section
