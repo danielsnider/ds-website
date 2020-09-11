@@ -313,7 +313,7 @@ function Portfolio(props) {
     <Section
         id='image-archive'
         title='Massive Scale'
-        description='At the SickKids Research Institute I led the development of a medical Picture Archive System. It is web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+        description='At the SickKids Research Institute I led the development of a medical Picture Archive System. It is a web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
       >
         <Frame
           // webLink=''
