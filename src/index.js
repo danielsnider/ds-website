@@ -31,7 +31,7 @@ function Main(props) {
     <div className='main'>
       <div className='animate-on-load'>
         <Header/>
-        <Status/>
+        {/* <Status/> */}
       </div>
       <Gallery/>
       <Portfolio/>
