@@ -60,7 +60,7 @@ function Header(props) {
           </div>
           <div className='about-sentence'>
             In collaboration with great engineers, scientists, and managers, I create Machine Learning (ML) Systems that are powerful and practical.
-            <br><br> ML Systems is a growing field that coalesces my roots in IT with my recent experience applying ML algorithms. My three aims are to make computation more efficient, data more manageable, and translate ML algorithms into advanced, practical systems.
+            <div> ML Systems is a growing field that coalesces my roots in IT with my recent experience applying ML algorithms. My three aims are to make computation more efficient, data more manageable, and translate ML algorithms into advanced, practical systems.<div>
           </div>
         </div>
       </div>
