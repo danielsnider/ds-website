@@ -503,7 +503,7 @@ export default function Animations(props) {
       };
 
       dynamics.setTimeout(logoAnimationLoop, 4000);
-      document.querySelector('#header-logo').addEventListener('mouseover', animateCrazyLogo);
+      //document.querySelector('#header-logo').addEventListener('mouseover', animateCrazyLogo);
 
       function handleMouseOver(e) {
         var el = e.target;
