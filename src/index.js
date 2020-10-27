@@ -51,7 +51,7 @@ function Header(props) {
         <div className='about'>
           <div className='about-sentence'>Hello and Welcome! My name is Daniel.</div>
           <div className='about-sentence'>
-            <span className='about-emphasis'>I automate for people with</span>
+            <span className='about-emphasis'>AI can free up humanity to focus more on creative, innovative, and compassionate activities </span>
             <svg style={{paddingLeft: '5px'}} version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28">
               <title>heart</title>
               <path d="M14 26c-0.25 0-0.5-0.094-0.688-0.281l-9.75-9.406c-0.125-0.109-3.563-3.25-3.563-7 0-4.578 2.797-7.313 7.469-7.313 2.734 0 5.297 2.156 6.531 3.375 1.234-1.219 3.797-3.375 6.531-3.375 4.672 0 7.469 2.734 7.469 7.313 0 3.75-3.437 6.891-3.578 7.031l-9.734 9.375c-0.187 0.187-0.438 0.281-0.688 0.281z" fill="#f1aaae"></path>
@@ -59,7 +59,8 @@ function Header(props) {
             .
           </div>
           <div className='about-sentence'>
-            In collaboration with great engineers, scientists, and managers, I create people-focused solutions that are powerful and 💯<span className='about-percent'>﹪</span>effortless.
+            In collaboration with great engineers, scientists, and managers, I create Machine Learning (ML) Systems that are powerful and practical.
+            <br><br> ML Systems is a growing field that coalesces my roots in IT with my recent experience applying ML algorithms. My three aims are to make computation more efficient, data more manageable, and translate ML algorithms into advanced, practical systems.
           </div>
         </div>
       </div>
@@ -72,7 +73,7 @@ function NameAndLogo(props) {
     <div>
       <Logo/>
       <div className='name'>Daniel Snider</div>
-      <div className='city'>Senior Software Developer</div>
+      <div className='city'>Software Systems Researcher</div>
       {/* <div className='city'>Toronto</div> */}
       <div className="contact">
         {/* <a className='animate-on-mouse-over social-icon-link' href="https://twitter.com/danielsnider" target="_blank">
@@ -313,7 +314,8 @@ function Portfolio(props) {
     <Section
         id='image-archive'
         title='Massive Scale'
-        description='At the SickKids Research Institute I led the development of a medical Picture Archive System. It is a web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
+        description='At the SickKids Research Institute I led the development of a medical Picture Archive 
+. It is a web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy.'
       >
         <Frame
           // webLink=''
