@@ -24,19 +24,162 @@ import rosRoverImage from './images/rover_half_33.jpg'
 import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
+import danielImage from './images/daniel_snider.jpg'
 import './styles/main.css'
 
 function Main(props) {
   return (
     <div className='main'>
       <div className='animate-on-load'>
-        <Header/>
+        <Header2/>
+        {/* <Header/> */}
         {/* <Status/> */}
       </div>
       <Gallery/>
       <Portfolio/>
       <Footer/>
-      <Animations/>
+      {/* <Animations/> */}
+    </div>
+  )
+}
+
+function Header2(props) {
+  return (
+    <div className="white-theme">
+      <div className="colour-bar"></div>
+      <ContactInfo/>
+      <div className="">
+        <AboutMe/>
+        <div className="paragraph">
+          <div className="news-blog">
+            <NewsPosts/>
+            <BlogPosts/>
+          </div>
+        </div>
+        <div className="">
+          <h2 className="underlined">Projects</h2>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ContactInfo(props) {
+  return (
+    <div className="header2">
+      <div className="header2-left">
+        <div>
+          <img className="profile-image" src={danielImage} alt="Daniel Snider"></img>
+        </div>
+      </div>
+      <div className="header2-right">
+        <div className="">
+          <h1>Daniel Snider</h1>
+          <h3>Software Systems Engineer</h3>
+          {/* <h3>Affiliation</h3> */}
+        </div>
+        <div className="">
+          <a href="https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view" target="_blank">CV</a> |
+          <a href="https://danielsnider.medium.com/" target="_blank">Blog</a> |
+          <a href="https://github.com/danielsnider" target="_blank">Newsletter</a> |
+          <a href="mailto:danielsnider12@gmail.com">danielsnider12@gmail.com</a>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function AboutMe(props) {
+  return (
+    <div className="paragraph">
+      <h2 className="underlined">About Me</h2>
+      <p>
+        I am a <a href="https://eecs.mit.edu/" target="_blank">Computer Science</a> PhD student at
+        <a href="https://web.mit.edu/" target="_blank">MIT</a>, advised by
+        <a href="https://people.csail.mit.edu/kraska/" target="_blank">Professor Tim Kraska</a>. I am part of the
+        <a href="http://dsg.csail.mit.edu/" target="_blank">Data Systems Group</a> within the
+        <a href="https://www.csail.mit.edu/" target="_blank">Computer Science and Artificial Intelligence Laboratory (CSAIL)</a>.
+      </p>
+      <p>
+        I am generally interested in computer systems research. My research interests span data systems, distributed
+        systems, and systems for machine learning. I also enjoy thinking about problems at the intersection of systems
+        and human-computer interaction as I strongly believe in the value of creating usable systems software.
+      </p>
+      <p>
+        Before starting my PhD, I earned my master's degree in
+        <a href="http://web.cs.toronto.edu/" target="_blank">Computer Science</a> at the
+        <a href="https://www.utoronto.ca/" target="_blank">University of Toronto</a>, advised by
+        <a href="https://www.cs.toronto.edu/~pekhimenko" target="_blank">Professor Gennady Pekhimenko</a>. Before
+        graduate school, I was a <a href="https://uwaterloo.ca/software-engineering" target="_blank">Software
+          Engineering</a> student at the <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a> and
+        graduated in 2018.
+      </p>
+    </div>
+  )
+}
+
+function NewsPosts(props) {
+  return (
+    <div className="news-posts">
+      <h2 className="underlined">News</h2>
+
+        <div className="row-item">
+          <div className="row-item-date">November 18, 2020</div>
+          <div className="row-item-text">We've open sourced our <a target="_blank" href="" target="_blank">Diagnostic Image Archive project</a>.</div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-date">June 30, 2019</div>
+          <div className="row-item-text">I recieved the Mary Jo Haddad SickKids Innovation Award. Thank you SickKids!</div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-date">April 26, 2018</div>
+          <div className="row-item-text">I was a finalist in the <a target="_blank" href="https://aigrant.org/">Nat Friedman A.I. Grant competition</a>.</div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-date">June 3rd, 2017</div>
+          <div className="row-item-text">I placed 21st out of 82 teams at the <a target="_blank" href="http://urc.marssociety.org/home/about-urc/urc2017-scores">University Rover Challenge</a> with <a target="_blank" href="https://teamr3.ca/">Team R3.</a></div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-text"><a target="_blank" href="https://www.geoffreyyu.com/news/">See older news »</a></div>
+        </div>
+    </div>
+  )
+}
+
+function BlogPosts(props) {
+  return (
+    <div className="blog-posts">
+      <h2 className="underlined">Latest Blog Posts</h2>
+
+        <div className="row-item">
+          <div className="row-item-date">November 5, 2020</div>
+          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/4-reasons-to-get-excited-about-the-future-of-automation-c89ab533ebaf">4 Reasons to Get Excited About the Future Of Automation</a></div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-date">September 16, 2017</div>
+          <div className="row-item-text"><a target="_blank" href="____________________">We Deserve Better Software Conventions</a></div>
+        </div>
+        
+        <div className="row-item">
+          <div className="row-item-date">September 16, 2017</div>
+          <div className="row-item-text"><a target="_blank" href="____________________">Scaling ElasticSearch</a></div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-date">September 16, 2017</div>
+          <div className="row-item-text"><a target="_blank" href="____________________">7 Habits of Highly Effective Note Taking</a></div>
+        </div>
+
+        <div className="row-item">
+          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/">See all posts »</a></div>
+        </div>
     </div>
   )
 }
@@ -324,7 +467,7 @@ function Portfolio(props) {
           <ImageItem
             src={imageArchiveImage50}
           />
-          <p class='text-item'>* The medical images above are samples sourced from Wikipedia and Google Images.</p>
+          <p className='text-item'>* The medical images above are samples sourced from Wikipedia and Google Images.</p>
         </Frame>
       </Section>
     <Section
