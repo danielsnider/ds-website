@@ -25,28 +25,32 @@ import senseactArmImage from './images/senseact-arm.jpg'
 import senseactDiagram from './images/senseact-short.gif'
 import senseactPresentation from './images/senseact-presenting_40.jpg'
 import danielImage from './images/daniel_snider.jpg'
+// import shevronImage from './images/01_arrow-double-chevron-angle-down-512.png'
+import shevronImage from './images/mouse-arrow.svg'
 import './styles/main.css'
 
 function Main(props) {
   return (
     <div className='main'>
       <div className='animate-on-load'>
-        <Header2/>
-        {/* <Header/> */}
+        <Header/>
         {/* <Status/> */}
       </div>
       <Gallery/>
       <Portfolio/>
       <Footer/>
       {/* <Animations/> */}
+      <div className="bottom-color-bar">
+        {/* Daniel Snider, 2020 */}
+      </div>
     </div>
   )
 }
 
-function Header2(props) {
+function Header(props) {
   return (
     <div className="white-theme">
-      <div className="colour-bar"></div>
+      <div className="color-bar"></div>
       <ContactInfo/>
       <div className="">
         <AboutMe/>
@@ -56,9 +60,6 @@ function Header2(props) {
             <BlogPosts/>
           </div>
         </div>
-        <div className="">
-          <h2 className="underlined">Projects</h2>
-        </div>
       </div>
     </div>
   )
@@ -66,22 +67,22 @@ function Header2(props) {
 
 function ContactInfo(props) {
   return (
-    <div className="header2">
-      <div className="header2-left">
+    <div className="header">
+      <div className="header-left">
         <div>
           <img className="profile-image" src={danielImage} alt="Daniel Snider"></img>
         </div>
       </div>
-      <div className="header2-right">
+      <div className="header-right">
         <div className="">
-          <h1>Daniel Snider</h1>
-          <h3>Software Systems Engineer</h3>
+          <h1 className="display-name">Daniel Snider</h1>
+          <h3 className="job-title">Software Systems Engineer</h3>
           {/* <h3>Affiliation</h3> */}
         </div>
-        <div className="">
-          <a href="https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view" target="_blank">CV</a> |
-          <a href="https://danielsnider.medium.com/" target="_blank">Blog</a> |
-          <a href="https://github.com/danielsnider" target="_blank">Newsletter</a> |
+        <div className="contact-links">
+          <a href="https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view" target="_blank">CV</a>| 
+          <a href="https://danielsnider.medium.com" target="_blank">Blog</a>| 
+          <a href="https://danielsnider.substack.com" target="_blank">Newsletter</a>| 
           <a href="mailto:danielsnider12@gmail.com">danielsnider12@gmail.com</a>
           <br/>
           <br/>
@@ -93,7 +94,7 @@ function ContactInfo(props) {
 
 function AboutMe(props) {
   return (
-    <div className="paragraph">
+    <div className="paragraph justify-text">
       <h2 className="underlined">About Me</h2>
       <p>
         I am a <a href="https://eecs.mit.edu/" target="_blank">Computer Science</a> PhD student at
@@ -125,10 +126,10 @@ function NewsPosts(props) {
     <div className="news-posts">
       <h2 className="underlined">News</h2>
 
-        <div className="row-item">
+        {/* <div className="row-item">
           <div className="row-item-date">November 18, 2020</div>
           <div className="row-item-text">We've open sourced our <a target="_blank" href="" target="_blank">Diagnostic Image Archive project</a>.</div>
-        </div>
+        </div> */}
 
         <div className="row-item">
           <div className="row-item-date">June 30, 2019</div>
@@ -146,7 +147,7 @@ function NewsPosts(props) {
         </div>
 
         <div className="row-item">
-          <div className="row-item-text"><a target="_blank" href="https://www.geoffreyyu.com/news/">See older news »</a></div>
+          <div className="row-item-text"><a href="./news/">See older news »</a></div>
         </div>
     </div>
   )
@@ -159,54 +160,27 @@ function BlogPosts(props) {
 
         <div className="row-item">
           <div className="row-item-date">November 5, 2020</div>
-          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/4-reasons-to-get-excited-about-the-future-of-automation-c89ab533ebaf">4 Reasons to Get Excited About the Future Of Automation</a></div>
+          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/4-reasons-to-get-excited-about-the-future-of-automation-c89ab533ebaf">Ranking Software Frameworks on Standardization of Collaboration</a></div>
         </div>
 
         <div className="row-item">
-          <div className="row-item-date">September 16, 2017</div>
-          <div className="row-item-text"><a target="_blank" href="____________________">We Deserve Better Software Conventions</a></div>
-        </div>
-        
-        <div className="row-item">
-          <div className="row-item-date">September 16, 2017</div>
-          <div className="row-item-text"><a target="_blank" href="____________________">Scaling ElasticSearch</a></div>
+          <div className="row-item-date">November 5, 2020</div>
+          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/taking-notes-has-compounding-effects-on-your-productivity-60b809f5f86a">Taking Notes has Compounding Effects on your Productivity</a></div>
         </div>
 
         <div className="row-item">
+          <div className="row-item-date">November 5, 2020</div>
+          <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/4-reasons-to-get-excited-about-the-future-of-automation-c89ab533ebaf">4 Reasons to Get Excited About the Future of Automation</a></div>
+        </div>
+
+        {/* <div className="row-item">
           <div className="row-item-date">September 16, 2017</div>
           <div className="row-item-text"><a target="_blank" href="____________________">7 Habits of Highly Effective Note Taking</a></div>
-        </div>
+        </div> */}
 
         <div className="row-item">
           <div className="row-item-text"><a target="_blank" href="https://danielsnider.medium.com/">See all posts »</a></div>
         </div>
-    </div>
-  )
-}
-
-function Header(props) {
-  return (
-    <div className='header'>
-      <div className='header-left'>
-        <NameAndLogo/>
-      </div>
-      <div className='header-right'>
-        <div className='about'>
-          <div className='about-sentence'>Hello and Welcome! My name is Daniel.</div>
-          <div className='about-sentence'>
-            <span className='about-emphasis'>AI can free up humanity to focus more on creative, innovative, and compassionate activities </span>
-            <svg style={{paddingLeft: '5px'}} version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28">
-              <title>heart</title>
-              <path d="M14 26c-0.25 0-0.5-0.094-0.688-0.281l-9.75-9.406c-0.125-0.109-3.563-3.25-3.563-7 0-4.578 2.797-7.313 7.469-7.313 2.734 0 5.297 2.156 6.531 3.375 1.234-1.219 3.797-3.375 6.531-3.375 4.672 0 7.469 2.734 7.469 7.313 0 3.75-3.437 6.891-3.578 7.031l-9.734 9.375c-0.187 0.187-0.438 0.281-0.688 0.281z" fill="#f1aaae"></path>
-            </svg>
-            .
-          </div>
-          <div className='about-sentence'>
-            In collaboration with great engineers, scientists, and managers, I create Machine Learning (ML) Systems that are powerful and practical.
-            <div style={{padding: '10px 0'}} > ML Systems is a growing field that coalesces my roots in IT with my recent experience applying ML algorithms. My three aims are to make computation more efficient, data more manageable, and translate ML algorithms into advanced, practical systems.</div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
@@ -248,6 +222,11 @@ function Logo(props) {
 function Gallery(props) {
   return (
     <div className='gallery'>
+      
+      <div className='shevron-div'>
+        <img className='shevron-img' src={shevronImage}/>
+      </div>
+      <div className='portfolio-title-big'>Portfolio Summary</div>
       <DateDivider year='Lead Developer'/>
       <div className='gallery-section'>
         <div className='card-section-title-container'>
@@ -354,6 +333,9 @@ function DateDivider(props) {
   return (
     <div id={props.id} className='section'>
       <div className='section-left'>
+        <div className='section-date'>
+          {props.date}
+        </div>
         <h1 className='section-title animate-on-mouse-over'>
           {props.title}
         </h1>
@@ -453,8 +435,10 @@ function Status(props) {
 function Portfolio(props) {
   return (
     <div className='portfolio'>
-    <DateDivider year='2019–2020' alignSection={true}/>
+    <div className='portfolio-title-big'>Software Portfolio</div>
+    {/* <DateDivider year='2019–2020' alignSection={true}/> */}
     <Section
+        date='2019–2020'
         id='image-archive'
         title='Massive Scale'
         description='At the SickKids Research Institute I led the development of a medical Picture Archive 
@@ -471,6 +455,7 @@ function Portfolio(props) {
         </Frame>
       </Section>
     <Section
+        date='2019'
         id='rareconnect'
         title='Full Stack'
         description="At the SickKids Research Institute I contributed to the RareConnect social network for rare disease patients. I worked on all technical aspects of the project with major contributions to the areas of microservices, testing, and user experience (UX)."
@@ -506,8 +491,8 @@ function Portfolio(props) {
             </div>
         </Frame>
       </Section>
-      <DateDivider year='2018' alignSection={true}/>
       <Section
+        date='2018'
         id='deepscatter'
         title='Deep Learning'
         description={['While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ', <a key='deepscatter-section-link' className='section-link animate-on-mouse-over' href='https://aigrant.org/' target='_blank'>AI Grant</a>, ' global competition.']}
@@ -522,6 +507,7 @@ function Portfolio(props) {
         </Frame>
       </Section>
       <Section
+        date='2018'
         id='matkit'
         title='Computer Vision'
         description='While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award.'
@@ -536,6 +522,7 @@ function Portfolio(props) {
         </Frame>
       </Section>
       <Section
+        date='2018'
         id='senseact'
         title='Reinforcement Learning'
         description={['For Toronto startup, ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='https://www.kindred.ai/' target='_blank'>Kindred AI</a>, ', I alpha tested their release of ', <a key='sensact-section-link' className='section-link animate-on-mouse-over' href='https://www.kindred.ai/senseact' target='_blank'>SenseAct</a>,', a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.']}
@@ -552,8 +539,8 @@ function Portfolio(props) {
           />
         </Frame>
       </Section>
-      <DateDivider year='2017' alignSection={true}/>
       <Section
+        date='2017'
         id='ros-rover'
         title='Robotics'
         description={['I led the software development of a self-driving, 6-wheeled rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ', <a key='kindred-section-link' className='section-link animate-on-mouse-over' href='http://urc.marssociety.org/' target='_blank'>University Rover Challenge</a>, ' at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.']}
@@ -568,6 +555,7 @@ function Portfolio(props) {
         </Frame>
       </Section>
       <Section
+        date='2017'
         id='breqwatr'
         title='DevOps'
         description='At Breqwatr Inc. I contributed to the OpenStack-based private cloud with the goal of helping IT departments modernize their datacentre. I made major contributions to the areas of network booting (PXE), configuration management (Chef), fault-tolerant coordination (Zookeeper), load-balancing (HAProxy), and health monitoring (custom). '
@@ -581,8 +569,8 @@ function Portfolio(props) {
           />
         </Frame>
       </Section>
-      <DateDivider year='2016' alignSection={true}/>
       <Section
+        date='2016'
         id='cell-bio'
         title='Data Science'
         description='Working with scientists at the Peter Gilgan Centre For Research and Learning (SickKids), I contributed statistical analysis derived from high throughput microscopy of cell biology experiments in the areas of cancer and diabetes research.'
@@ -630,9 +618,9 @@ function Footer(props) {
       <div className='slogan2'>
         I do it with everything I have. Passion, love, and devotion to name a few.
       </div>
-      <div className='made-using'>
+      {/* <div className='made-using'>
         Website made using <a className='section-link animate-on-mouse-over' target="_blank" href='https://reactjs.org/docs/hooks-intro.html'>React Hooks</a> and <a className='section-link animate-on-mouse-over' target="_blank" href='http://dynamicsjs.com/'>Dynamics.js</a>.
-      </div>
+      </div> */}
     </div>
   )
 }
