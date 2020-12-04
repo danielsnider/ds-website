@@ -686,7 +686,7 @@ a:hover {
 
 .news-posts, .blog-posts {
   flex: 1;
-  margin-right: 30px;
+  margin-right: 30px; 
 }
 
 .row-item {
