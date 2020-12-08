@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Daniel Snider | Software Developer</title>
-        <link rel="icon" href="images/robot-head.svg" type="image/svg+xml" />
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="page">
-          <div id="app"></div>
-        </div>
-        <script src="index.js"></script>
-        <script>
-            // On page load
-            window.addEventListener('load', (event) => {
-                // console.log('page loaded')
-                // Enable smooth scroll which clicking any anchor link (Note: this only works when pressing ENTER in the address bar, not F5 refresh)
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                  // console.log('each')
-                  anchor.addEventListener('click', function (e) {
-                    // console.log('click ')
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
+  <head>
+    <title>Daniel Snider | Software Developer</title>
+    <link rel="icon" href="images/robot-head.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="page">
+      <div id="app"></div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      // On page load
+      window.addEventListener("load", (event) => {
+        // console.log('page loaded')
+        // Enable smooth scroll which clicking any anchor link (Note: this only works when pressing ENTER in the address bar, not F5 refresh)
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          // console.log('each')
+          anchor.addEventListener("click", function (e) {
+            // console.log('click ')
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
             });
+          });
         });
-      </script>
-    </body>
+      });
+    </script>
+  </body>
 </html>

@@ -277,9 +277,9 @@ function BlogPosts(props) {
         <div className="row-item-text">
           <a
             target="_blank"
-            href="https://danielsnider.medium.com/ranking-software-frameworks-on-standardization-227c906599f7"
+            href="https://danielsnider.medium.com/the-benefits-of-software-standards-50c108a6a019"
           >
-            Ranking Software Frameworks on Standardization
+            The Benefits of Software Standards
           </a>
         </div>
       </div>
