@@ -51,8 +51,8 @@ function Header(props) {
       <div className="color-bar"></div>
       <ContactInfo />
       <div className="">
-        {/* <AboutMe/> */}
-        <div className="paragraph">
+        <AboutMe />
+        <div className="links-paragraph">
           <div className="news-blog">
             <NewsPosts />
             <BlogPosts />
@@ -153,52 +153,68 @@ function ContactInfo(props) {
 
 function AboutMe(props) {
   return (
-    <div className="paragraph justify-text">
+    <div className="about-me justify-text">
       <h2 className="underlined">About Me</h2>
       <p>
-        I am a{" "}
+        {/* I am a{" "}
         <a href="https://eecs.mit.edu/" target="_blank">
           Computer Science
+        </a>{" "} */}
+        In collaboration with great engineers, scientists, and managers, I
+        create{" "}
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Software_system">
+          Software Systems
         </a>{" "}
-        PhD student at
-        <a href="https://web.mit.edu/" target="_blank">
-          MIT
-        </a>
-        , advised by
-        <a href="https://people.csail.mit.edu/kraska/" target="_blank">
-          Professor Tim Kraska
-        </a>
-        . I am part of the
-        <a href="http://dsg.csail.mit.edu/" target="_blank">
-          Data Systems Group
-        </a>{" "}
-        within the
-        <a href="https://www.csail.mit.edu/" target="_blank">
-          Computer Science and Artificial Intelligence Laboratory (CSAIL)
-        </a>
-        .
+        that are powerful and practical.
       </p>
       <p>
-        I am generally interested in computer systems research. My research
-        interests span data systems, distributed systems, and systems for
-        machine learning. I also enjoy thinking about problems at the
-        intersection of systems and human-computer interaction as I strongly
-        believe in the value of creating usable systems software.
-      </p>
-      <p>
-        Before starting my PhD, I earned my master's degree in
-        <a href="http://web.cs.toronto.edu/" target="_blank">
+        I have overseen data centre infrastructure for clients such as{" "}
+        <a target="_blank" href="https://www.prnewswire.com/">
+          PR Newswire
+        </a>
+        , written award-winning computer vision software at the{" "}
+        <a
+          target="_blank"
+          href="https://www.sickkids.ca/en/research/about-research-institute/"
+        >
+          SickKids Research Institute
+        </a>
+        , and published a book chapter in{" "}
+        <a
+          target="_blank"
+          href="https://www.springer.com/gp/book/9783319915890"
+        >
+          Springer’s Studies in Computational Intelligence
+        </a>{" "}
+        about self-driving robotics. I studied{" "}
+        <a
+          target="_blank"
+          href="https://businessandit.ontariotechu.ca/undergraduate/bachelor-of-information-technology/networking-and-information-technology-security/index.php"
+        >
+          Information Technology
+        </a>{" "}
+        at{" "}
+        <a target="_blank" href="https://ontariotechu.ca/">
+          Ontario Tech University
+        </a>
+        , I was an exchange student in{" "}
+        <a target="_blank" href="https://www.mi.fu-berlin.de/en/inf/index.html">
           Computer Science
         </a>{" "}
-        at the
-        <a href="https://www.utoronto.ca/" target="_blank">
-          University of Toronto
+        at{" "}
+        <a target="_blank" href="https://www.fu-berlin.de/en/">
+          Freie Universität Berlin
         </a>
-        , advised by
-        <a href="https://www.cs.toronto.edu/~pekhimenko" target="_blank">
-          Professor Gennady Pekhimenko
-        </a>
-        . Before graduate school, I was a{" "}
+        , and I graduated in 2013.
+      </p>
+      <p>
+        Currently, I am studying high-quality software design, exploring recent
+        innovations in computing, and learning techniques for excellent
+        communication. I enjoy mentoring new team members, sailing my Tanzer 7.5
+        on Lake Ontario, and someday I hope to have a garden of genetically
+        modified plants.
+      </p>
+      {/* . Before graduate school, I was a{" "}
         <a href="https://uwaterloo.ca/software-engineering" target="_blank">
           Software Engineering
         </a>{" "}
@@ -206,8 +222,7 @@ function AboutMe(props) {
         <a href="https://uwaterloo.ca/" target="_blank">
           University of Waterloo
         </a>{" "}
-        and graduated in 2018.
-      </p>
+        and graduated in 2018. */}
     </div>
   );
 }

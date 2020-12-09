@@ -660,7 +660,15 @@ a:hover {
   font-family: "source-pro", sans-serif;
 }
 
-.paragraph {
+.about-me {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px 0 20px;
+  font-size: 16px;
+  font-family: "source-pro", sans-serif;
+}
+
+.links-paragraph {
   max-width: 800px;
   margin: 0 auto 0 auto;
   padding: 20px;
