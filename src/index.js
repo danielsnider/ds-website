@@ -208,7 +208,7 @@ function AboutMe(props) {
         , and I graduated in 2013.
       </p>
       <p>
-        Currently, I am studying high-quality software design, exploring recent
+        Currently, I am practicing high-quality software design, exploring recent
         innovations in computing, and learning techniques for excellent
         communication. I enjoy mentoring new team members, sailing my Tanzer 7.5
         on Lake Ontario, and someday I hope to have a garden of genetically
