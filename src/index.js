@@ -24,7 +24,7 @@ import rosRoverImage from "./images/rover_half_33.jpg";
 import senseactArmImage from "./images/senseact-arm.jpg";
 import senseactDiagram from "./images/senseact-short.gif";
 import senseactPresentation from "./images/senseact-presenting_40.jpg";
-import danielImage from "./images/daniel_snider.jpg";
+import danielImage from "./images/daniel_snider2.jpg";
 // import shevronImage from './images/01_arrow-double-chevron-angle-down-512.png'
 import shevronImage from "./images/mouse-arrow.svg";
 import "./styles/main.css";
@@ -208,8 +208,8 @@ function AboutMe(props) {
         , and I graduated in 2013.
       </p>
       <p>
-        Currently, I am practicing high-quality software design, exploring recent
-        innovations in computing, and learning techniques for excellent
+        Currently, I am practicing high-quality software design, exploring
+        recent innovations in computing, and learning techniques for excellent
         communication. I enjoy mentoring new team members, sailing my Tanzer 7.5
         on Lake Ontario, and someday I hope to have a garden of genetically
         modified plants.
