@@ -83,7 +83,7 @@ function ContactInfo(props) {
         </div>
         <div className="contact-links">
           <a
-            href="https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view"
+            href="https://drive.google.com/file/d/1xvjmW0SXMITgUUWil3Dg2UjTd1zkDAFh/view"
             target="_blank"
           >
             CV
