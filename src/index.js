@@ -407,7 +407,7 @@ function Gallery(props) {
           <Card
             subtitle="Scaled to 100 million images"
             title="Medical Image Archive for AI"
-            desc="Accomplished with distributed processing across 200 servers."
+            desc="Built with ElasticSearch, Javascript, Python and a 200-node HPC cluster."
             src={imageArchiveImage20}
             anchor="#image-archive"
           />
@@ -423,7 +423,7 @@ function Gallery(props) {
           <Card
             subtitle="Finalist in Robotics Competition"
             title="Autonomous Mars Rover"
-            desc="Depth camera, self-driving, and robot arm."
+            desc="Built a 6-wheeled, 1-armed robot for a University competition in Utah."
             src={rosRoverImage}
             anchor="#ros-rover"
             styleImg={{
@@ -433,7 +433,7 @@ function Gallery(props) {
           <Card
             subtitle="A.I. Grant Finalist"
             title="Deep Learning Web App"
-            desc="Compared machine learning and manifold learning algorithms."
+            desc="Compared ML models and manifold learning algorithms."
             src={deepscatterImage33}
             anchor="#deepscatter"
           />
@@ -445,13 +445,13 @@ function Gallery(props) {
         <span className="card-group">
           <Card
             title="Datacentre Platform"
-            desc="Contributed to a private cloud appliance."
+            desc="Developed highly-available services for OpenStack-based solution."
             src={breqwatrCardImage}
             anchor="#breqwatr"
           />
           <Card
             title="Research Data Analysis"
-            desc="Contributed to academic research papers."
+            desc="Contributed statistical analysis to 7 journal publications."
             src={cellGrowthPlot}
             styleImg={{
               transform:
@@ -469,7 +469,7 @@ function Gallery(props) {
           />
           <Card
             title="Global Social Network"
-            desc="Contributed to a social network for rare disease patients."
+            desc="Contributed full-stack features to a web app with 50,000 users."
             src={rareconnectImage}
             anchor="#rareconnect"
             styleImg={{ objectFit: "unset" }}
@@ -639,8 +639,18 @@ function Portfolio(props) {
         date="2019–2020"
         id="image-archive"
         title="Massive Scale"
-        description="At the SickKids Research Institute I led the development of a medical Picture Archive 
-. It is a web based search engine used by A.I. researchers. The archive contains 100 million images and 10 billion metadata tags. To protect personal health information (PHI) we anonymize radiology reports and PHI burned into the image pixels. Our algorithm automates the process with a high degree of accuracy."
+        description={[
+          "At the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.sickkids.ca/en/research/about-research-institute/"
+            target="_blank"
+          >
+            SickKids Research Institute
+          </a>,
+          " I led a 5-person development team which built high-performance computing (HPC) infrastructure that processed 100 million medical images and indexed 10 billion metadata values. I also wrote computer vision and fuzzy matching algorithms to find and anonymize personal health information (PHI) in image pixels. I supplied data to 9 research groups. This led to publications in deep learning and medical journals.",
+        ]}
       >
         <Frame
           // webLink=''
@@ -662,7 +672,18 @@ function Portfolio(props) {
         date="2019"
         id="rareconnect"
         title="Full Stack"
-        description="At the SickKids Research Institute I contributed to the RareConnect social network for rare disease patients. I worked on all technical aspects of the project with major contributions to the areas of microservices, testing, and user experience (UX)."
+        description={[
+          "At the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.sickkids.ca/en/research/about-research-institute/"
+            target="_blank"
+          >
+            SickKids Research Institute
+          </a>,
+          " I simplified RareConnect's microservice API architecture, doubled test coverage, and rewrote a complex WYSIWYG text editor in React. These features support RareConnect, a social network for people with rare diseases, as it continues to grow beyond 50,000 users.",
+        ]}
       >
         <Frame
           webLink="https://www.rareconnect.org/"
@@ -713,7 +734,16 @@ function Portfolio(props) {
         id="deepscatter"
         title="Deep Learning"
         description={[
-          "While mentoring a brilliant student coming from their high-school Co-op education program we built a web app that lets users experiment with popular machine learning models and dimensionality reduction algorithms on uploaded images. The project was a finalist in the ",
+          "At the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.sickkids.ca/en/research/about-research-institute/"
+            target="_blank"
+          >
+            SickKids Research Institute
+          </a>,
+          " I mentored a brilliant high-school co-op student. We built a web application that could compare ML models and dimensionality reduction algorithms on user uploaded images. I taught my mentee 5 programming languages and she is now a bio-engineering student at UC Berkeley. Our project was a finalist in the ",
           <a
             key="deepscatter-section-link"
             className="section-link animate-on-mouse-over"
@@ -736,7 +766,18 @@ function Portfolio(props) {
         date="2018"
         id="matkit"
         title="Computer Vision"
-        description="While contributing to cell biology research at the SickKids Research Institute I built a computer vision desktop application for scientists. The application is called Matkit-Image and uses computer vision to measure the dynamics of cells seen under a microscope. This project won the Mary Jo Haddad SickKids Innovation Award."
+        description={[
+          "At the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.sickkids.ca/en/research/about-research-institute/"
+            target="_blank"
+          >
+            SickKids Research Institute
+          </a>,
+          " I built a computer vision desktop application for microbiology scientists. The application, called Matkit-Image, performs 60+ types of analysis on 5D images. It automates common manual quantification tasks 50x faster with higher detection accuracy and less human introduced bias. This project supported research at 3 labs and won the Mary Jo Haddad SickKids Innovation Award.",
+        ]}
       >
         <Frame
           githubLink="https://github.com/danielsnider/Single_Cell_Analysis_Toolkit"
@@ -755,7 +796,7 @@ function Portfolio(props) {
         id="senseact"
         title="Reinforcement Learning"
         description={[
-          "For Toronto startup, ",
+          "For ",
           <a
             key="kindred-section-link"
             className="section-link animate-on-mouse-over"
@@ -764,16 +805,16 @@ function Portfolio(props) {
           >
             Kindred AI
           </a>,
-          ", I alpha tested their release of ",
+          ", I alpha-tested ",
           <a
             key="sensact-section-link"
             className="section-link animate-on-mouse-over"
             href="https://www.kindred.ai/senseact"
             target="_blank"
           >
-            SenseAct
+            SenseAct's
           </a>,
-          ", a machine learning framework for real-time control of robotic components. I presented demonstrations at the Toronto Machine Learning Summit of SenseAct controlling iRobot hardware and a 6-axis robot arm.",
+          " reinforcement learning algorithms (TRPO, PPO, and Soft-Q) on robotic hardware (Universal Robotics arm, Dynamixel servo, iRobot mobile base). I contributed code, documentation, and a pretrained model. This work led me to present two workshops at the Toronto Machine Learning Summit.",
         ]}
       >
         <Frame
@@ -789,7 +830,25 @@ function Portfolio(props) {
         id="ros-rover"
         title="Robotics"
         description={[
-          "I led the software development of a self-driving, 6-wheeled rover with a robot arm and depth camera. As an engineering design team at Ryerson University, we competed in the ",
+          "At ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.ryerson.ca/"
+            target="_blank"
+          >
+            Ryerson University
+          </a>,
+          " I led the software development of a self-driving, 6-wheeled rover with a robot arm and depth camera. As a part of the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://teamr3.ca/"
+            target="_blank"
+          >
+            R3
+          </a>,
+          " engineering design team, we competed in the ",
           <a
             key="kindred-section-link"
             className="section-link animate-on-mouse-over"
@@ -798,7 +857,7 @@ function Portfolio(props) {
           >
             University Rover Challenge
           </a>,
-          " at the Mars Desert Research Station, in Utah, USA. In our first year we placed 21st out of 82 teams from 13 countries.",
+          " at the Mars Desert Research Station, Utah. In our first year we placed 21st out of 82 teams from 13 countries.",
         ]}
       >
         <Frame
@@ -818,7 +877,18 @@ function Portfolio(props) {
         date="2017"
         id="breqwatr"
         title="DevOps"
-        description="At Breqwatr Inc. I contributed to the OpenStack-based private cloud with the goal of helping IT departments modernize their datacentre. I made major contributions to the areas of network booting (PXE), configuration management (Chef), fault-tolerant coordination (Zookeeper), load-balancing (HAProxy), and health monitoring (custom). "
+        description={[
+          "At ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://breqwatr.com/"
+            target="_blank"
+          >
+            Breqwatr Inc.
+          </a>,
+          " I contributed full-stack features and devops automation to a highly-available OpenStack-based cloud platform. I built horizontally-scalable solutions using distributed software. I participated in on-premise deployments at four customer datacenters and I led monitoring of their systems thereafter.",
+        ]}
       >
         <Frame
           webLink="https://breqwatr.com/"
@@ -838,7 +908,18 @@ function Portfolio(props) {
         date="2016"
         id="cell-bio"
         title="Data Science"
-        description="Working with scientists at the Peter Gilgan Centre For Research and Learning (SickKids), I contributed statistical analysis derived from high throughput microscopy of cell biology experiments in the areas of cancer and diabetes research."
+        description={[
+          "At the ",
+          <a
+            key="kindred-section-link"
+            className="section-link animate-on-mouse-over"
+            href="https://www.sickkids.ca/en/research/about-research-institute/"
+            target="_blank"
+          >
+            SickKids Research Institute
+          </a>,
+          " I contributed statistical analysis to 7 journal publications and 1 award winning research poster. I was consulted as a domain expert in computer vision and high-performance computing and I represented our bioinformatics team at a research expo.",
+        ]}
       >
         <Frame
           githubLink="https://github.com/danielsnider/cell-bio"
