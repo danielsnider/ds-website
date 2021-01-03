@@ -179,14 +179,14 @@ function AboutMe(props) {
         >
           SickKids Research Institute
         </a>
-        , and published a book chapter in{" "}
+        , and published a book chapter about self-driving robotics in{" "}
         <a
           target="_blank"
           href="https://www.springer.com/gp/book/9783319915890"
         >
           Springer’s Studies in Computational Intelligence
         </a>{" "}
-        about self-driving robotics. I studied{" "}
+        . I studied{" "}
         <a
           target="_blank"
           href="https://businessandit.ontariotechu.ca/undergraduate/bachelor-of-information-technology/networking-and-information-technology-security/index.php"
