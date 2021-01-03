@@ -288,7 +288,7 @@ function BlogPosts(props) {
       <h2 className="underlined">Latest Blog Posts</h2>
 
       <div className="row-item">
-        <div className="row-item-date">November 5, 2020</div>
+        <div className="row-item-date">December 8, 2020</div>
         <div className="row-item-text">
           <a
             target="_blank"
@@ -300,7 +300,7 @@ function BlogPosts(props) {
       </div>
 
       <div className="row-item">
-        <div className="row-item-date">November 5, 2020</div>
+        <div className="row-item-date">November 11, 2020</div>
         <div className="row-item-text">
           <a
             target="_blank"
@@ -312,7 +312,7 @@ function BlogPosts(props) {
       </div>
 
       <div className="row-item">
-        <div className="row-item-date">November 5, 2020</div>
+        <div className="row-item-date">November 7, 2020</div>
         <div className="row-item-text">
           <a
             target="_blank"
