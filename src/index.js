@@ -743,7 +743,7 @@ function Portfolio(props) {
           >
             SickKids Research Institute
           </a>,
-          " I mentored a brilliant high-school co-op student. We built a web application that could compare ML models and dimensionality reduction algorithms on user uploaded images. I taught my mentee 5 programming languages and she is now a bio-engineering student at UC Berkeley. Our project was a finalist in the ",
+          " I mentored a brilliant high-school co-op student. I led her in the developement of a web application that could compare ML models and dimensionality reduction algorithms on user uploaded images. I introduced my mentee to new programming languages and she is now a bio-engineering student at UC Berkeley. Our project was a finalist in the ",
           <a
             key="deepscatter-section-link"
             className="section-link animate-on-mouse-over"
@@ -776,7 +776,7 @@ function Portfolio(props) {
           >
             SickKids Research Institute
           </a>,
-          " I built a computer vision desktop application for microbiology scientists. The application, called Matkit-Image, performs 60+ types of analysis on 5D images. It automates common manual quantification tasks 50x faster with higher detection accuracy and less human introduced bias. This project supported research at 3 labs and won the Mary Jo Haddad SickKids Innovation Award.",
+          " I led development of a computer vision desktop application for microbiology scientists. The application, called Matkit-Image, performs 60+ types of analysis on 5D images. It automates common manual quantification tasks 50x faster with higher detection accuracy and less human introduced bias. This project supported research at 3 labs and won the Mary Jo Haddad SickKids Innovation Award.",
         ]}
       >
         <Frame
