@@ -78,7 +78,7 @@ h4 {
   width: 25px;
   height: 19px;
   cursor: pointer;
-  margin: 15px 5px 0 0;
+  margin: 10px 5px 0 0;
 }
 
 .social-icon:hover {
@@ -640,23 +640,23 @@ a:hover {
 
 .display-name {
   font-size: 35px;
+  margin-bottom: 10px;
 }
 
 .job-title {
-  padding-bottom: 10px;
-  font-size: 19px;
+  padding: 5px 0 0px 0;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .contact-links {
-  font-size: 16px;
+  font-size: 15px;
+  padding-top: 7px;
 }
 
 .contact-links a {
   font-weight: 600;
-  font-family: "source-pro", sans-serif;
-}
-
-.contant-links {
+  letter-spacing: 1px;
   font-family: "source-pro", sans-serif;
 }
 

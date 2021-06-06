@@ -78,8 +78,8 @@ function ContactInfo(props) {
       <div className="header-right">
         <div className="">
           <h1 className="display-name">Daniel Snider</h1>
-          <h3 className="job-title">Software Systems Engineer</h3>
-          {/* <h3>Affiliation</h3> */}
+          <div className="job-title">Computer Science MSc Student</div>
+          <div className="job-title">University of Toronto (U of T)</div>
         </div>
         <div className="contact-links">
           <a
@@ -156,23 +156,21 @@ function AboutMe(props) {
     <div className="about-me justify-text">
       <h2 className="underlined">About Me</h2>
       <p>
-        {/* I am a{" "}
-        <a href="https://eecs.mit.edu/" target="_blank">
-          Computer Science
-        </a>{" "} */}
-        In collaboration with great engineers, scientists, and managers, I
-        create{" "}
-        <a target="_blank" href="https://en.wikipedia.org/wiki/Software_system">
-          Software Systems
-        </a>{" "}
-        that are powerful and practical.
+        I am a <a target="_blank" href="http://www.cs.toronto.edu/">Computer Science</a> MSc
+        student at <a target="_blank" href="https://www.utoronto.ca/">U of T</a>,
+        advised by <a target="_blank" href="http://www.cs.toronto.edu/~pekhimenko/">Professor Gennady Pekhimenko</a>.
+        I am part of the <a target="_blank" href="http://www.cs.toronto.edu/ecosystem/">Efficient Computing Systems Group</a> within
+         the <a target="_blank" href="http://csng.cs.toronto.edu/index.php">Computer Systems & Networks Research Cluster</a>. My research aim is to accelerate robotic simulation and learning systems.
       </p>
       <p>
-        I have overseen data centre infrastructure for clients such as{" "}
+      My lifelong mission is to develop intelligent robots. I believe the <a target="_blank" href="https://www.bdc.ca/en/documents/analysis_research/labour-shortage.pdf">labour shortage</a> and prevalence of <a target="_blank" href="https://en.wikipedia.org/wiki/Bullshit_Jobs">meaningless jobs</a> are underappreciated global issues.
+      </p>
+      <p>
+        Before starting my Masters, I oversaw data centre infrastructure for clients such as{" "}
         <a target="_blank" href="https://www.prnewswire.com/">
           PR Newswire
         </a>
-        , written award-winning computer vision software at the{" "}
+        , wrote award-winning computer vision software at the{" "}
         <a
           target="_blank"
           href="https://www.sickkids.ca/en/research/about-research-institute/"
@@ -186,7 +184,7 @@ function AboutMe(props) {
         >
           Springer’s Studies in Computational Intelligence
         </a>{" "}
-        . I studied{" "}
+        {/* . I studied{" "}
         <a
           target="_blank"
           href="https://businessandit.ontariotechu.ca/undergraduate/bachelor-of-information-technology/networking-and-information-technology-security/index.php"
@@ -205,24 +203,8 @@ function AboutMe(props) {
         <a target="_blank" href="https://www.fu-berlin.de/en/">
           Freie Universität Berlin
         </a>
-        , and I graduated in 2013.
+        , and I graduated in 2013. */}
       </p>
-      <p>
-        Currently, I am practicing high-quality software design, exploring
-        recent innovations in computing, and learning techniques for excellent
-        communication. I enjoy mentoring new team members, sailing my Tanzer 7.5
-        on Lake Ontario, and someday I hope to have a garden of genetically
-        modified plants.
-      </p>
-      {/* . Before graduate school, I was a{" "}
-        <a href="https://uwaterloo.ca/software-engineering" target="_blank">
-          Software Engineering
-        </a>{" "}
-        student at the{" "}
-        <a href="https://uwaterloo.ca/" target="_blank">
-          University of Waterloo
-        </a>{" "}
-        and graduated in 2018. */}
     </div>
   );
 }
@@ -231,11 +213,6 @@ function NewsPosts(props) {
   return (
     <div className="news-posts">
       <h2 className="underlined">News</h2>
-
-      {/* <div className="row-item">
-          <div className="row-item-date">November 18, 2020</div>
-          <div className="row-item-text">We've open sourced our <a target="_blank" href="" target="_blank">Diagnostic Image Archive project</a>.</div>
-        </div> */}
 
       <div className="row-item">
         <div className="row-item-date">June 30, 2019</div>
@@ -259,14 +236,14 @@ function NewsPosts(props) {
       <div className="row-item">
         <div className="row-item-date">June 3rd, 2017</div>
         <div className="row-item-text">
-          I placed 21st out of 82 teams at the{" "}
+          I was a finalist at the{" "}
           <a
             target="_blank"
             href="http://urc.marssociety.org/home/about-urc/urc2017-scores"
           >
             University Rover Challenge
           </a>{" "}
-          with{" "}
+          robotics competition with{" "}
           <a target="_blank" href="https://teamr3.ca/">
             Team R3.
           </a>
@@ -323,11 +300,6 @@ function BlogPosts(props) {
         </div>
       </div>
 
-      {/* <div className="row-item">
-          <div className="row-item-date">September 16, 2017</div>
-          <div className="row-item-text"><a target="_blank" href="____________________">7 Habits of Highly Effective Note Taking</a></div>
-        </div> */}
-
       <div className="row-item">
         <div className="row-item-text">
           <a target="_blank" href="https://danielsnider.medium.com/">
@@ -335,60 +307,6 @@ function BlogPosts(props) {
           </a>
         </div>
       </div>
-    </div>
-  );
-}
-
-function NameAndLogo(props) {
-  return (
-    <div>
-      <Logo />
-      <div className="name">Daniel Snider</div>
-      <div className="city">Software Systems Researcher</div>
-      {/* <div className='city'>Toronto</div> */}
-      <div className="contact">
-        {/* <a className='animate-on-mouse-over social-icon-link' href="https://twitter.com/danielsnider" target="_blank">
-          <svg className='social-icon' viewBox="0 0 42 36" xmlns="http://www.w3.org/2000/svg"><path d="M40.885 5.917a16.098 16.098 0 0 1-4.7 1.315 8.35 8.35 0 0 0 3.598-4.62 16.18 16.18 0 0 1-5.196 2.026A8.094 8.094 0 0 0 28.614 2c-4.52 0-8.183 3.74-8.183 8.353 0 .655.073 1.293.213 1.904-6.8-.348-12.83-3.674-16.866-8.728a8.447 8.447 0 0 0-1.108 4.2 8.397 8.397 0 0 0 3.64 6.952 8.024 8.024 0 0 1-3.707-1.045v.105c0 4.047 2.82 7.423 6.563 8.19a8.035 8.035 0 0 1-3.695.144c1.042 3.32 4.064 5.734 7.645 5.8A16.206 16.206 0 0 1 1 31.337a22.818 22.818 0 0 0 12.544 3.754c15.05 0 23.282-12.73 23.282-23.768 0-.362-.008-.723-.024-1.08a16.82 16.82 0 0 0 4.083-4.325z"></path></svg>
-        </a> */}
-        <a
-          className="animate-on-mouse-over social-icon-link"
-          href="https://github.com/danielsnider"
-          target="_blank"
-        >
-          <svg
-            className="social-icon"
-            style={{ transform: "scale(1.2, 1.2)" }}
-            viewBox="0 0 1792 1792"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z" />
-          </svg>
-        </a>
-        <span style={{ margin: "5px" }}> </span>
-        <a
-          className="animate-on-mouse-over social-icon-link"
-          href="mailto:danielsnider12@gmail.com"
-          target="_blank"
-        >
-          <svg
-            className="social-icon"
-            viewBox="0 0 42 36"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M3.025 5.255A1.99 1.99 0 0 1 4.003 5h33.994c.354 0 .688.093.977.256L21 18.5 3.025 5.255zm-1.002 1.45c-.015.098-.023.2-.023.302V18.28v-5.636 17.35C2 31.1 2.902 32 4.003 32h33.994A2.005 2.005 0 0 0 40 29.993v-17.35 5.638V7.008c0-.103-.008-.204-.023-.303L21 20.687 2.023 6.704z"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function Logo(props) {
-  return (
-    <div id="header-logo">
-      {/* <img id='logo' className='logo' src={loveBot}/> */}
-      {/* <svg id="logo" width="80" height="67" viewBox="0 0 160 134" xmlns="http://www.w3.org/2000/svg"><path d="M24.44 78.157L0 53.53 53.417 0l26.39 26.612L106.38 0l53.482 53.614L136.25 77.31l-29.312-29.2-26.46 26.946-26.548-26.58-29.49 29.68zm5.335 5.375l50.033 50.415 51.108-51.286-23.775-23.684-26.712 26.72-26.372-26.404-24.28 24.24z" fill="white" fillRule="evenodd"></path></svg> */}
-      <RobotSvg />
     </div>
   );
 }
@@ -608,24 +526,6 @@ function Frame(props) {
       <ColoredScrollbars style={{ width: "100%", height: "69vh" }}>
         {newChildren}
       </ColoredScrollbars>
-    </div>
-  );
-}
-
-function Status(props) {
-  return (
-    <div className="status">
-      <div className="status-text">
-        <span className="status-text-emphasis">Current status:</span>
-        Looking to join a passionate team. I am based in Toronto.{" "}
-        <a
-          className="animate-on-mouse-over"
-          href="https://drive.google.com/file/d/1u5l1Ow-Qth4VIZu6R4dUTSpP-ruVsMGe/view?usp=sharing"
-          target="_blank"
-        >
-          Here is my resume.
-        </a>
-      </div>
     </div>
   );
 }
