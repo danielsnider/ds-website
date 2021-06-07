@@ -170,7 +170,7 @@ function AboutMe(props) {
          the <a target="_blank" href="http://csng.cs.toronto.edu/index.php">Computer Systems & Networks Research Cluster</a>. My research aim is to accelerate robotic simulation and learning systems.
       </p>
       <p>
-      My lifelong mission is to develop intelligent robots. I believe that <a target="_blank" href="https://www.bdc.ca/en/documents/analysis_research/labour-shortage.pdf">labour shortages</a> and the high prevalence of <a target="_blank" href="https://en.wikipedia.org/wiki/Bullshit_Jobs">low-impact jobs</a> are underappreciated global issues.
+        My lifelong mission is to develop intelligent robots that can help solve underappreciated global issues such as <a target="_blank" href="https://www.bdc.ca/en/documents/analysis_research/labour-shortage.pdf">labour shortages</a> and the high prevalence of <a target="_blank" href="https://en.wikipedia.org/wiki/Bullshit_Jobs">low-impact jobs</a>.
       </p>
       <p>
         Before starting my Masters, I oversaw data centre infrastructure for clients such as{" "}
