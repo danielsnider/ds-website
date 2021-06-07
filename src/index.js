@@ -83,20 +83,27 @@ function ContactInfo(props) {
         </div>
         <div className="contact-links">
           <a
-            href="https://drive.google.com/file/d/1xvjmW0SXMITgUUWil3Dg2UjTd1zkDAFh/view"
+            href="https://drive.google.com/file/d/1PkPpAzDgrTyuRZl-bxwC3G1P2QDVixF7/view"
             target="_blank"
           >
             CV
+          </a>
+          |
+          <a
+            href="https://drive.google.com/file/d/1mNAxG6x649nNeNvxZM09Dcx1QcBqSxMr/view"
+            target="_blank"
+          >
+            Resume
           </a>
           |
           <a href="https://danielsnider.medium.com" target="_blank">
             Blog
           </a>
           |
-          <a href="https://danielsnider.substack.com" target="_blank">
+          {/* <a href="https://danielsnider.substack.com" target="_blank">
             Newsletter
           </a>
-          |
+          | */}
           <a href="mailto:danielsnider12@gmail.com">danielsnider12@gmail.com</a>
         </div>
         <div className="contact">
